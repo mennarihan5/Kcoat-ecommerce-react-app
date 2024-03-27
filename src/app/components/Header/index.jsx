@@ -4,7 +4,7 @@ import { userIcons } from './data.js';
 
 export const NavBar = () => {
     return (
-        <nav className={styles.navbar}>
+        <nav>
             <ul className={styles[`nav-menu`]}>
                 <li className={styles[`menu-item`]}>
                     <a href='#'>Home</a>
@@ -25,16 +25,18 @@ export const NavBar = () => {
 
 export const UserIcons = () => {
     return(
-        <div className={styles.icons}>
-        {
-            userIcons.map((iconImg) => {
-                return (
-                    <div className={styles[`user-icons`]}>
-                        {iconImg.icon}
-                    </div>
-                )
-            })
-        }
+        <div className={styles[`icons-wrapper`]}>
+            {
+                userIcons.map((iconImg) => {
+                    return (
+                        <div className={styles.icon}>
+                            <a href='#'>
+                                {iconImg.icon}
+                            </a>
+                        </div>
+                    )
+                })
+            }
        </div>
     )
 }

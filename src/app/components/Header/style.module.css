@@ -1,5 +1,35 @@
-.header {
+.header, .nav-menu, .icons-wrapper {
     display: flex;
     justify-content: space-between;
-    background-color: ;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    gap: 2.5rem;
+}
+.header {
+    background-color: var(--white);
+    border: 1px solid var(--olive);
+    padding: 0.2% 6%;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+.menu-item {
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.menu-item a {
+    text-decoration: none;
+    color: var(--darkGrey);
+}
+.icons-wrapper {
+    gap: 1rem;
+}
+.icon {
+    cursor: pointer;
+}
+.icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
 }
