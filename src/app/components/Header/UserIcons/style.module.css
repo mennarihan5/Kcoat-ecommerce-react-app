@@ -1,0 +1,23 @@
+.icons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    gap: 2.5rem;
+}
+.icons-wrapper {
+    gap: 1rem;
+}
+.icon {
+    cursor: pointer;
+}
+.icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--darkGrey);
+    transition: all 0.2s ease-in-out;
+}
+.icon:hover svg {
+    color: var(--olive);
+    transform: scale(1.2);
+}
