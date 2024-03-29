@@ -1,5 +1,18 @@
 .header {
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    gap: 2.5rem;
 }
+.header {
+    background-color: var(--white);
+    border: 1px solid var(--olive);
+    padding: 0.2% 6%;
+}
+
+/* @media (max-width: 1200px) {
+   .header {
+        padding: 0 10%;
+   }
+} */
