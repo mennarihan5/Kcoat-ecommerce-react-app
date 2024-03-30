@@ -14,4 +14,3 @@ export const NewItems = () => {
     )
 }
 export default NewItems;
-
