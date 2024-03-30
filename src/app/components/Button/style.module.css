@@ -1,0 +1,8 @@
+.button {
+    border: none;
+    color: var(--olive);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--olive);
+    width: 7rem;
+}
