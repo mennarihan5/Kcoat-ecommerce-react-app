@@ -1,7 +1,21 @@
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 
 
+//middlewae
+
+app.use(express.json());
+
+app.use(express.urlencoded({extended: true}))
+
+
+//routers
+
+const router = require('./routes/rts.js');
+
+app.use('/', router)
 
 //testing api
 
