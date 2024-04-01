@@ -11,6 +11,7 @@ import { Categories } from '../../components/Categories/index.jsx';
 import { Trending } from '../../components/Trending/index.jsx';
 import { cardsData } from '../../components/Categories/data.js';
 import { BestSelling } from '../../components/BestSelling/index.jsx';
+import { Footer } from '../../components/Footer/inex.jsx';
 
 export const LandingPage = () => {
     return (
@@ -24,9 +25,8 @@ export const LandingPage = () => {
             <NewItems />
             <AppProducts />
             <CustomerDetails />
+            <Footer />
             {/* <Title /> */}
-            
-
         </section>
     )
 }
