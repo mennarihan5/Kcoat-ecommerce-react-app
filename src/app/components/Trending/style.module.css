@@ -1,5 +1,25 @@
 .trending {
     padding: 6% 0;
-    width: 85%;
+    width: 80%;
     margin: auto;
+    font-family: 'Libre Baskerville', 'Helvetica Neue';
+}
+.text {
+    text-align: center;
+    color: var(--olive);
+    font-weight: 700;
+}
+.discover {
+    font-size: 1.75rem;
+}
+.title {
+    font-size: 3rem;
+    margin-top: 2.5%;
+}
+.description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darkGrey);
+    margin-top: 1.2%;
 }
