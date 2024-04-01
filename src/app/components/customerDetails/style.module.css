@@ -1,0 +1,40 @@
+.customerDetails {
+  display: flex;
+  justify-content: space-between; /* Adjust as needed */
+  top: 5000px; /* Adjust as needed */
+  position: relative;
+    width: Hug (1,205px)px;
+  height: Hug (90px)px;
+  left: 116px;
+  gap: 15px;
+  opacity: 0px;
+  border: 2px solid #ccc; /* Adjust border color */
+
+}
+
+.flexiblePay
+
+
+.feature {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 50px; /* Adjust icon size */
+  height: 50px; /* Adjust icon size */
+  margin-right: 10px; /* Adjust icon spacing */
+}
+
+.title {
+  font-size: 18px; /* Adjust title font size */
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px; /* Adjust description font size */
+  color: #666; /* Adjust description color */
+}
+
+/* .firstbutton {
+   */
