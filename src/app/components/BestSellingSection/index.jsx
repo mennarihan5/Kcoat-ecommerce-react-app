@@ -1,5 +1,5 @@
-import { ProductCard } from '../ProductCard/index.jsx';
-import { bestSellingData } from '../ProductCard/data.js';
+import { ProductCard } from '../ProductCardSection/index.jsx';
+import { bestSellingData } from '../ProductCardSection/data.js';
 import styles from './style.module.css';
 
 export const BestSelling = () => {
