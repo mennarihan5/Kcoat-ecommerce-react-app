@@ -19,10 +19,10 @@ import ProductCard from './productData';
         price: "$5,500",
       },
       {
-        id: 6,
-        imageSrc: menSuit,
-        price: "$34.99",
-        description: "Men Suit"
+        id: 2,
+        imageSrc: pearlNecklace,
+        price: "$24.99",
+        description: "Pearl Necklace"
       }
       ,
       {
@@ -44,11 +44,12 @@ import ProductCard from './productData';
         description: "Vintage Dress"
       },
       {
-        id: 2,
-        imageSrc: pearlNecklace,
-        price: "$24.99",
-        description: "Pearl Necklace"
+        id: 6,
+        imageSrc: menSuit,
+        price: "$34.99",
+        description: "Men Suit"
       }
+      
     ];
   
 
@@ -58,7 +59,7 @@ import ProductCard from './productData';
       <div className={styles["products"]}>
       
         {products.map(product => {
-          let cardClass = counter < 3 ? styles['long-card'] : styles['short-card'];
+          let cardClass = counter == 1 || counter == 6 ? styles['long-card'] : styles['short-card'];
           
           return (
             <ProductCard
