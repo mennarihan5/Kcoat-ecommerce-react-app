@@ -8,8 +8,7 @@ const sequelize = new Sequelize(
     dbConfig.PASSWORD, {
         host: dbConfig.HOST,
         dialect: dbConfig.dialect,
-        operatorsAliases: false,
-
+       
         pool: {
             max: dbConfig.pool.max,
              min: dbConfig.pool.min,
@@ -31,6 +30,8 @@ const db = {}
 
 db.Sequelize = Sequelize
 db.sequelize = sequelize
+
+db.customers = require('./customerModel')(sequelize, DataTypes)
 
 db.sequelize.sync({force: false})
 .then(()=>{
