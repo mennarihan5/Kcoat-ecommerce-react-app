@@ -1,4 +1,3 @@
-// Banner.js
 import React from 'react';
 import styles from './styles.module.css';
 import discount1 from '../../assets/images/discount1.svg';
@@ -17,5 +16,6 @@ function Banner() {
     </div>
   );
 }
+
 
 export default Banner;
