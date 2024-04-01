@@ -16,7 +16,7 @@
 }
 
 .newarrivalText{
-    width: 301px;
+    
     height: 60px;
     top: 4600px;
     left: 620px;
@@ -29,12 +29,14 @@
     text-align: center;
     color: #7C7B5D;
     position: relative;
+    margin-right: 1100px;
+    
 }
 
 .paragraph{
     width: 883px;
     height: 24px;
-    top: 4580px;
+    top: 4650px;
     left: 290px;
     gap: 0px;
     opacity: 0px;
