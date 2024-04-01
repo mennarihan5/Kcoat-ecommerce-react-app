@@ -10,6 +10,7 @@ import { Hero } from '../../components/Hero/index.jsx';
 import { Categories } from '../../components/Categories/index.jsx';
 import { Trending } from '../../components/Trending/index.jsx';
 import { cardsData } from '../../components/Categories/data.js';
+import { BestSelling } from '../../components/BestSelling/index.jsx';
 
 export const LandingPage = () => {
     return (
@@ -18,6 +19,7 @@ export const LandingPage = () => {
             <Hero />
             <Categories />
             <Trending />
+            <BestSelling />
             <Banner />
             <NewItems />
             <AppProducts />
