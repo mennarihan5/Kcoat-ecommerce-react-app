@@ -1,0 +1,19 @@
+.products-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+   
+
+}
+.product-card {
+    width: 15rem;
+    height: 25rem;
+}
+.card-img {
+    width: 100%;
+}
+.card-img img {
+    width: 100%;
+}
