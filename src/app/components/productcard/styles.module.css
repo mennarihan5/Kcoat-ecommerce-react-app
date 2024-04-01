@@ -1,38 +1,117 @@
 /* ProductCard.css */
-.product-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 200px; /* Adjust the width as needed */
-    margin: 10px;
-  }
+
+
+.product-image {
+  width: 100%; /* Adjust image width */
+  height: 90%; /* Adjust image height */
+  margin-bottom: 0px;
+  margin-top: 5px;
+  background-color: white;
   
-  .product-image {
-    position: relative;
-  }
+}
+
+
+.price {
+  font-weight: bold;
+  width: 79px;
+height: 100px;
+gap: 0px;
+opacity: 0px;
+align-items: right;
+color: #988d8d;
+margin-left: 50px;
+
+
+}
+
+.description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: black;
+  width: 184px;
+  height: 29px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 29.26px;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 700;
+  line-height: 29.26px;
+  text-align: center;
+  margin-left: 50e;
+}
+
+.love-icon {
+  background-color:white;
+  gap: 0px;
+  opacity: 0px;
+  color: gray;
+  width: 41.67px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 25px;
+  border: 2px solid white;
+  border-radius: 100%;
+  align-items: center;
+  position: relative;
+  top: -60px;
+  bottom: 50px;
+  right: -120px;
+
+}
+.products {
+  display: flex; /* Use flexbox */
+
+  /* flex-wrap: wrap; Allow items to wrap to the next line */
+  justify-content: flex-start; /* Align items to the start of the flex container */
+  align-items: flex-start; /* Align items to the start of the flex container */
+  width: 1240px;
+  top: 4700px;
+  left: 101px;
+  gap: 10px;
+  opacity: 0px;
+  position: relative; 
+
+}
+
+
+.product-card{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+   padding: 0 10px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+#prodCard_2{
+  background-color: white;
+  width: 100%;
+  min-height:  100px;
+  float: right;
+  margin-top: 0;
+  padding: 0;
+}
+
+#prodCard_1{
+  min-height: 100px;
+  margin-top: 0px;
+  background-color: white;
+}
+
+.short-card {
+  display: flex;
+  width: 290px;
+ min-height: 400px;
+  gap: 0px;
+  opacity: 0px;
+  color: #D9D9D9;
+  display: inline-block;
+
   
-  .product-image img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .love-icon {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    color: black;
-  }
-  
-  .product-info {
-    padding: 10px;
-  }
-  
-  .price {
-    font-weight: bold;
-  }
-  
-  .description {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-  
+}
+

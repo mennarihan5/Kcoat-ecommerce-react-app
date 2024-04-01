@@ -6,62 +6,73 @@ import shoulderBag from '../../assets/images/shoulderBag.svg';
 import vintage from '../../assets/images/vintage.svg';
 import menSuit from '../../assets/images/menSuit.svg';
 import styles from './styles.module.css';
+import ProductCard from './productData';
 
 
 
     
-    export const products = [
+    const products = [
       {
         id: 1,
         imageSrc: dinnerGown,
-        price: "$19.99",
-        description: "Product 1 description goes here"
-      },
-      {
-        id: 2,
-        imageSrc: pearlNecklace,
-        price: "$24.99",
-        description: "Product 2 description goes here"
-      },
-      {
-        id: 3,
-        imageSrc: stiletto,
-        price: "$29.99",
-        description: "Product 3 description goes here"
-      },
-      {
-        id: 4,
-        imageSrc: shoulderBag,
-        price: "$14.99",
-        description: "Product 4 description goes here"
-      },
-      {
-        id: 5,
-        imageSrc: vintage,
-        price: "$34.99",
-        description: "Product 5 description goes here"
+        description: "Dinner Gown",
+        price: "$5,500",
       },
       {
         id: 6,
         imageSrc: menSuit,
         price: "$34.99",
-        description: "Product 5 description goes here"
+        description: "Men Suit"
+      }
+      ,
+      {
+        id: 3,
+        imageSrc: stiletto,
+        price: "$29.99",
+        description: "Stiletto"
+      },
+      {
+        id: 4,
+        imageSrc: shoulderBag,
+        price: "$14.99",
+        description: "Shoulder Bag"
+      },
+      {
+        id: 5,
+        imageSrc: vintage,
+        price: "$34.99",
+        description: "Vintage Dress"
+      },
+      {
+        id: 2,
+        imageSrc: pearlNecklace,
+        price: "$24.99",
+        description: "Pearl Necklace"
       }
     ];
   
+
+    export function AppProducts () {
+    let counter = 1;
     return (
-      <div className="App">
-        {/* Render ProductCard components for each product */}
-        {products.map(product => (
-          <ProductCard
-            key={product.id}
-            imageSrc={product.imageSrc}
-            price={product.price}
-            description={product.description}
-          />
-        ))}
+      <div className={styles["products"]}>
+      
+        {products.map(product => {
+          let cardClass = counter < 3 ? styles['long-card'] : styles['short-card'];
+          
+          return (
+            <ProductCard
+              key={product.id}
+              imageSrc={product.imageSrc}
+              price={product.price}
+              description={product.description}
+              cardClass={cardClass}
+              id={styles['prodCard_' + counter]}
+              counter={counter++}
+            />
+          );
+        })}
+    
       </div>
     );
   }
-  
-  export default App;
