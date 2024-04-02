@@ -4,14 +4,54 @@
     flex-wrap: wrap;
     width: 100%;
     margin: auto;
+    padding: 3.5% 0;
+    font-family: "Montserrat", sans-serif;
 }
 .product-card {
-    width: 15rem;
-    height: 25rem;
+    width: 17rem;
+    height: 25.8rem;
+    margin: 0.5% 0;
+    position: relative;
+    cursor: pointer;
 }
+
 .card-img {
     width: 100%;
 }
 .card-img img {
     width: 100%;
+}
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--darkGrey);
+    margin: 3% 0;
+}
+.price {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--mediumGrey);
+}
+.heart {
+    border-radius: 50%;
+    padding: 1.6%;
+    padding-top: 3%;
+    color: var(--olive);
+    background-color: var(--white);
+    position: absolute ;
+    bottom: 28%;
+    right: 2%;
+}
+.heart svg {
+    width: 2.3rem;
+    height: 1.8rem;
+}
+@media (max-width: 900px) {
+    .products-card-wrapper {
+        margin: auto;
+    }
+    .product-card {
+         width: 100%;
+         height: auto;
+     }
 }
