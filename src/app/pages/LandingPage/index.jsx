@@ -5,6 +5,10 @@ import {NewItems} from '../../components/newarrival/index.jsx';
 // import ProductCard from '../../components/productCard/productData.jsx';
 import { CustomerDetails } from '../../components/customerDetails/index.jsx';
 // import { Title } from '../../components/reviewCard/index.jsx';
+import { Hero } from '../../components/Hero/index.jsx';
+import { Categories } from '../../components/Categories/index.jsx';
+import { Trending } from '../../components/Trending/index.jsx';
+import { cardsData } from '../../components/Categories/data.js';
 import { AppProducts } from '../../components/ProductCard/index.jsx';
 import { Hero } from '../../components/Hero/index.jsx';
 import { Categories } from '../../components/Categories/index.jsx';
@@ -22,12 +26,10 @@ export const LandingPage = () => {
             <BestSellingSection />
             <Banner />
             <NewItems />
-            <AppProducts />
+            {/* <AppProducts /> */}
             <CustomerDetails />
             <Footer />
             {/* <Title /> */}
-            
-
         </section>
     )
 }

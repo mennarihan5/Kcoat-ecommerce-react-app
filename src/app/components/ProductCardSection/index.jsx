@@ -4,7 +4,6 @@ import { bestSellingData } from './data.js';
 import styles from './style.module.css';
 import { FaRegHeart } from "react-icons/fa6";
 
-
 export const ProductCardSection = (props) => {
     return(
         <div className={styles['products-card-wrapper']}>
