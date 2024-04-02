@@ -1,7 +1,5 @@
 import { ProductCardSection } from '../ProductCardSection/index.jsx';
 import { productData } from '../ProductCardSection/data.js';
-import { productData } from '../ProductCardSection/data.js';
-import { ProductCardSection } from '../ProductCardSection/index.jsx';
 import styles from './style.module.css';
 
 export const Trending = () => {
@@ -12,9 +10,7 @@ export const Trending = () => {
                 <h3 className={styles.title}>Trending</h3>
                 <p className={styles.description}>Explore our curated selection of trendy outfits, jewelry, bags, slides, heels, and more.</p>
                 <ProductCardSection products={productData} trending={true}/>
-            </div>
-            </div>    
-            <ProductCardSection products={productData} trending={true}/>
+            </div>   
         </div>
     )
 }
