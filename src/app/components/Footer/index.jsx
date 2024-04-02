@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.logo}>
-                <Logo />
+                <Logo className={styles.img} background={false}/>
             </div>    
             <div className={styles['footer-menu-wrapper']}>
                 <FooterMenu title="Profile" options={profileMenu} />
