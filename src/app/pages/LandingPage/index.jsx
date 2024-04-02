@@ -25,8 +25,8 @@ export const LandingPage = () => {
             <NewItems />
             <AppProducts />
             <CustomerDetails />
+              {/* <Title /> */}
             <Footer />
-            {/* <Title /> */}
         </section>
     )
 }
