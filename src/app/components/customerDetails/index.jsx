@@ -21,6 +21,7 @@ function Card({ logo, heading, description }) {
         {/* Description */}
         <div className={styles.description}>{description}</div>
       </div>
+  
     </div>
   );
 }
