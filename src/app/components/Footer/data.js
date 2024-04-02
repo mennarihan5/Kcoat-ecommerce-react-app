@@ -1,4 +1,3 @@
-
 import { IoLocationOutline, IoMailOutline, IoLogoWhatsapp, IoLogoInstagram, IoLogoFacebook } from "react-icons/io5";
 import { LiaPhoneAltSolid } from "react-icons/lia";
 
@@ -65,6 +64,6 @@ export const contactMenu = [
     {
         whatsappIcon: <IoLogoWhatsapp />,
         instagramIcon: <IoLogoInstagram />,
-        facebookicon: <IoLogoFacebook />
+        facebookIcon: <IoLogoFacebook />
     },
 ]
