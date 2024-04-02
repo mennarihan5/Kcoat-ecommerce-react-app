@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center; /* Align cards to the center horizontally */
   color: blueviolet;
+  
 }
 
 /* Card.module.css */
@@ -16,6 +17,12 @@
   margin: 0px;
   max-width: 200px; /* Adjust card width as needed */
   gap: 10px;
+  width: Hug (1,205px)px;
+/* height: Hug (90px)px;
+top: 6011px;
+left: 116px;
+gap: 15px;
+opacity: 0px; */
 }
 
 .logo {
@@ -23,13 +30,14 @@
   height: 50px; /* Adjust logo size as needed */
   /* margin-bottom: 10px; */
   display: flex;
-  position: absolute;
-  margin-right: 50px;
+  /* position: absolute; */
+  margin-right: 40px;
   /* padding: 7.2px 4.8px 4.79px 4.9px; */
   gap: 8px;
   opacity: 0px;
   align-items: flex-start;
   margin-right: 260px;
+  margin-top: 30px;
 
 
 }
@@ -40,6 +48,7 @@ height: Hug (52px)px;
 gap: 10px;
 opacity: 0px;
 color: #741e1e;
+margin-top: -60px;
 
 }
 
@@ -68,7 +77,12 @@ font-weight: 300;
 line-height: 19.5px;
 text-align: left;
 color: #4F4B4B;
+}
 
+.content{
+  margin-left: 45px;
+}
 
-
+.heading{
+  font-size: 12px;
 }
