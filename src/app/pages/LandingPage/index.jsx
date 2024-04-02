@@ -5,13 +5,13 @@ import {NewItems} from '../../components/newarrival/index.jsx';
 // import ProductCard from '../../components/productcard/productData.jsx';
 import { CustomerDetails } from '../../components/customerDetails/index.jsx';
 // import { Title } from '../../components/reviewCard/index.jsx';
-import { AppProducts } from '../../components/productcard/index.jsx';
+// import { AppProducts } from '../../components/productcard/index.jsx';
 import { Hero } from '../../components/Hero/index.jsx';
 import { Categories } from '../../components/Categories/index.jsx';
 import { Trending } from '../../components/Trending/index.jsx';
 import { cardsData } from '../../components/Categories/data.js';
-import { BestSelling } from '../../components/BestSelling/index.jsx';
-import { Footer } from '../../components/Footer/inex.jsx';
+import { BestSellingSection } from '../../components/BestSellingSection/index.jsx';
+import { Footer } from '../../components/Footer/index.jsx';
 
 export const LandingPage = () => {
     return (
@@ -20,10 +20,10 @@ export const LandingPage = () => {
             <Hero />
             <Categories />
             <Trending />
-            <BestSelling />
+            <BestSellingSection />
             <Banner />
             <NewItems />
-            <AppProducts />
+            {/* <AppProducts /> */}
             <CustomerDetails />
             <Footer />
             {/* <Title /> */}
