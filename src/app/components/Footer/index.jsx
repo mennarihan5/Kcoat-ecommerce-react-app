@@ -9,6 +9,16 @@ export const Footer = () => {
             <div className={styles.logo}>
                 <Logo />
             </div>
+            <div className={styles['footer-columns']}>
+                <div className={styles.column}>
+
+                </div>
+                <div className={styles.column}>
+
+                </div>
+                <div className={styles.column}>
+
+                </div>
             <div className={styles['footer-menu-wrapper']}>
                 <FooterMenu title="Profile" options={profileMenu} />
                 <FooterMenu title="Services" options={servicesMenu}/>
