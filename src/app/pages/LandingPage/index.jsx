@@ -9,10 +9,7 @@ import { Hero } from '../../components/Hero/index.jsx';
 import { Categories } from '../../components/Categories/index.jsx';
 import { Trending } from '../../components/Trending/index.jsx';
 import { cardsData } from '../../components/Categories/data.js';
-import { AppProducts } from '../../components/ProductCard/index.jsx';
-import { Hero } from '../../components/Hero/index.jsx';
-import { Categories } from '../../components/Categories/index.jsx';
-import { Trending } from '../../components/Trending/index.jsx';
+import { AppProducts } from '../../components/productcard/index.jsx';
 import { BestSellingSection } from '../../components/BestSellingSection/index.jsx';
 import { Footer } from '../../components/Footer/index.jsx';
 
@@ -26,7 +23,7 @@ export const LandingPage = () => {
             <BestSellingSection />
             <Banner />
             <NewItems />
-            {/* <AppProducts /> */}
+            <AppProducts />
             <CustomerDetails />
             <Footer />
             {/* <Title /> */}
