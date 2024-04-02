@@ -1,79 +1,39 @@
-import { FaHeart } from 'react-icons/fa'; // Importing the heart icon from react-icons library
-import dinnerGown from '../../assets/images/dinnerGown.svg';
-import pearlNecklace from '../../assets/images/pearlNecklace.svg';
-import stiletto from '../../assets/images/stiletto.svg';
-import shoulderBag from '../../assets/images/shoulderBag.svg';
-import vintage from '../../assets/images/vintage.svg';
-import menSuit from '../../assets/images/menSuit.svg';
-import styles from './styles.module.css';
-import ProductCard from './productData';
+import { productData } from './data';
+import styles from './style.module.css';
+import { FaRegHeart } from "react-icons/fa6";
+import { bestSellingData } from './data.js';
 
-
-
-    
-    const products = [
-      {
-        id: 1,
-        imageSrc: dinnerGown,
-        description: "Dinner Gown",
-        price: "$5,500",
-      },
-      {
-        id: 2,
-        imageSrc: pearlNecklace,
-        price: "$24.99",
-        description: "Pearl Necklace"
-      }
-      ,
-      {
-        id: 3,
-        imageSrc: stiletto,
-        price: "$29.99",
-        description: "Stiletto"
-      },
-      {
-        id: 4,
-        imageSrc: shoulderBag,
-        price: "$14.99",
-        description: "Shoulder Bag"
-      },
-      {
-        id: 5,
-        imageSrc: vintage,
-        price: "$34.99",
-        description: "Vintage Dress"
-      },
-      {
-        id: 6,
-        imageSrc: menSuit,
-        price: "$34.99",
-        description: "Men Suit"
-      }
-      
-    ];
-  
-
-    export function AppProducts () {
-    let counter = 1;
-    return (
-      <div className={styles["products"]}>
-      
-        {products.map(product => {
-          let cardClass = counter == 1 || counter == 6 ? styles['long-card'] : styles['short-card'];
-          
-          return (
-            <ProductCard
-              key={product.id}
-              imageSrc={product.imageSrc}
-              price={product.price}
-              description={product.description}
-              cardClass={cardClass}
-              id={styles['prodCard_' + counter]}
-              counter={counter++}
-            />
-          );
-        })}
-    
-      </div>
-    );
-  }
+export const ProductCard = (props) => {
+    return(
+        <div className={styles['products-card-wrapper']}>
+            {
+                props.trending && productData.map((product) => {
+                    return(
+                        <div className={styles['product-card']} key={product.id}>
+                            <div className={styles[`card-img`]}>
+                                <img src={product.image}/>
+                                <FaRegHeart />
+                            </div>
+                            <h4 className={styles[`card-title`]}>{product.title}</h4>
+                            <div className={styles.price}>₦{product.price}</div>
+                        </div>
+                    )
+                })
+            }
+            {
+                props.bestselling && bestSellingData.map((product) => {
+                    return(
+                        <div className={styles['product-card']} key={product.id}>
+                            <div className={styles[`card-img`]}>
+                                <img src={product.image}/>
+                                <FaRegHeart />
+                            </div>
+                            <h4 className={styles[`card-title`]}>{product.title}</h4>
+                            <div className={styles.price}>₦{product.price}</div>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
+}
