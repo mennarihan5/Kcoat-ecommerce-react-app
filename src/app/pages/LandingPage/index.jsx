@@ -12,6 +12,7 @@ import { Trending } from '../../components/Trending/index.jsx';
 import { cardsData } from '../../components/Categories/data.js';
 import App from '../../components/customerDetails/index.jsx';
 import { WhatPeopleSay } from '../../components/reviewSection/whatPeopleSay.jsx';
+import AppCards from '../../components/reviewCards/index.jsx';
 
 export const LandingPage = () => {
     return (
@@ -25,6 +26,7 @@ export const LandingPage = () => {
             <AppProducts />
             <App />
             <WhatPeopleSay />
+            <AppCards />
             {/* <Title /> */}
             
 
