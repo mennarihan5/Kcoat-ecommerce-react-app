@@ -12,7 +12,7 @@ export const Footer = () => {
             <div className={styles['footer-menu-wrapper']}>
                 <FooterMenu title="Profile" options={profileMenu} />
                 <FooterMenu title="Services" options={servicesMenu}/>
-                <FooterMenu title="Contact Us" options={contactMenu}/>
+                <FooterMenu title="Contact Us" options={contactMenu} contact={true}/>
             </div>
         </footer>
     )
