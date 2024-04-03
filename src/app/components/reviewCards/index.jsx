@@ -45,37 +45,37 @@ const reviews = [
   {
     image: reviewImage,
     text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John',
+    userName: 'John Eva 1',
     rating: 5,
   },
   {
     image: reviewImage,
     text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva',
+    userName: 'John Eva 2',
     rating: 5,
   },
   {
     image: reviewImage,
     text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva',
+    userName: 'John Eva 3',
     rating: 5,
   },
   {
     image: reviewImage,
     text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva',
+    userName: 'John Eva 4',
     rating: 5,
   },
   {
     image: reviewImage,
     text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva',
+    userName: 'John Eva 5',
     rating: 5,
   },
   {
     image: reviewImage,
     text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva',
+    userName: 'John Eva 6',
     rating: 5,
   },
   // Add more reviews here...

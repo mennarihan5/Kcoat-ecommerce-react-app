@@ -13,6 +13,7 @@ import { cardsData } from '../../components/Categories/data.js';
 import App from '../../components/customerDetails/index.jsx';
 import { WhatPeopleSay } from '../../components/reviewSection/whatPeopleSay.jsx';
 import AppCards from '../../components/reviewCards/index.jsx';
+import SubscriptionCard from '../../components/newsLetterSection/index.jsx';
 
 export const LandingPage = () => {
     return (
@@ -27,6 +28,7 @@ export const LandingPage = () => {
             <App />
             <WhatPeopleSay />
             <AppCards />
+            <SubscriptionCard />
             {/* <Title /> */}
             
 
