@@ -1,5 +1,7 @@
 import React from 'react';
-import styles from './style.module.css'; // Import CSS module for AppCards component
+import styles from './style.module.css';
+import reviewImage from '../../assets/images/reviewImage.jpg';
+
 
 
 const ReviewCard = ({ review }) => {
@@ -41,16 +43,40 @@ const ReviewCardsContainer = ({ reviews }) => {
 // Example usage
 const reviews = [
   {
-    image: 'image1.jpg',
-    text: 'This product is amazing! I would highly recommend it.',
-    userName: 'John Doe',
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John',
     rating: 5,
   },
   {
-    image: 'image2.jpg',
-    text: 'Not impressed with the quality. Could be better.',
-    userName: 'Jane Smith',
-    rating: 2,
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva',
+    rating: 5,
+  },
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva',
+    rating: 5,
+  },
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva',
+    rating: 5,
+  },
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva',
+    rating: 5,
+  },
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva',
+    rating: 5,
   },
   // Add more reviews here...
 ];
@@ -58,7 +84,6 @@ const reviews = [
 const AppCards = () => {
   return (
     <div className={styles.app}> {/* Use CSS module class name for styling */}
-      <h1>Product Reviews</h1>
       <ReviewCardsContainer reviews={reviews} />
     </div>
   );
