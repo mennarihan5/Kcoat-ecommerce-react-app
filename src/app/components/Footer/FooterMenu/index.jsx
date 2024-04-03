@@ -1,8 +1,9 @@
 import styles from './style.module.css';
 
-export const FooterMenu = ({title, options}) => {
+export const FooterMenu = ({title, options, contact}) => {
+    const contactCol = contact ? styles.contact : "";
     return(
-        <nav>
+        <nav className={`${styles['footer-nav']} ${contactCol}`}>
          <p className={styles['footer-menu-title']}>{title}</p>
             <ul className={styles['footer-menu-list']}>
                 {
@@ -14,10 +15,10 @@ export const FooterMenu = ({title, options}) => {
                                 </span>
                                 <li  className={styles['list-item-text']}>
                                     <a href={option.url}>{option.title}</a>
-                                    <span className={styles['social-media-icon']}>
-                                        {option.whatsappIcon}
-                                        {options.instagramIcon}
-                                        {option.facebookIcon}
+                                    <span className={styles['social-media-icons']}>
+                                        <span>{option.whatsappIcon}</span>
+                                        <span>{option.instagramIcon}</span>
+                                        <span>{option.facebookIcon}</span>
                                     </span>
                                 </li>
                             </div>

@@ -3,18 +3,23 @@
     font-weight: 500;
     padding: 0 4%;
     margin-bottom: 10%;
+    margin-left: 2%;
 }
 .footer-menu-list {
     margin: 0 5%;
 }
 .list-item {
     display: flex;
-
+    gap: 2%;
+    width: 15rem;
+    margin: 8% 0;
+    cursor: pointer;
 }
 .list-item-text {
     list-style: none;
     font-size: 1.25rem;
     font-weight: 400;
+    width: 100%;
 }
 .list-item a {
     text-decoration: none; 
@@ -22,4 +27,50 @@
 }
 .list-icon {
     align-self: flex-start;
+}
+.social-media-icons {
+    margin-left: -4%;
+    cursor: pointer;
+}
+.social-media-icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.social-media-icons span {
+    width: 100%;
+    margin-right: 7%;
+
+}
+.contact {
+    margin: 0 5%; 
+}
+.contact .footer-menu-list {
+    margin-top: -4%;
+}
+.contact .footer-menu-list .list-item {
+    width: 25rem;
+    
+}
+.contact .footer-menu-list .list-item .list-icon {
+    margin: 0 2%;
+}
+.contact .footer-menu-list .list-item .list-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+@media (max-width: 900px) {
+    .footer-nav {
+        width: 100%;
+    }
+    .contact .footer-menu-list .list-item .list-icon {
+        margin-left: -4%;
+    }
+    .contact .footer-menu-title {
+        margin-left: -3%;
+    }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+    .footer-nav {
+        width: 30%;
+    }
 }

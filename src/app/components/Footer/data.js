@@ -49,17 +49,17 @@ export const contactMenu = [
     {
         icon: <IoLocationOutline />,
         title: "74 group Tech4Dev, Lagos Nigeria",
-        url: "address"
+        url: "address",
     },
     {
         icon: <IoMailOutline />,
         title: "74 group @ Tech4Dev.com",
-        url: "email"
+        url: "email",
     },
     {
         icon: <LiaPhoneAltSolid />,
         title: +1234567890,
-        url: "phone-number"
+        url: "phone-number",
     },
     {
         whatsappIcon: <IoLogoWhatsapp />,
