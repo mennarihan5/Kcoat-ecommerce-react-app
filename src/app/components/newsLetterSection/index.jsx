@@ -11,11 +11,12 @@ class SubscriptionCard extends React.Component {
         </div>
         <div className={styles.subscriptionForm}>
           <form>
-            <label htmlFor="address">Enter Address:</label>
-            <input type="text" id="address" name="address" />
-            <button type="submit">Submit</button>
+            
+            <input type="text" id="address" name="address"  placeholder='Email Address'/>
+            <button type="submit">Subscribe</button>
+            <p>Terms & Conditions and privacy& Cookies policy</p>
           </form>
-          <p>Fill in your address to complete the subscription.</p>
+        
         </div>
       </div>
     );
