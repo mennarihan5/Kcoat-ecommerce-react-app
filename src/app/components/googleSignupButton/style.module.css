@@ -1,0 +1,51 @@
+/* LoginFormFooter.module.css */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    background: #7C7B5D;
+
+  }
+  
+  hr {
+    border: 1px solid #ccc;
+    width: 40%;
+  }
+  
+  .text {
+    margin: 10px 0;
+    color: #F5F5DC;
+  }
+  
+  .googleButton {
+    border: 2px solid white;
+    background-color: #7C7B5D;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .googleButton:hover {
+    border-color: blue;
+  }
+  
+  .gmailIcon {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .terms {
+    margin-top: 20px;
+    
+  }
+  
+  .link {
+    
+    text-decoration: underline;
+  }
+  
+  .link:hover {
+    color: darkblue;
+  }
+  

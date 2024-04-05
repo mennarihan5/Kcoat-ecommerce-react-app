@@ -15,6 +15,7 @@ import { WhatPeopleSay } from '../../components/reviewSection/whatPeopleSay.jsx'
 import AppCards from '../../components/reviewCards/index.jsx';
 import SubscriptionCard from '../../components/newsLetterSection/index.jsx';
 import LoginPage from '../LoginPage/index.jsx';
+// import LoginFormFooter from '../../components/googleSignupButton/index.jsx';
 
 export const LandingPage = () => {
     return (
@@ -31,6 +32,8 @@ export const LandingPage = () => {
             <AppCards />
             <SubscriptionCard />
             <LoginPage />
+            {/* <LoginFormFooter /> */}
+
             {/* <Title /> */}
             
 
