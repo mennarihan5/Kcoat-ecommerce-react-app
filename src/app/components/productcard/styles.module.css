@@ -1,26 +1,15 @@
-/* ProductCard.css */
-
-
 .product-image {
-  width: 100%; /* Adjust image width */
-  height: 90%; /* Adjust image height */
-  margin-bottom: 0px;
-  margin-top: 5px;
-  background-color: white;
-  
+  width: 100%;
+  height: auto; /* Change height to auto for responsive image */
+  margin-bottom: 5px; /* Add some margin for spacing */
 }
-
 
 .price {
   font-weight: bold;
-  width: 79px;
-height: 100px;
-gap: 0px;
-opacity: 0px;
-align-items: right;
-color: #988d8d;
-margin-left: 50px;
-
+  width: 100%; /* Adjust width to fill the container */
+  text-align: right; /* Align text to the right */
+  color: #988d8d;
+  margin-top: 5px; /* Add margin for spacing */
 
 }
 
@@ -28,91 +17,42 @@ margin-left: 50px;
   margin-top: 5px;
   font-size: 14px;
   color: black;
-  width: 184px;
-  height: 29px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 29.26px;
-  text-align: left;
-  font-family: Montserrat;
-  font-weight: 700;
-  line-height: 29.26px;
-  text-align: center;
-  margin-left: 50e;
+  text-align: center; /* Center-align the text */
 }
 
 .love-icon {
-  background-color:white;
-  gap: 0px;
-  opacity: 0px;
-  color: gray;
-  width: 41.67px;
-  gap: 0px;
-  opacity: 0px;
-  font-size: 25px;
-  border: 2px solid white;
-  border-radius: 100%;
-  align-items: center;
-  position: relative;
-  top: -60px;
-  bottom: 50px;
-  right: -120px;
-
+  width: 25px; /* Adjust width */
+  font-size: 20px; /* Adjust font size */
+  margin: 5px auto; /* Center horizontally */
 }
+
 .products {
-  display: flex; /* Use flexbox */
-
-  /* flex-wrap: wrap; Allow items to wrap to the next line */
-  justify-content: flex-start; /* Align items to the start of the flex container */
-  align-items: flex-start; /* Align items to the start of the flex container */
-  width: 1240px;
-  top: 4850px;
-  left: 20px;
-  gap: 10px;
-  opacity: 0px;
-  position: relative; 
-
+  display: grid; /* Use CSS grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create grid columns with minimum width of 200px */
+  gap: 20px; /* Add some gap between items */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px; /* Add margin for spacing */
 }
 
-
-.product-card{
+.product-card {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-   padding: 0 10px;
-  box-sizing: border-box;
-  background-color: white;
-  top: 5000px;
-}
-
-#prodCard_2{
-  background-color: white;
-  width: 100%;
-  min-height:  100px;
-  float: right;
-  margin-top: 0;
-  padding: 0;
-}
-
-#prodCard_1{
-  min-height: 100px;
-  margin-top: 0px;
-  background-color: white;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-bottom: 20px; /* Add margin for spacing */
 }
 
 .short-card {
+  width: 90%; /* Adjust width */
+  max-width: 250px; /* Limit maximum width */
+  min-height: 100px; /* Adjust minimum height */
   display: flex;
-  width: 290px;
- min-height: 400px;
-  gap: 0px;
-  opacity: 0px;
-  color: #D9D9D9;
-  display: inline-block;
-
-  
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items horizontally */
+  margin-bottom: 20px; /* Add margin for spacing */
+  margin-top: -420px;
 }
+
 

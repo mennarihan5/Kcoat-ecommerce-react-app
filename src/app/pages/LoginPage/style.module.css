@@ -1,0 +1,132 @@
+/* LoginPage.module.css */
+.loginContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background: #7C7B5D;
+    color: #fff;
+    font-family: Libre Baskerville;
+
+
+  }
+
+  /* .companyLogo{
+    color: #7C7B5D;
+    font-family: Libre Baskerville;
+    font-size: 32px; */
+    
+  
+
+  #welcome{
+    font-family: Libre Baskerville;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.68px;
+    text-align: center;
+        width: 252px;
+    height: 40px;
+    top: 137px;
+    left: 292px;
+    gap: 0px;
+    opacity: 0px;
+
+
+}
+  
+  .leftSection {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .companyLogo img {
+    width: 100px;
+  }
+  
+  .rightSection {
+    flex: 1;
+    position: relative;
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .loginForm {
+    width: 100%;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: calc(100% - 40px); /* Adjust width for password toggle */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .passwordToggle {
+    cursor: pointer;
+    position: relative;
+    top: 2%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+
+  #forgot {
+    color:  #F5F5DC;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color:#A3A17F80;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  #forgot:hover {
+    text-decoration: underline;
+    color: blue;
+    list-style: blue;
+  }
+  button:hover {
+    background-color: rgb(213, 213, 156)
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .loginContainer {
+      flex-direction: column;
+    }
+  
+    .leftSection,
+    .rightSection {
+      width: 100%;
+    }
+  }
+  
