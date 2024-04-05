@@ -1,21 +1,21 @@
 // LoginPage.js
 import React from 'react';
-import styles from './style.module.css';
-import logingirl from '../../assets/images/logingirl.jpg';
-import logo from '../../assets/images/logo.svg';
+import styles from './style.module.css'; // Import the styles for the login page
+import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
+import logo from '../../assets/images/logo.svg'; // Import the logo image
+
 const LoginPage = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
         <div className={styles.companyLogo}>
-          <img src={logo} alt="Company Logo"  />
+          <img src={logo} alt="Company Logo" />
         </div>
-        <h2 id={styles.welcome
-        }>Welcome Back</h2>
+        <h2>Welcome Back</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
             <label>Email</label>
-            <input type="email" placeholder="Tech4Dev@kcoat.com" />
+            <input type="email" placeholder="Enter your email" />
           </div>
           <div className={styles.formGroup}>
             <label>Password</label>
@@ -24,16 +24,15 @@ const LoginPage = () => {
           </div>
           <div className={styles.rememberForgot}>
             <label>
-              <input type="checkbox" /> Remember me?
+              <input type="checkbox" /> Remember me
             </label>
-            <a href="#" id={styles.forgot}>Forgot Password?</a>
+            <a href="#">Forgot Password?</a>
           </div>
           <button type="submit">Login</button>
         </form>
       </div>
-      <div className={styles.rightSection}>
-        <img src={logingirl} alt="Background Image" className={styles.backgroundImage} />
-      </div>
+      <LoginFormFooter /> {/* Include the component for the form footer */}
+      <div className={styles.rightSection}></div> {/* Right section for background image */}
     </div>
   );
 }
