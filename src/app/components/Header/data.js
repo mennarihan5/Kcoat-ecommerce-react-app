@@ -4,7 +4,7 @@ import {ReactComponent as HeartIcon} from '../../assets/images/heart.svg';
 import {ReactComponent as CartIcon} from '../../assets/images/cart.svg';
 
 export const userIcons = [
-    {
+    { 
         icon: <SearchIcon />
     },
     {
