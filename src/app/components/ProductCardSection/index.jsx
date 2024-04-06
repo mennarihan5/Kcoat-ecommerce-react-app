@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { productData } from './data.js';
 import { bestSellingData } from './data.js';
 import styles from './style.module.css';
