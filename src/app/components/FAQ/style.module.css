@@ -7,6 +7,7 @@
     font-family: 'Montserrat', sans-serif;
     width: 80%;
     padding: 5% 0;
+    gap: 5%;
 }
 .text {
     text-align: left;
@@ -16,11 +17,13 @@
     font-weight: 700;
     color: var(--olive);
     font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     margin-top: 5%;
 }
 .description {
     font-weight: 400;
     font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     color: var(--darkGrey);
     margin: 5% 0;
 }
@@ -31,6 +34,7 @@
     padding: 1.8% 4%;
     border-radius: 4px;
     font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     cursor: pointer;
 }
 .question {
@@ -48,6 +52,8 @@
     cursor: pointer;
     font-weight: 600;
     font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    text-align: left;
 }
 .icon {
     cursor: pointer;
@@ -55,6 +61,12 @@
 @media (max-width: 1200px) {
     .faq {
         width: 90%;
-        align-items: center;
+        justify-content: center;
+    }
+    .text {
+        text-align: center;
+    } 
+    .question {
+        width: 100%;
     }
 }
