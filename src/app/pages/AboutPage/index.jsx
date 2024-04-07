@@ -16,7 +16,7 @@ export const AboutPage = () => {
     return(
         <div className={styles.about}>
             <Header />
-            <Hero />
+            {/* <Hero /> */}
             <About />
             <Trending />
             {/* <Banner />
