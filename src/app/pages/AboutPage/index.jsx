@@ -18,14 +18,14 @@ export const AboutPage = () => {
             <Header />
             <Hero />
             <About />
-            {/* <Trending />
-            <Banner />
+            <Trending />
+            {/* <Banner />
             <NewItems />
-            <AppProducts />
-            <BestSellingSection /> */}
+            <AppProducts /> */}
+            <BestSellingSection />
             <FAQ />
             
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
