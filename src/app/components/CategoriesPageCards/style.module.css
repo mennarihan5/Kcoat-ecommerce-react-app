@@ -1,0 +1,48 @@
+.categories-page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.card {
+    width: 21.8rem;
+    position: relative;
+
+}
+.card img {
+    width: 100%;
+}
+.title {
+    background-color: var(--white);
+    padding: 2%;
+    box-shadow: 0px 4px 5px 0px var(--lightGrey);
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: "Montserrat", "Helvetica Neue";
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: rgba(40, 40, 40, 0.400);
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.title:hover {
+    color: var(--black);
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;   
+        margin: 5% 0; 
+    }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+
+    .card {
+        width: 48%;   
+        margin: 1% 0; 
+    }
+}
