@@ -1,34 +1,45 @@
-// LoginPage.js
+// SigniUnPage.js
 import React from 'react';
 import styles from './style.module.css'; // Import the styles for the login page
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
 import logo from '../../assets/images/logo.svg'; // Import the logo image
 
-const LoginPage = () => {
+const SignupPage = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
         <div className={styles.companyLogo}>
           <img src={logo} alt="Company Logo" />
         </div>
-        <h2>Welcome Back</h2>
+        <h2>Create your free account</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email" />
+            <label>Name</label>
+            <input type="name" placeholder="Full Name" />
           </div>
           <div className={styles.formGroup}>
+            <label>Email</label>
+            <input type="email" placeholder="Tech4Dev@kcoat.com" />
+            </div>
+            <div className={styles.formGroup}>
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" />
+            <input type="password"  />
             <span className={styles.passwordToggle}>&#x1F441;</span>
           </div>
+
+          <div className={styles.formGroup}>
+            <label>Confirm Password</label>
+            <input type="password"  />
+            <span className={styles.passwordToggle}>&#x1F441;</span>
+          </div>
+          
           <div className={styles.rememberForgot}>
             <label>
               <input type="checkbox" /> Remember me
             </label>
             <a href="#">Forgot Password?</a>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
       <LoginFormFooter /> {/* Include the component for the form footer */}
@@ -37,4 +48,4 @@ const LoginPage = () => {
   );
 }
 
-export default LoginPage;
+export default SignupPage;

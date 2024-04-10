@@ -1,12 +1,10 @@
-// LoginPage.js
 import React from 'react';
-import styles from './style.module.css'; // Import the styles for the login page
-import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
+import styles from './style.module.css'; // Import the styles for the login page 
 import logo from '../../assets/images/logo.svg'; // Import the logo image
 
-const LoginPage = () => {
-  return (
-    <div className={styles.loginContainer}>
+
+export function loginForm () {
+    return(
       <div className={styles.leftSection}>
         <div className={styles.companyLogo}>
           <img src={logo} alt="Company Logo" />
@@ -31,10 +29,5 @@ const LoginPage = () => {
           <button type="submit">Login</button>
         </form>
       </div>
-      <LoginFormFooter /> {/* Include the component for the form footer */}
-      <div className={styles.rightSection}></div> {/* Right section for background image */}
-    </div>
-  );
-}
-
-export default LoginPage;
+      );
+    }
