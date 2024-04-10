@@ -1,0 +1,21 @@
+.header {
+    width: 100%; /* Adjust width to fill the container */
+    max-width: 668px; /* Limit maximum width */
+    height: auto; /* Adjust height automatically based on content */
+    gap: 0px;
+    opacity: 0px;
+    font-family: Libre Baskerville;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.25; /* Adjust line-height for better responsiveness */
+    text-align: center;
+    color: #7C7B5D;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      font-size: 36px; /* Adjust font size for smaller screens */
+    }
+  }
+  
