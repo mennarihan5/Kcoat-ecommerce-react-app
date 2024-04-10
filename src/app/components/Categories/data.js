@@ -29,4 +29,3 @@ export const cardsData = [
     }
 ]
 
-console.log(cardsData)
