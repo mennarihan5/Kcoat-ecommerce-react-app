@@ -5,9 +5,12 @@ import google from '../../assets/images/googleIcon.png';
 const LoginFormFooter = () => {
   return (
     <div className={styles.footer}>
-      <hr />
+      <hr className={styles.line1} />
+      <hr className={styles.line2} />
       <p className={styles.text}>or</p>
-      <hr />
+    
+      
+      
       <button className={styles.googleButton}>
         <img src={google} alt="Gmail Icon" className={styles.gmailIcon} />
         Continue with Google
