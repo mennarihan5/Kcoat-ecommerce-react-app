@@ -4,18 +4,20 @@ import styles from './style.module.css'; // Import the styles for the login page
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
 import logo from '../../assets/images/logo.svg'; // Import the logo image
 
-const SignupPage = () => {
+export const SignupPage = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
         <div className={styles.companyLogo}>
           <img src={logo} alt="Company Logo" />
         </div>
-        <h2>Create your free account</h2>
+        <h2 className={styles.create}>Create your free account</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
+          <div className={styles.formGroup}>
             <label>Name</label>
-            <input type="name" placeholder="Full Name" />
+            <input type="email" placeholder="Full Name" />
+            </div>
           </div>
           <div className={styles.formGroup}>
             <label>Email</label>
@@ -37,12 +39,13 @@ const SignupPage = () => {
             <label>
               <input type="checkbox" /> Remember me
             </label>
-            <a href="#">Forgot Password?</a>
+            <a href="#" className={styles.forgot}>Forgot Password?</a>
           </div>
           <button type="submit">Sign Up</button>
         </form>
+        <LoginFormFooter />
       </div>
-      <LoginFormFooter /> {/* Include the component for the form footer */}
+      {/* <LoginFormFooter /> Include the component for the form footer */}
       <div className={styles.rightSection}></div> {/* Right section for background image */}
     </div>
   );
