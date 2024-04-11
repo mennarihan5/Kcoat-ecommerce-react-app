@@ -191,10 +191,11 @@ hr {
 }
 
 .rightSection {
-  flex: 3; /* Adjust flex ratio as needed */
+  flex: 2; /* Adjust flex ratio as needed */
   background-image: url(../../assets/images/logingirl.jpg); /* Add background image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the background image */
+  position: relative;
 }
 
 /* Other styles remain the same */

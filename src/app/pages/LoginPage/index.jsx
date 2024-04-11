@@ -11,10 +11,10 @@ export const LoginPage = () => {
         <div className={styles.companyLogo}>
           <img src={logo} alt="Company Logo" />
         </div>
-        <h2>Welcome Back</h2>
+        <h2 className={styles.welcome}>Welcome Back</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
-            <label>Email</label>
+            <label className={styles.email}>Email</label>
             <input type="email" placeholder="Enter your email" />
           </div>
           <div className={styles.formGroup}>
@@ -26,12 +26,13 @@ export const LoginPage = () => {
             <label>
               <input type="checkbox" /> Remember me
             </label>
-            <a href="#">Forgot Password?</a>
+            <a href="#" className={styles.forgot}>Forgot Password?</a>
           </div>
           <button type="submit">Login</button>
         </form>
+        <LoginFormFooter /> 
       </div>
-      <LoginFormFooter /> {/* Include the component for the form footer */}
+      {/* <LoginFormFooter /> Include the component for the form footer */}
       <div className={styles.rightSection}></div> {/* Right section for background image */}
     </div>
   );
