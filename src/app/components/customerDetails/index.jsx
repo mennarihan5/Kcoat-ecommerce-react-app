@@ -1,40 +1,63 @@
-import react from 'react';
+// imp
+import React from 'react';
 import styles from './style.module.css';
-import firstbutton from '../../assets/images/firstbutton.svg';
+import firstButton from '../../assets/images/firstbutton.svg';
 import flexiblePayment from '../../assets/images/flexiblePayment.svg';
 import customerSupport from '../../assets/images/customerSupport.svg';
 import buyersProtection from '../../assets/images/buyersProtection.svg';
 
-export const CustomerDetails = () => {
-    return (<div>
-    <div className={styles.customerDetails}>
-        <img src={firstbutton} alt="firstbutton" className={styles.firstbutton} />
-        <h1 className={styles.firstbuttonText}>Worldwide Delivery</h1>
-        <p className={styles.paragraph}>To your destination</p>
-        <div class="vertical-line"></div>
 
-        <div className={styles.flexiblePayment}>
-            <img src={flexiblePayment} alt="flexiblePayment" className={styles.flexiblePayment} />
-            <h1 className={styles.flexiblePaymentText}>Flexible Payment</h1>
-            <p className={styles.paragraph}>Payment with choices</p>
-            <div class="vertical-line"></div>
-        </div>
-
-        <div className={styles.customerSupport}>
-            <img src={customerSupport} alt="customerSupport" className={styles.customerSupport} />
-            <h1 className={styles.customerSupportText}>Customer Support</h1>
-            <p className={styles.paragraph}>24/7 Online Support</p>
-            <div class="vertical-line"></div>
-        </div>
-
-        <div className={styles.buyersProtection}>
-            <img src={buyersProtection} alt="buyersProtection" className={styles.buyersProtection} />
-            <h1 className={styles.buyersProtectionText}>Buyers Protection</h1>
-            <p className={styles.paragraph}>Secured Payment</p>
-            <div class="vl"></div>
-        </div>
+function Card({ logo, heading, description }) {
+  return (
+    <div className={styles.card}>
+      {/* Logo */}
+      <div className={styles.logo}>
+        <img src={logo} alt="Logo" />
+      </div>
+      {/* Content */}
+      <div className={styles.content}>
+        {/* Heading */}
+        <div className={styles.heading}>{heading}</div>
+        {/* Description */}
+        <div className={styles.description}>{description}</div>
+      </div>
+  
     </div>
-</div>
-    )
+  );
 }
-export default CustomerDetails;
+
+function App() {
+  // Sample data for cards
+  const cardsData = [
+    {
+      logo: firstButton,
+      heading: 'Worldwide Delivery',
+      description: 'To your destination',
+    },
+    {
+      logo: flexiblePayment,
+  heading: 'Flexible payment',
+  description: 'Payment with choices',
+    },
+    {
+      logo: customerSupport,
+  heading: 'Customer SupportCard',
+  description: '24/7 Online Support',
+    },
+    {
+      logo: buyersProtection,
+  heading: 'Buyers Protection',
+  description: 'Secured Payment',
+    },
+  ];
+
+  return (
+    <div className={styles.app}>
+      {cardsData.map((card, index) => (
+        <Card key={index} logo={card.logo} heading={card.heading} description={card.description} />
+      ))}
+    </div>
+  );
+}
+
+export default App;

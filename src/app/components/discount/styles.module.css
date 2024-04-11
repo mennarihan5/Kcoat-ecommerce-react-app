@@ -1,103 +1,173 @@
-/* Banner.css */
+.discount1, .discount2 {
+  width: 100%;
+  max-width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #EDE9E6;
+  line-height: normal;
+  position: relative;
+  margin-right: 50px;
+  gap: 2px;
+}
+
+.discountText {
+  width: 20%;
+  background-color: white;
+  height: auto;
+  font-size: 12px;
+  line-height: normal;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 1; /* Set z-index to 1 to ensure it appears above the banner */
+  border: 2px solid transparent;
+  padding: 20px;
+  display: inline;
+}
+
+.discountSection {
+  width: 50%;
+  max-width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  margin-right: 20px;
+  position: relative; /* Use relative positioning for overlap */
+  z-index: 2;
+  background-color: white;
+  }
+
 .banner {
-    margin: 0;
-    padding: 0;
-    width: 1,443px;
-    height: Hug (347px)px;
-    top: 4336px;
-    opacity: 0px;  
+  margin: 0;
+  padding: 0;
+  max-width: 1443px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+}
+
+.discount1 {
+  display: flex;
+  position: absolute;
+  margin-left: 50px;
+  gap: 20px;
+  z-index: -1;
+}
+
+.discount2 {
+  margin-right: 0;
+  gap: 20px;
+}
+  
+  .discount1, .discount2 {
+    width: 100%; /* Set width to 100% to make them take up the full width */
+    max-width: 40%; /* Limit maximum width to 50% to ensure they stay side by side */
+    height: auto; /* Adjust height automatically based on content */
     display: flex;
+    gap: 0px;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-
+    justify-content: center;
+    color: #EDE9E6; /* Adjust text color */
+    line-height: normal; /* Reset line height */
+    position: relative; /* Use relative positioning */
+    margin-right: 20px; /* Add some margin between the boxes */
+    z-index: 1; /* Set z-index to 1 to ensure they appear above the banner */
   }
   
-  .discount1 {
-
-    display: flex;
-    position:absolute;
-    width: 50%;
-    height: 347px;
-    right:0;
-    gap: 0px;
-    opacity: 0px;
-    gap: 0px;
-    opacity: 0px;
-    position: absolute;
-    left: 0;
-    margin-right: 20px;
-    line-height: 100px;
-  }
-  
-  .discount2 {
-    display: flexbox;
-    position:absolute;
-    width: 50%;
-    height: 347px;
-    right: 0;
-    gap: 0px;
-    opacity: 0px;
-    color: #EDE9E6;
-    position: absolute;
-    line-height: 49.6px;
-  }
-
   .discountText {
-  width: 280px;
-  height: 50px;
+    /* width: 20%; Adjust width */
+    height: auto;
+    line-height: normal; /* Reset line height */
+    text-align: center; /* Center align text */
+    margin: 20px; /* Center horizontally */
+    margin-left: 2%;
+    width: 580px;
   gap: 0px;
   opacity: 0px;
   font-family: Libre Baskerville;
   font-size: 40px;
   font-weight: 700;
-  line-height: 49.6px;
-  text-align: left;
   color: #7C7B5D;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1; /* Make sure the middle box appears on top */
-}
-
-
-  .paragraph {
+  margin-bottom: 100px;
+  padding: 10px;
   
-    /* width: 294px;  */
-    height: 120px; 
-    gap: 0px;
-    opacity: 0px;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 180px;
-    color: #282828;
-    text-align: center;
-    margin-left: -22px;
   }
-
-
+  
   .discountSection {
-    position: absolute;
-    width: 538px;
-    height: 239px;
-    gap: 10px;
-    opacity: 0px;
-    background: #FFFFFF;
+    width: 10%; /* Adjust width */
+    max-width: 20%; /* Limit maximum width to 50% */
+    height: auto; /* Adjust height automatically based on content */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 2px;
+    margin-right: 20px; /* Add some margin between the boxes */
+    background-color:white;
+    border: 2px;
+    margin-top: 100px;
+    
+  }
+  
+  .banner {
+    margin: 0;
+    padding: 0;
+    max-width: 1443px; /* Set maximum width */
+    width: 100%; /* Make it responsive */
+    height: auto; /* Adjust height automatically based on content */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if necessary */
+        
+  }
+  
+  
+  .discount1 {
     z-index: 1;
-    margin-right: 20px;
-    margin-left: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    margin-left: 5%;
+    padding-left: 0;
+    margin-right: 50px;
+    
+  }
+  
+  .discount2 {
+    margin-right: 0;
+    gap: 2px;
+    z-index: -1;
+    
   }
 
-  .link{
-    width: 104px;
+.paragraph{
+
+   /* width: 294px;  */
+   height: 10px;
+   gap: 0px;
+   opacity: 0px;
+   font-family: Montserrat;
+   font-size: 12px;
+   font-weight: 500;
+   color: #282828;
+   text-align: center;
+   margin-top: 50px;
+   margin-left: -40px;
+}
+
+.link{
+  width: 104px;
     height: 24px;
     gap: 0px;
     opacity: 0px;
@@ -108,27 +178,20 @@
     text-align: center;
     color: #7C7B5D;
     text-decoration: underline;
-    
+    margin-top: 40px;
+    margin-right:20px;
+}
 
+.card {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
 
-
-  }
-
-  
-  .card-container {
-    position: absolute;
-    left: 30%;
-    right: 30%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .card {
-    background-color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
-  
-  /* Adjust the styles as needed */
-  
+.para {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--black);
+  margin-top: 1.2%;
+}
