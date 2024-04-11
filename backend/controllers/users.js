@@ -14,8 +14,12 @@ const about = async(req, res)=>{
 }
 
 const login = async(req,res)=>{
+    //return login status
     const token = jwt.sign(users,secret)
     console.log(token)
 }
+const details = async(req,res)=>{
+    console.log({message:"details"})
+}
 
-module.exports = {home, about, login}
+module.exports = {home, about, login, details}
