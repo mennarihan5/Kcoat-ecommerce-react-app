@@ -23,6 +23,7 @@ import { BestSellingSection } from '../../components/BestSellingSection/index.js
 import { Footer } from '../../components/Footer/index.jsx';
 //Fixing githib conflicts
 
+
 export const LandingPage = () => {
     return (
         <section className={styles.header}>
@@ -33,8 +34,9 @@ export const LandingPage = () => {
             <BestSellingSection />
             <Banner />
             <NewItems />
+
             <AppProducts />
-//Fixing githib conflicts
+{/* //Fixing githib conflicts */}
             <App />
             <WhatPeopleSay />
             <AppCards />
@@ -46,11 +48,9 @@ export const LandingPage = () => {
             {/* <Title /> */}
             
 
-// =======
-            <CustomerDetails />
+            <customerDetails />
               {/* <Title /> */}
             <Footer />
-// >>>>>>> main
         </section>
     )
 }

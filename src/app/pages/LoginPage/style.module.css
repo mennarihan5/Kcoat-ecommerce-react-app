@@ -5,7 +5,7 @@
     background: #7C7B5D;
     color: #fff;
     font-family: Libre Baskerville;
-
+    height: 1024px;
 
   }
 
@@ -14,20 +14,27 @@
     font-family: Libre Baskerville;
     font-size: 32px; */
     
+  .passwordToggle {
+    cursor: pointer;
+    position: relative;
   
+    
+  
+  }
 
-  #welcome{
+  .welcome{
     font-family: Libre Baskerville;
     font-size: 32px;
     font-weight: 700;
     line-height: 39.68px;
     text-align: center;
-        width: 252px;
-    height: 40px;
-    top: 137px;
-    left: 292px;
-    gap: 0px;
-    opacity: 0px;
+  width: 252px;
+  height: 40px;
+left: 292px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 30%;
+          
 
 
 }
@@ -39,6 +46,14 @@
   
   .companyLogo img {
     width: 100px;
+    width: 119px;
+    height: 47px;
+    top: 64px;
+    left: 358px;
+    gap: 0px;
+    opacity: 0px;
+    margin-bottom: 100px;
+
   }
   
   .rightSection {
@@ -93,7 +108,7 @@
     
   }
 
-  #forgot {
+  .forgot {
     color:  #F5F5DC;
     cursor: pointer;
     text-decoration: none;
@@ -110,11 +125,12 @@
     
     
   }
-  #forgot:hover {
+  .forgot:hover {
     text-decoration: underline;
-    color: blue;
-    list-style: blue;
+    color: blue; 
   }
+
+
   button:hover {
     background-color: rgb(213, 213, 156)
     
@@ -191,7 +207,7 @@ hr {
 }
 
 .rightSection {
-  flex: 3; /* Adjust flex ratio as needed */
+  flex: 2; /* Adjust flex ratio as needed */
   background-image: url(../../assets/images/logingirl.jpg); /* Add background image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the background image */

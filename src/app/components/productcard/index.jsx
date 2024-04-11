@@ -7,6 +7,7 @@ import vintage from '../../assets/images/vintage.svg';
 import menSuit from '../../assets/images/menSuit.svg';
 import styles from './styles.module.css';
 import ProductCard from './productData';
+import vector from '../../assets/images/vector.svg';
 
 
 
