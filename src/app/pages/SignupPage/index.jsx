@@ -4,7 +4,7 @@ import styles from './style.module.css'; // Import the styles for the login page
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
 import logo from '../../assets/images/logo.svg'; // Import the logo image
 
-const SignupPage = () => {
+export const SignupPage = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
