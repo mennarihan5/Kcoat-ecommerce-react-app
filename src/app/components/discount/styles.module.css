@@ -9,22 +9,26 @@
   color: #EDE9E6;
   line-height: normal;
   position: relative;
-  margin-right: 20px;
+  margin-right: 50px;
+  gap: 2px;
 }
 
 .discountText {
   width: 20%;
   background-color: white;
   height: auto;
-  font-size: 32px;
+  font-size: 12px;
   line-height: normal;
   text-align: center;
   margin: 0 auto;
   z-index: 1; /* Set z-index to 1 to ensure it appears above the banner */
+  border: 2px solid transparent;
+  padding: 20px;
+  display: inline;
 }
 
 .discountSection {
-  width: 20%;
+  width: 50%;
   max-width: 20%;
   height: auto;
   display: flex;
@@ -179,4 +183,12 @@
   background-color: white;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+.para {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--black);
+  margin-top: 1.2%;
 }
