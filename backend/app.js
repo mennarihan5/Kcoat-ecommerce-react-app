@@ -10,10 +10,20 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended: true}))
 
+app.use(cors());
 
 //routers
 
-const router = require('./routes/rts.js');
+const {router} = require('./routes/rts.js');
+app.use((req, res, next)=>{
+    res.locals.username = "myUsername"
+    next()
+})
+
+app.use((req, res, next) => {
+  console.log(res.locals.username);
+  next();
+});
 
 app.use('/', router)
 
