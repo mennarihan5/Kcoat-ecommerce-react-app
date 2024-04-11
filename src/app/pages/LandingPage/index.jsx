@@ -47,6 +47,7 @@ export const LandingPage = () => {
 
             {/* <Title /> */}
             
+
             <customerDetails />
               {/* <Title /> */}
             <Footer />
