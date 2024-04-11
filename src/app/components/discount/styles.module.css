@@ -73,7 +73,7 @@
     max-width: 40%; /* Limit maximum width to 50% to ensure they stay side by side */
     height: auto; /* Adjust height automatically based on content */
     display: flex;
-    gap: 2px;
+    gap: 0px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -85,13 +85,13 @@
   }
   
   .discountText {
-    width: 20%; /* Adjust width */
+    /* width: 20%; Adjust width */
     height: auto;
     line-height: normal; /* Reset line height */
     text-align: center; /* Center align text */
-    margin: 0 auto; /* Center horizontally */
+    margin: 20px; /* Center horizontally */
     margin-left: 2%;
-    width: 280px;
+    width: 580px;
   gap: 0px;
   opacity: 0px;
   font-family: Libre Baskerville;
@@ -103,6 +103,7 @@
   transform: translateX(-50%);
   z-index: 1; /* Make sure the middle box appears on top */
   margin-bottom: 100px;
+  padding: 10px;
   
   }
   
@@ -114,10 +115,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 2px;
     margin-right: 20px; /* Add some margin between the boxes */
     background-color:white;
     border: 2px;
+    margin-top: 100px;
+    
   }
   
   .banner {
@@ -135,7 +138,7 @@
   
   .discount1 {
     z-index: 1;
-    margin-left: 0%;
+    margin-left: 5%;
     padding-left: 0;
     margin-right: 50px;
     
