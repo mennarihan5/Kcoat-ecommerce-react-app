@@ -43,16 +43,18 @@
   margin-bottom: 20px; /* Add margin for spacing */
 }
 
-.short-card {
-  width: 90%; /* Adjust width */
-  max-width: 250px; /* Limit maximum width */
-  min-height: 100px; /* Adjust minimum height */
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: space-between; /* Space items evenly */
-  align-items: center; /* Center items horizontally */
-  margin-bottom: 20px; /* Add margin for spacing */
-  margin-top: -420px;
+
+.vector {
+  /* width: 19%; */
+  height: auto; /* Change height to auto for responsive image */
+  margin-bottom: 5px; /* Add some margin for spacing */
+  width: 30px;
+height: 50px;
+gap: 0px;
+opacity: 0px;
+margin-top: -50px;
+margin-left: 70%;
+background-color: white;
+border-radius: 100%
+
 }
-
-
