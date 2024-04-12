@@ -7,7 +7,7 @@ export const ProductsGrid = () => {
     const [data ,setData] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products")
+        fetch("https://fakestoreapi.com/products")
         .then(res => res.json())
         .then((apiData) => {
             setData(apiData);
@@ -24,7 +24,7 @@ export const ProductsGrid = () => {
                     return (
                         <div className={styles['product-card']} key={product.id}>
                             <div className={styles.heart}><FaRegHeart /></div>
-                            <img src={product.images} alt={product.title} />
+                            <img src={product.image} alt={product.title} />
                             <h3 className={styles.title}>{product.title}</h3>
                             <p className={styles.price}>{product.price} $</p>
                             <div className={styles.stars}>
