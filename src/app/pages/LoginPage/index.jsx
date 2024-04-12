@@ -44,7 +44,7 @@ export const LoginPage = () => {
         </form>
         <div>
         {/* Add a link to the signup page */}
-        <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+        <p className={styles.account}>Don't have an account? <Link to="/signup" className={styles.signup}>Sign Up</Link></p>
       </div>
         <LoginFormFooter /> 
       </div>

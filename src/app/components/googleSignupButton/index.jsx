@@ -19,6 +19,7 @@ const LoginFormFooter = () => {
         By continuing, you agree to the <span className={styles.link}>Terms of Service</span> and <span className={styles.link}>Private Policy</span>.
       </p>
       <p className={styles.already}>Already have an account? <a href="#" className={styles.login}>Log In</a></p>
+      
     </div>
   );
 }

@@ -52,7 +52,7 @@ export const LandingPage = () => {
             <customerDetails />
               {/* <Title /> */}
             <Footer />
-            <LoginPage />
+            
         </section>
     )
 }
