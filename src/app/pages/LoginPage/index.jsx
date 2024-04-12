@@ -1,10 +1,12 @@
-// LoginPage.js
-import React from 'react';
-import styles from './style.module.css'; // Import the styles for the login page
-import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
-import logo from '../../assets/images/logo.svg'; // Import the logo image
+import React, { useState } from 'react';
+import styles from './style.module.css'; 
+import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; 
+import logo from '../../assets/images/logo.svg'; 
+import eye from '../../assets/images/Right Content.jpg'; 
 
 export const LoginPage = () => {
+  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
@@ -19,8 +21,16 @@ export const LoginPage = () => {
           </div>
           <div className={styles.formGroup}>
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" />
-            <span className={styles.passwordToggle}>&#x1F441;</span>
+            <input 
+              type={showPassword ? 'text' : 'password'} // Toggle password visibility
+              placeholder="Enter your password" 
+            />
+            <img 
+              src={eye} 
+              alt="Eye Icon" 
+              className={styles.passwordToggle} 
+              onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+            />
           </div>
           <div className={styles.rememberForgot}>
             <label>
@@ -32,8 +42,7 @@ export const LoginPage = () => {
         </form>
         <LoginFormFooter /> 
       </div>
-      {/* <LoginFormFooter /> Include the component for the form footer */}
-      <div className={styles.rightSection}></div> {/* Right section for background image */}
+      <div className={styles.rightSection}></div>
     </div>
   );
 }
