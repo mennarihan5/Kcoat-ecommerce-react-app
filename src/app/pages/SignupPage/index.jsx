@@ -26,7 +26,7 @@ export const SignupPage = () => {
             <div className={styles.formGroup}>
             <label>Password</label>
             <input type="password"  />
-            <span className={styles.passwordToggle}>&#x1F441;</span>
+            <span className={styles.passwordToggle}>&#x1F441;</span> 
           </div>
 
           <div className={styles.formGroup}>

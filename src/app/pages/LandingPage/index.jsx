@@ -16,7 +16,7 @@ import AppCards from '../../components/reviewCards/index.jsx';
 import SubscriptionCard from '../../components/newsLetterSection/index.jsx';
 // import LoginPage from '../LoginPage/index.jsx';
 // import SignupPage from '../SignupPage/index.jsx';
-// import LoginFormFooter from '../../components/googleSignupButton/index.jsx';
+import LoginFormFooter from '../../components/googleSignupButton/index.jsx';
 //Fixing githib conflicts
 import { AppProducts } from '../../components/productcard/index.jsx';
 import { BestSellingSection } from '../../components/BestSellingSection/index.jsx';
@@ -44,7 +44,7 @@ export const LandingPage = () => {
             <SubscriptionCard />
             {/* <LoginPage />
             <SignupPage /> */}
-            {/* <LoginFormFooter /> */}
+            <LoginFormFooter />
 
             {/* <Title /> */}
             
