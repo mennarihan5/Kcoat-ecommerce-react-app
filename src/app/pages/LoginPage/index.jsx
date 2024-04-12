@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './style.module.css'; 
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; 
 import logo from '../../assets/images/logo.svg'; 
+import { Link } from 'react-router-dom';
+
 import eye from '../../assets/images/Right Content.jpg'; 
 
 export const LoginPage = () => {
@@ -11,7 +13,7 @@ export const LoginPage = () => {
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
         <div className={styles.companyLogo}>
-          <img src={logo} alt="Company Logo" />
+          <img src={logo} alt="Company Logo" transparentBackground={false}/>
         </div>
         <h2 className={styles.welcome}>Welcome Back</h2>
         <form className={styles.loginForm}>
@@ -40,6 +42,10 @@ export const LoginPage = () => {
           </div>
           <button type="submit">Login</button>
         </form>
+        <div>
+        {/* Add a link to the signup page */}
+        <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+      </div>
         <LoginFormFooter /> 
       </div>
       <div className={styles.rightSection}></div>

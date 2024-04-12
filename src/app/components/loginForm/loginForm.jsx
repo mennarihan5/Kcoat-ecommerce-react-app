@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.css'; // Import the styles for the login page 
-import { Logo } from '../Logo';
+import { Logo} from '../../components/Logo/index.jsx';
 // import logo from '../../assets/images/vintage.svg'; // Import the logo image
 
 
