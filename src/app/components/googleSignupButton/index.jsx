@@ -13,12 +13,12 @@ const LoginFormFooter = () => {
       
       <button className={styles.googleButton}>
         <img src={google} alt="Gmail Icon" className={styles.gmailIcon} />
-        Continue with Google
+       <span className={styles.continue}>Continue with Google</span>
       </button>
       <p className={styles.terms}>
         By continuing, you agree to the <span className={styles.link}>Terms of Service</span> and <span className={styles.link}>Private Policy</span>.
       </p>
-      <p>Already have an account? <a href="#">Log In</a></p>
+      <p className={styles.already}>Already have an account? <a href="#" className={styles.login}>Log In</a></p>
     </div>
   );
 }
