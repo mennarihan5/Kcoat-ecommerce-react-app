@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 import google from '../../assets/images/googleIcon.png';
+import { Link } from 'react-router-dom';
 
 const LoginFormFooter = () => {
   return (
@@ -18,7 +19,9 @@ const LoginFormFooter = () => {
       <p className={styles.terms}>
         By continuing, you agree to the <span className={styles.link}>Terms of Service</span> and <span className={styles.link}>Private Policy</span>.
       </p>
-      <p className={styles.already}>Already have an account? <a href="#" className={styles.login}>Log In</a></p>
+      {/* <p className={styles.already}>Already have an account? <Link  className={styles.login}>Log In</a></p> */}
+      <p className={styles.account}>Already have an account? <Link to="/login" className={styles.login}>Log In</Link></p>
+
       
     </div>
   );
