@@ -210,3 +210,7 @@ hr {
 .forgot:hover{
   color: blue;
 }
+
+.passwordToggle{
+  margin: -20px;
+}
