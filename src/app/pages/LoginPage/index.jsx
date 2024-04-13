@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styles from './style.module.css'; 
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; 
-import logo from '../../assets/images/logo.svg'; 
+// import logo from '../../assets/images/logo.svg'; 
 import { Link } from 'react-router-dom';
+import { Logo } from '../../components/Logo/index.jsx';
 
 import eye from '../../assets/images/Right Content.jpg'; 
 
@@ -12,9 +13,13 @@ export const LoginPage = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
-        <div className={styles.companyLogo}>
+      <div className={styles.logo}>
+                <Logo className={styles.img} background={false}/>
+            </div>    
+
+        {/* <div className={styles.companyLogo}>
           <img src={logo} alt="Company Logo" transparentBackground={false}/>
-        </div>
+        </div> */}
         <h2 className={styles.welcome}>Welcome Back</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
