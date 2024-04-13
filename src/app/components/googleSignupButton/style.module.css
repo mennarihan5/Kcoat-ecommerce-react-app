@@ -96,9 +96,17 @@ opacity: 0px;
   .link {
     
     text-decoration: underline;
+    font-family: Montserrat;
+    
   }
   
   .link:hover {
     color: darkblue;
+  }
+
+  .account {
+    font-family: Montserrat;
+    color: white;
+    margin-top: 10px;
   }
   

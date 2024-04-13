@@ -5,7 +5,15 @@
     background: #7C7B5D;
     color: #fff;
     font-family: Libre Baskerville;
-    height: 1024px;
+    /* height: 1024px; */
+
+    @media (max-width: 768px) {
+      .loginContainer {
+          flex-direction: column;
+          height: auto; /* Adjust height for responsiveness */
+      }
+    }
+
 
   }
 
