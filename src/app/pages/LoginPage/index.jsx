@@ -26,7 +26,7 @@ export const LoginPage = () => {
         setRedirectTo('/'); // Redirect regular user to landing page
       }
     } else {
-      setError('Incorrect email or password'); // Display error message for incorrect credentials
+      setError(<span style={{ color: 'blue'}}>Incorrect email or password</span>); 
     }
   };
 
