@@ -1,54 +1,70 @@
 import React, { useState } from 'react';
 import styles from './style.module.css'; 
-import loginButtonfunctionalities from './loginButton.js';
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; 
-// import logo from '../../assets/images/logo.svg'; 
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Logo } from '../../components/Logo/index.jsx';
-
-import eye from '../../assets/images/Right Content.jpg'; 
-
+import eye from '../../assets/images/Right Content.jpg';
+import userData from '../../.env/acoount.json';
 
 export const LoginPage = () => {
-  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [redirectTo, setRedirectTo] = useState('');
 
-  const handleClick = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault(); // Prevent the default form submission
-    // Add your login logic here
-    console.log('Login button clicked');
 
-    const data = require('../../.env/acoount.json');
-    console.log(data);
+    const user = userData.find(user => user.email === email && user.password === password);
+
+    if (user) {
+      if (user['account-type'] > 0) {
+        setRedirectTo('/admin-dashboard'); // Redirect admin user to admin dashboard
+      } else {
+        setRedirectTo('/'); // Redirect regular user to landing page
+      }
+    } else {
+      setError('Incorrect email or password'); // Display error message for incorrect credentials
+    }
+  };
+
+  if (redirectTo) {
+    return <Navigate to={redirectTo} />;
   }
-
 
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
-      <div className={styles.logo}>
-                <Logo className={styles.img} background={false}/>
-            </div>    
+        <div className={styles.logo}>
+          <Logo className={styles.img} background={false}/>
+        </div>    
 
-        {/* <div className={styles.companyLogo}>
-          <img src={logo} alt="Company Logo" transparentBackground={false}/>
-        </div> */}
         <h2 className={styles.welcome}>Welcome Back</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
             <label className={styles.email}>Email</label>
-            <input type="email" placeholder="Enter your email" />
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              value={email} 
+              onChange={e => setEmail(e.target.value)} 
+            />
           </div>
           <div className={styles.formGroup}>
             <label>Password</label>
             <input 
-              type={showPassword ? 'text' : 'password'} // Toggle password visibility
+              type={showPassword ? 'text' : 'password'} 
               placeholder="Enter your password" 
+              value={password} 
+              onChange={e => setPassword(e.target.value)} 
             />
             <img 
               src={eye} 
               alt="Eye Icon" 
               className={styles.passwordToggle} 
-              onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+              onClick={() => setShowPassword(!showPassword)} 
             />
           </div>
           <div className={styles.rememberForgot}>
@@ -57,14 +73,12 @@ export const LoginPage = () => {
             </label>
             <a href="#" className={styles.forgot}>Forgot Password?</a>
           </div>
-          <button id={styles.loginButton} type="submit" onClick={handleClick}>Login</button>
-
-          {/* <button id={styles.loginButton} type="submit">Login</button> */}
+          <button id={styles.loginButton} type="submit" onClick={handleLogin}>Login</button>
         </form>
+        {error && <p>{error}</p>}
         <div>
-        {/* Add a link to the signup page */}
-        <p className={styles.account}>Don't have an account? <Link to="/signup" className={styles.signup}>Sign Up</Link></p>
-      </div>
+          <p className={styles.account}>Don't have an account? <Link to="/signup" className={styles.signup}>Sign Up</Link></p>
+        </div>
         <LoginFormFooter /> 
       </div>
       <div className={styles.rightSection}></div>
