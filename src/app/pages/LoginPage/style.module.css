@@ -5,7 +5,15 @@
     background: #7C7B5D;
     color: #fff;
     font-family: Libre Baskerville;
-    height: 1024px;
+    /* height: 1024px; */
+
+    @media (max-width: 768px) {
+      .loginContainer {
+          flex-direction: column;
+          height: auto; /* Adjust height for responsiveness */
+      }
+    }
+
 
   }
 
@@ -19,7 +27,7 @@
     position: relative;
   
     
-  
+
   }
 
   .welcome{
@@ -92,13 +100,16 @@ left: 292px;
     border-radius: 5px;
   }
   
-  .passwordToggle {
-    cursor: pointer;
-    position: relative;
-    top: 2%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
+
+.passwordToggle {
+  position: relative;
+  margin-bottom: -20px; /* Position vertically at the center of the input field */
+  right: 20px; /* Adjust the right distance from the input field */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+  
   
   .rememberForgot {
     display: flex;
@@ -214,3 +225,8 @@ hr {
 }
 
 /* Other styles remain the same */
+
+.account {
+  
+  margin-top: 50px;
+}
