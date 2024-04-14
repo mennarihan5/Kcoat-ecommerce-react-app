@@ -1,0 +1,17 @@
+[
+    {
+        "email": "dummyemail@gmail",
+        "password": "dummypassword",
+        "account-type": "0"
+    },
+    {
+        "email": "dummy2email@gmail",
+        "password": "dummy2password",
+        "account-type": "0"
+    },
+    {
+        "email": "admin@admin.com",
+        "password": "myadminpassword",
+        "account-type": "1"
+    }
+]

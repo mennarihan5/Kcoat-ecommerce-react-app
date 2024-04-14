@@ -21,6 +21,7 @@ import SubscriptionCard from '../../components/newsLetterSection/index.jsx';
 import { AppProducts } from '../../components/productcard/index.jsx';
 import { BestSellingSection } from '../../components/BestSellingSection/index.jsx';
 import { Footer } from '../../components/Footer/index.jsx';
+import LoginPage from '../LoginPage/index.jsx';
 //Fixing githib conflicts
 
 
@@ -51,6 +52,7 @@ export const LandingPage = () => {
             <customerDetails />
               {/* <Title /> */}
             <Footer />
+            
         </section>
     )
 }

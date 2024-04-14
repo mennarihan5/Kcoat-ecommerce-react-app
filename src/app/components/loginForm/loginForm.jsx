@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './style.module.css'; // Import the styles for the login page 
-import logo from '../../assets/images/logo.svg'; // Import the logo image
+import { Logo} from '../../components/Logo/index.jsx';
+// import logo from '../../assets/images/vintage.svg'; // Import the logo image
 
 
 export function loginForm () {
     return(
       <div className={styles.leftSection}>
         <div className={styles.companyLogo}>
-          <img src={logo} alt="Company Logo" />
+          <img src={Logo} alt="Company Logo" />
         </div>
         <h2>Welcome Back</h2>
         <form className={styles.loginForm}>

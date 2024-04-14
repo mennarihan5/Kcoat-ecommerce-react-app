@@ -1,16 +1,27 @@
 // SigniUnPage.js
-import React from 'react';
+import React, { useState } from 'react';
+
 import styles from './style.module.css'; // Import the styles for the login page
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
-import logo from '../../assets/images/logo.svg'; // Import the logo image
+// import logo from '../../assets/images/logo.svg'; // Import the logo image
+import eye from '../../assets/images/Right Content.jpg'; // Import the eye image
+import {Logo} from '../../components/Logo/index.jsx';
+
 
 export const SignupPage = () => {
+  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+
+
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
-        <div className={styles.companyLogo}>
+      <div className={styles.logo}>
+                <Logo className={styles.img} background={false}/>
+            </div> 
+
+      {/* <div className={styles.companyLogo}>
           <img src={logo} alt="Company Logo" />
-        </div>
+        </div> */}
         <h2 className={styles.create}>Create your free account</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
@@ -25,14 +36,32 @@ export const SignupPage = () => {
             </div>
             <div className={styles.formGroup}>
             <label>Password</label>
-            <input type="password"  />
-            <span className={styles.passwordToggle}>&#x1F441;</span>
+            {/* <input type="password"  /> */}
+            <input 
+              type={showPassword ? 'text' : 'password'} // Toggle password visibility
+              placeholder="Enter your password" 
+            />
+            <img 
+              src={eye} 
+              alt="Eye Icon" 
+              className={styles.passwordToggle} 
+              onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+            />
+            {/* <span className={styles.passwordToggle}>&#x1F441;</span>  */}
           </div>
 
           <div className={styles.formGroup}>
             <label>Confirm Password</label>
-            <input type="password"  />
-            <span className={styles.passwordToggle}>&#x1F441;</span>
+            <input 
+              type={showPassword ? 'text' : 'password'} // Toggle password visibility
+              placeholder="Enter your password" 
+            />
+            <img 
+              src={eye} 
+              alt="Eye Icon" 
+              className={styles.passwordToggle} 
+              onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+            />          
           </div>
           
           <div className={styles.rememberForgot}>
