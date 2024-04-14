@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './style.module.css'; 
+import loginButtonfunctionalities from './loginButton.js';
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; 
 // import logo from '../../assets/images/logo.svg'; 
 import { Link } from 'react-router-dom';
@@ -7,8 +8,19 @@ import { Logo } from '../../components/Logo/index.jsx';
 
 import eye from '../../assets/images/Right Content.jpg'; 
 
+
 export const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false); // State for password visibility
+
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevent the default form submission
+    // Add your login logic here
+    console.log('Login button clicked');
+
+    const data = require('../../.env/acoount.json');
+    console.log(data);
+  }
+
 
   return (
     <div className={styles.loginContainer}>
@@ -45,7 +57,9 @@ export const LoginPage = () => {
             </label>
             <a href="#" className={styles.forgot}>Forgot Password?</a>
           </div>
-          <button type="submit">Login</button>
+          <button id={styles.loginButton} type="submit" onClick={handleClick}>Login</button>
+
+          {/* <button id={styles.loginButton} type="submit">Login</button> */}
         </form>
         <div>
         {/* Add a link to the signup page */}
