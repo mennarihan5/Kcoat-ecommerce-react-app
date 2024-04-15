@@ -188,7 +188,10 @@ hr {
 .leftSection {
   flex: 2;
   padding: 20px;
+
 }
+
+
 
 .rightSection {
   flex: 2; /* Adjust flex ratio as needed */
@@ -199,3 +202,10 @@ hr {
 }
 
 /* Other styles remain the same */
+.eyetoggle {
+  position: relative;
+  top: 2%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: black;
+}
