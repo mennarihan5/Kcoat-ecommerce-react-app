@@ -210,3 +210,19 @@ hr {
 .forgot:hover{
   color: blue;
 }
+
+.passwordToggle{
+  margin: -20px;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+      flex-direction: column;
+  }
+
+  .leftSection,
+  .rightSection {
+      flex: 1; /* Adjust flex ratio for smaller screens */
+      width: 100%;
+  }
+}
