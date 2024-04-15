@@ -1,4 +1,5 @@
 import styles from './style.module.css';
+import { Link } from 'react-router-dom';
 
 export const FooterMenu = ({title, options, contact}) => {
     const contactCol = contact ? styles.contact : "";
@@ -14,7 +15,7 @@ export const FooterMenu = ({title, options, contact}) => {
                                     {option.icon}
                                 </span>
                                 <li  className={styles['list-item-text']}>
-                                    <a href={option.url}>{option.title}</a>
+                                    <Link to={option.url}>{option.title}</Link>
                                     <span className={styles['social-media-icons']}>
                                         <span>{option.whatsappIcon}</span>
                                         <span>{option.instagramIcon}</span>
