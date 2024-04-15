@@ -15,7 +15,7 @@ export const CategoriesPage = () => {
                 <SidebarFilter />
                 <ProductsGrid />
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
