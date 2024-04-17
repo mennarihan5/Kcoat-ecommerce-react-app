@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CategoriesPage } from './pages/CategoriesPage/index.jsx';
 import { LoginPage } from './pages/LoginPage/index.jsx';
 import { SignupPage } from './pages/SignupPage/index.jsx';
+import { ContactPage } from './pages/ContactPage/index.jsx';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path='/categories' element={<CategoriesPage />}/>
           <Route path='/login' element={<LoginPage />}/> 
           <Route path='/signup' element={<SignupPage />}/>
-          {/* <Route path='/contact' element={<SignupPage />}/> */}
+          <Route path='/contact' element={<ContactPage />}/> 
         </Routes>
       </BrowserRouter>
     </div>
