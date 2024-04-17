@@ -217,16 +217,16 @@ text-align: left;
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
-    height: 50%;
+    /* width: 50%; */
+    height: 416px;
     z-index: -1; /* Bring the image behind other content */
-    width: 500px;
-    height: 750px;
-    top: 1152px;
-    left: 112px;
-    gap: 0px;
-    opacity: 0px;
-    transform: 89.75 deg;
+    display: flex;
+    max-width: 600px; /* Adjust the maximum width of the container */
+    top: 500px; 
+    left: 500px; 
+    /* gap: 0px; */
+    /* opacity: 0px; */
+    /* transform: 89.75 deg;  */
 
   }
 
@@ -272,6 +272,7 @@ text-align: left;
   }
 
   .righttext2{
+
     height: 48px;
     top: 158px;
     left: 61px;
