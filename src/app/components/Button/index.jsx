@@ -1,9 +1,11 @@
 import styles from './style.module.css';
 
-export const Button = () => {
+export const Button = (props) => {
+    const {children, className} = props;
+    
     return(
-        <div className={styles.button}>
-            Shop Now
+        <div className={`${styles.button} ${className}`}>
+            {children}
         </div>
     )
 }
