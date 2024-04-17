@@ -1,10 +1,24 @@
 import './App.css';
-import { LandingPage } from './pages/LandingPage';
+import { AboutPage } from './pages/AboutPage/index.jsx';
+import { LandingPage } from './pages/LandingPage/index.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import { CategoriesPage } from './pages/CategoriesPage/index.jsx';
+import { LoginPage } from './pages/LoginPage/index.jsx';
+import { SignupPage } from './pages/SignupPage/index.jsx';
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LandingPage />}/>
+          <Route path='/about' element={<AboutPage />}/>
+          <Route path='/categories' element={<CategoriesPage />}/>
+          <Route path='/login' element={<LoginPage />}/> 
+          <Route path='/signup' element={<SignupPage />}/>
+          {/* <Route path='/contact' element={<SignupPage />}/> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

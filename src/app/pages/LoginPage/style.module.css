@@ -1,0 +1,232 @@
+/* LoginPage.module.css */
+.loginContainer {
+    display: flex;
+    flex-wrap: wrap;
+    background: #7C7B5D;
+    color: #fff;
+    font-family: Libre Baskerville;
+    /* height: 1024px; */
+
+    @media (max-width: 768px) {
+      .loginContainer {
+          flex-direction: column;
+          height: auto; /* Adjust height for responsiveness */
+      }
+    }
+
+
+  }
+
+  /* .companyLogo{
+    color: #7C7B5D;
+    font-family: Libre Baskerville;
+    font-size: 32px; */
+    
+  .passwordToggle {
+    cursor: pointer;
+    position: relative;
+  
+    
+
+  }
+
+  .welcome{
+    font-family: Libre Baskerville;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.68px;
+    text-align: center;
+  width: 252px;
+  height: 40px;
+left: 292px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 30%;
+          
+
+
+}
+  
+  .leftSection {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .companyLogo img {
+    width: 100px;
+    width: 119px;
+    height: 47px;
+    top: 64px;
+    left: 358px;
+    gap: 0px;
+    opacity: 0px;
+    margin-bottom: 100px;
+
+  }
+  
+  .rightSection {
+    flex: 1;
+    position: relative;
+  }
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .loginForm {
+    width: 100%;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: calc(100% - 40px); /* Adjust width for password toggle */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+
+.passwordToggle {
+  position: relative;
+  margin-bottom: -20px; /* Position vertically at the center of the input field */
+  right: 20px; /* Adjust the right distance from the input field */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+  
+  
+  .rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+
+  .forgot {
+    color:  #F5F5DC;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color:#A3A17F80;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+  }
+  .forgot:hover {
+    text-decoration: underline;
+    color: blue; 
+  }
+
+
+  button:hover {
+    background-color: rgb(213, 213, 156)
+    
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .loginContainer {
+      flex-direction: column;
+    }
+  
+    .leftSection,
+    .rightSection {
+      width: 100%;
+    }
+  }
+  
+  /* LoginFormFooter.module.css */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+hr {
+  border: 1px solid #ccc;
+  width: 40%;
+}
+
+.text {
+  margin: 10px 0;
+  color: #777;
+}
+
+.googleButton {
+  border: 1px solid transparent;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.googleButton:hover {
+  border-color: blue;
+}
+
+.gmailIcon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.terms {
+  margin-top: 20px;
+  color: #777;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: darkblue;
+}
+/* LoginPage.module.css */
+.loginContainer {
+  display: flex;
+}
+
+.leftSection {
+  flex: 2;
+  padding: 20px;
+}
+
+.rightSection {
+  flex: 2; /* Adjust flex ratio as needed */
+  background-image: url(../../assets/images/logingirl.jpg); /* Add background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+}
+
+/* Other styles remain the same */
+
+.account {
+  
+  margin-top: 50px;
+}

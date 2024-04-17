@@ -1,0 +1,77 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5DC;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .subscriptionDetails {
+    padding-bottom: 2px;
+  }
+  
+  .subscriptionDetails h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #7C7B5D;
+
+  }
+  
+  .subscriptionDetails p {
+    margin: 0;
+    color:#7C7B5D;
+
+  }
+  
+  .subscriptionForm {
+    background-color:#F5F5DC;
+
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .subscriptionForm input[type="text"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .subscriptionForm button {
+    width: 30%;
+    padding: 10px 20px;
+    background-color:#7C7B5D;
+
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .subscriptionForm button:hover {
+    background-color: #0056b3;
+  }
+  
+  .subscriptionForm p {
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .cardContainer {
+      width: 90%;
+      flex-direction: column-reverse;
+    }
+  
+    .subscriptionDetails,
+    .subscriptionForm {
+      width: 50%;
+    }
+  }
+  
+  
