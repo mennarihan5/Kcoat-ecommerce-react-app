@@ -4,12 +4,12 @@
     max-width: 600px; /* Adjust the maximum width of the container */
     margin: 0 auto; /* Center the container horizontally */
     justify-content: right;
-    float: right;
+    /* float: right; */
     margin-right: 50px;
     width: 911px;
-    height: 416px;
-    top: 312px;
-    left: 429px;
+    height: 900px;
+    /* top: 312px;
+    left: 429px; */
     gap: 33px;
     border: 2px 0px 0px 0px;
     opacity: 0px;
@@ -290,14 +290,14 @@ text-align: left;
 
   }
 
-  .Footer{
+  /* .Footer{
     
         position: relative;
         bottom: 0;
         left: 0;
         width: 100%;
         text-align: center;
-      }
+      } */
 
   .newslettersection{
     
