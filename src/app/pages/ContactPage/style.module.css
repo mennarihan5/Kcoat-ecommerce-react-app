@@ -292,11 +292,11 @@ text-align: left;
 
   .Footer{
     
-        position: absolute;
-        min-height: 800px;
+        position: relative;
+        bottom: 0;
+        left: 0;
         width: 100%;
         text-align: center;
       }
 
-
-     
+  
