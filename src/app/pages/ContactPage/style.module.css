@@ -4,16 +4,14 @@
     max-width: 600px; /* Adjust the maximum width of the container */
     margin: 0 auto; /* Center the container horizontally */
     justify-content: right;
-    float: right;
     margin-right: 50px;
     width: 911px;
-    height: 416px;
-    top: 312px;
-    left: 429px;
-    gap: 33px;
+    height: 700px;
     border: 2px 0px 0px 0px;
     opacity: 0px;
     margin-top: 10px;
+    border: 2px solid #000000
+    
 
     
   }
@@ -21,6 +19,7 @@
   .leftContent {
     flex: 1;
     padding: 20px;
+    height: 300px;
   }
   
   .rightContent {
@@ -290,7 +289,7 @@ text-align: left;
 
   }
 
-  .Footer{
+    .Footer{
     
         position: relative;
         bottom: 0;
@@ -299,8 +298,10 @@ text-align: left;
         text-align: center;
       }
 
-  .newslettersection{
-    
-    
-  }
-     
+      .facebookicon{
+        margin-left: 20px;
+      }
+
+      .instaicon{
+        margin-left: 20px;
+      }
