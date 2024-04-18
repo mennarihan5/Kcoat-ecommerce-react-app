@@ -1,0 +1,21 @@
+/* .options, .apply {
+    padding: 5% 0 5% 25%;
+    position: relative;
+    
+} */
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    margin: auto;
+    cursor: pointer;
+}
+.option input {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+}
+.option label {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
