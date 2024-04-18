@@ -1,6 +1,7 @@
 const UserModel = require("../../models/userModel");
 const userService = require("../../service/user");
 const passwordHelper = require("../../helpers/crypt/password");
+const JWTHelper = require("../../helpers/auth/jwt");
 
 module.exports = {
   login: async (req, res) => {
@@ -22,9 +23,13 @@ module.exports = {
         message: "Invalid email or password. Kindly check or try again.",
       });
     }
-    return res.status(201).json(userData);
+    const token = JWTHelper.generateUserToken({ id: userData.id });
+    return res.status(201).json(token);
   },
-  register: async (req, res) => {
+  signup: async (req, res) => {
     return res.status(201).json(await userService.createUser(req.body));
+  },
+  me: async (req, res) => {
+    return res.status(200).json(await userService.retrieveUser({ id: 5 }));
   },
 };

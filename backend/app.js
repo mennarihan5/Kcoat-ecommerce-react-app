@@ -3,6 +3,9 @@ const cors = require("cors");
 require("./models");
 const app = express();
 
+// Loading environmental variables
+require("dotenv").config({ path: ["./envs/.env"] });
+
 //middlewae
 
 app.use(express.json());
