@@ -53,6 +53,7 @@ export const LandingPage = () => {
               {/* <Title /> */}
             <Footer />
             
+            
         </section>
     )
 }
