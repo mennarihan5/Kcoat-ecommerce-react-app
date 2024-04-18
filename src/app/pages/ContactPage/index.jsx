@@ -4,6 +4,9 @@ import styles from './style.module.css';
 import contactpagepic from '../../assets/images/contactpage.jpg';
 import { Footer } from '../../components/Footer/index.jsx';
 import SubscriptionCard  from '../../components/newsLetterSection/index.jsx';
+import facebookicon from '../../assets/images/facebookicon.jpg';
+import instaicon from '../../assets/images/instaicon.jpg';
+import whatsappicon from '../../assets/images/whatsappicon.jpg';
 
 export const ContactPage = () => {
   const [fullName, setFullName] = useState('');
@@ -62,6 +65,8 @@ export const ContactPage = () => {
             </div>
             <button type="submit" className={styles.contactus}>Contact Us</button>
           </form>
+
+          
         </div>
         <div className={styles.rightContent}>
           <h3 className={styles.contacttext}>Contact</h3>
@@ -77,7 +82,14 @@ export const ContactPage = () => {
           <p className={styles.righttext3}>
             Nigeria
           </p>
+
+          <div className={styles.iconcontainer}>
+          <img src={whatsappicon} className={styles.whatsappicon} />
+          <img src={instaicon} className={styles.instaicon} />
+          <img src={facebookicon} className={styles.facebookicon} />
         </div>
+        </div>
+      
       </div>
       <div className={styles.imageContainer}>
         <img src={contactpagepic} alt="your_image_alt" className={styles.image} />
