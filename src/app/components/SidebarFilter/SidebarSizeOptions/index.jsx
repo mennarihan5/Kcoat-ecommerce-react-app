@@ -3,7 +3,7 @@ import { FilterInput } from '../FilterInput';
 
 export const SidebarSizeOptions = ({handleChange, clear, handleCheckboxChange, checkbox}) => {
     return(
-        <div>
+        <div className={styles.options}>
             <h5 className={styles.title}>Size</h5>
             <FilterInput 
             handleChange={handleChange}
