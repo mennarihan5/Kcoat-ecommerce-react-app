@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Header } from '../../components/Header';
 import styles from './style.module.css';
 import contactpagepic from '../../assets/images/contactpage.jpg';
+import { Footer } from '../../components/Footer/index.jsx';
+import SubscriptionCard  from '../../components/newsLetterSection/index.jsx';
 
 export const ContactPage = () => {
   const [fullName, setFullName] = useState('');
@@ -80,8 +82,17 @@ export const ContactPage = () => {
       <div className={styles.imageContainer}>
         <img src={contactpagepic} alt="your_image_alt" className={styles.image} />
       </div>
+      <div className={styles.newslettersection}>
+        <SubscriptionCard/>
+        </div> 
+        <div className={styles.Footer}>  
+        <Footer/>
+        </div> 
+        
     </div>
   );
 };
 
+
 export default ContactPage;
+
