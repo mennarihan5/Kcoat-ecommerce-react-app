@@ -1,42 +1,32 @@
 import styles from './style.module.css';
-import { options } from './data.js';
+import { SidebarTypeOptions } from './SidebarTypeOptions/index.jsx';
+import { SidebarColorOptions } from './SidebarColorOptions/index.jsx';
+import { SidebarSizeOptions } from './SidebarSizeOptions/index.jsx';
+import { SidebarPriceOptions } from './SidebarPriceOptions/index.jsx';
 
-export const FilterOptions = ({title, data}) => {
+export const FilterOptions = ({handleChange, clear, handleCheckboxChange, checkbox}) => {
     return (
         <div className={styles['filters-wrapper']}>
-                <div className={styles.filter}>
-                    <h5 className={styles.title}>{title}</h5>
-                    {
-                        data.map((data) => {
-                            return (
-                                <div className={styles.options}>
-                                    <div className={styles.option}>
-                                        <input type="checkbox" id="check" />
-                                        <label htmlFor="check">{data}</label>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-       </div>
+             <div className={styles.filter}>
+                <SidebarTypeOptions handleChange={handleChange} clear={clear} />
+                <SidebarColorOptions handleChange={handleChange} clear={clear}/>
+                <SidebarSizeOptions handleChange={handleChange} clear={clear} handleCheckboxChange={handleCheckboxChange} checked={checkbox}/>
+                <SidebarPriceOptions handleChange={handleChange} clear={clear}/>
+             </div>
+    </div>
     )
 }
 
-export const SidebarFilter = () => {
+export const SidebarFilter = ({handleChange, clear, handleCheckboxChange, checkbox}) => {
     return (
         <div className={styles['sidebar-filter']}>
             <h3 className={styles['filter-title']}>Filter by</h3>
-            {
-                options.map((option) => (
-                    <FilterOptions title={option.title} data={option.data} />
-            ))
-            }
-            <div className={styles.apply}>
+            <FilterOptions handleChange={handleChange} clear={clear} handleCheckboxChange={handleCheckboxChange} checked={checkbox}/>
+            {/* <div className={styles.apply}>
                 <input type="checkbox" id="check" />
                 <p>Apply Filter</p>
-            </div>
-            <p className={styles.clear}>Clear Filter</p>
+            </div> */}
+            <p className={styles.clear} onClick={clear}>Clear Filter</p>
         </div>
     )
 }
