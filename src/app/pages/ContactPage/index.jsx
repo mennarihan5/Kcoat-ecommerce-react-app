@@ -96,11 +96,10 @@ export const ContactPage = () => {
       </div>
       <div className={styles.newslettersection}>
         <SubscriptionCard/>
-        </div> 
+      </div>
         <div className={styles.Footer}>  
         <Footer/>
-        </div> 
-        
+        </div>   
     </div>
   );
 };
