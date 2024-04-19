@@ -1,0 +1,58 @@
+.cart {
+    /* Add styles for the main cart container if needed */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .leftSection {
+    flex: 3;
+    padding: 20px;
+    background-color: white; /* Set background color to white */
+  }
+  
+  .rightSection {
+    flex: 1;
+    padding: 20px;
+    background: #E5E5E54D;
+    width: 583px;
+    height: 1496px;
+    left: 857px;
+    gap: 0px;
+    opacity: 0px;
+
+  }
+
+  .yourcart{
+    width: 203px;
+    height: 50px;
+    top: 178.09px;
+    left: 100px;
+    font-family: Libre Baskerville;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    color: #7C7B5D;
+
+  }
+
+  .items{
+    width: 92px;
+    height: 29px;
+    margin-top: 30px;
+    margin-right: 50px;
+    left: 720px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: left;
+    color: #282828;
+
+  }
+  
