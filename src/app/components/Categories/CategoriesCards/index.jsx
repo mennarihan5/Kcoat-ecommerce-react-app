@@ -8,7 +8,6 @@ export const CategoriesCards = (props) => {
     const whiteBtn = props.isWhite ? styles['white-btn'] : '';
 
     return(
-        <div>
             <div className={`${styles['categories-card']} ${size} ${coverImg} ${margin}`}>
                 <img className={styles.img} src={props.image} alt='card images' />
                 <div className={styles.details}>
@@ -20,6 +19,5 @@ export const CategoriesCards = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
