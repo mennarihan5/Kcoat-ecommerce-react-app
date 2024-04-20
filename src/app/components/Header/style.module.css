@@ -4,14 +4,16 @@
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     gap: 2.5rem;
-}
-.header {
     background-color: var(--white);
     border: 1px solid var(--olive);
     padding: 0.2% 6%;
 }
+.logoContainer {
+    /* width: 20%; */
+    background-color: red;
+}
 
-/* @media (max-width: 1200px) {
+/* @media (max-width: 600px) {
    .header {
         padding: 0 10%;
    }

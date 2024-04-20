@@ -3,7 +3,7 @@ import { FilterInput } from '../FilterInput';
 
 export const SidebarColorOptions = ({handleChange}) => {
     return(
-        <div>
+        <div className={styles.options}>
             <h5 className={styles.title}>Color</h5>
             <FilterInput 
             handleChange={handleChange}
