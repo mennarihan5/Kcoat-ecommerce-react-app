@@ -1,24 +1,30 @@
 .contactForm {
-  display: flex;
-  border: black 1px solid;
-  max-width: 600px; /* Adjust the maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  justify-content: right;
-  margin-right: 50px;
-  width: 911px;
-  height: 700px;
-  border: 2px 0px 0px 0px;
-  opacity: 0px;
-  margin-top: 10px;
-  border: 2px solid #000000;
+    display: flex;
+    border: black 1px solid;
+    max-width: 600px; /* Adjust the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    justify-content: right;
+    margin-right: 50px;
+    width: 911px;
+    height: 400px;
+    border: 2px 0px 0px 0px;
+    opacity: 0px;
+    margin-top: 10px;
+    border: 2px solid #000000
+
+  }
+.newslettersection{
+  margin-top: 350px;
+  margin-bottom: 0px;
 }
 
-.leftContent {
-  flex: 1;
-  padding: 20px;
-  height: 300px;
-}
-
+  
+  .leftContent {
+    flex: 1;
+    padding: 20px;
+    height: 300px;
+  }
+  
 .rightContent {
   flex: 1;
   padding: 20px;
@@ -200,7 +206,6 @@ label {
       width: 90%; /* Adjust width to fit smaller screens */
   }
 
-  .leftContent,
   .rightContent {
       width: 100%; /* Make content take up full width */
   }
