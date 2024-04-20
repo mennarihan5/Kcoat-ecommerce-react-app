@@ -6,15 +6,21 @@
     justify-content: right;
     margin-right: 50px;
     width: 911px;
-    height: 700px;
+    height: 400px;
     border: 2px 0px 0px 0px;
     opacity: 0px;
     margin-top: 10px;
     border: 2px solid #000000
-    
 
-    
   }
+/* .Footer{
+  margin-top: 40px;
+} */
+.newslettersection{
+  margin-top: 350px;
+  margin-bottom: 0px;
+}
+
   
   .leftContent {
     flex: 1;

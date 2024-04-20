@@ -15,11 +15,13 @@ export const CartPage = () => {
                 <div>
                     <p className={styles.items}>3 items</p>
                 </div>
-                <div>
-                    <h2>Item</h2>
-                    <h2>Quantity</h2>
-                    <h2>Price</h2>
+                <div className={styles.middleSection}>
+                    <h2 className={styles.heading1}> Item</h2>
+                    <h2 className={styles.heading2}>Quantity</h2>
+                    <h2 className={styles.heading3}>Price</h2>
+                
                 </div>
+        
                 
                 <div className={styles.rightSection}>
                     <h2 className={styles.sectionHeading}>Summary</h2>
