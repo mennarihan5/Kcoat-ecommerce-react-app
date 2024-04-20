@@ -14,45 +14,4 @@
   background-color: white; /* Set background color to white */
 }
 
-.rightSection {
-  flex: 2;
-  padding: 20px;
-  background: #E5E5E54D;
-  width: 583px;
-  height: 1496px;
-  left: 857px;
-  gap: 0px;
-  opacity: 0px;
-}
 
-.yourcart {
-  font-family: Libre Baskerville;
-  font-weight: 700;
-  font-size: 40px;
-  color: #7C7B5D;
-}
-
-.items {
-  margin-top: 30px;
-  margin-right: 50px;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-weight: 700;
-  color: #282828;
-}
-
-.middleSection {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.heading1,
-.heading2,
-.heading3 {
-  font-family: Montserrat;
-  font-size: 24px;
-  font-weight: 500;
-  color: #282828;
-  margin-bottom: 10px; /* Add margin between headings */
-}
