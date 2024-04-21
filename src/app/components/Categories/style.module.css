@@ -6,6 +6,7 @@
     width: 80%;
     padding: 6% 0;
     margin: auto;
+    height: auto;
 }
 @media (max-width: 900px) {
     .categories {
