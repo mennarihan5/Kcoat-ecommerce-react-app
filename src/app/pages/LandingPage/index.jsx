@@ -27,7 +27,7 @@ import LoginPage from '../LoginPage/index.jsx';
 
 export const LandingPage = () => {
     return (
-        <section className={styles.header}>
+        <section className={styles['landing-page']}>
             <Header />
             <Hero />
             <Categories />
@@ -35,25 +35,13 @@ export const LandingPage = () => {
             <BestSellingSection />
             <Banner />
             <NewItems />
-
             <AppProducts />
-{/* //Fixing githib conflicts */}
             <App />
             <WhatPeopleSay />
             <AppCards />
             <SubscriptionCard />
-            {/* <LoginPage />
-            <SignupPage /> */}
-            {/* <LoginFormFooter /> */}
-
-            {/* <Title /> */}
-            
-
             <customerDetails />
-              {/* <Title /> */}
             <Footer />
-            
-            
         </section>
     )
 }

@@ -10,12 +10,9 @@ export const CategoriesPage = () => {
     const [products ,setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [query, setQuery] = useState("");
-    const [checkbox, setCheckbox] = useState(false);
+    const [checkbox, setCheckbox] = useState();
 
-    const handleCheckboxChange = (event) => {
-        setCheckbox(event.target.value);
-        console.log(event.target.value);
-    } 
+  
 
     const handleInputChange = (event) => {
         setQuery(event.target.value);
@@ -62,11 +59,19 @@ export const CategoriesPage = () => {
     }
     const results = filteredData(products, selectedCategory, query);
 
+    const handleCheckboxChange = (event) => {
+        setCheckbox(event.target.checked);
+        console.log(event.target.checked);
+
+        if(checkbox.checked === true) {
+            setCheckbox(false);
+        } 
+    } 
+
     function clear () {
         setSelectedCategory(null);
         setQuery("");
     }
-
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")

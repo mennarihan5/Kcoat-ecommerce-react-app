@@ -60,18 +60,25 @@ import vector from '../../assets/images/vector.svg';
       <div className={styles["products"]}>
       
         {products.map(product => {
-          let cardClass = counter == 1 || counter == 6 ? styles['long-card'] : styles['short-card'];
+          let cardClass = product.id === 1 ? styles['card-1'] : 
+          product.id === 2 ? styles['card-2'] :
+          product.id === 3 ? styles['card-3'] :
+          product.id === 4 ? styles['card-4'] :
+          product.id === 5 ? styles['card-5'] : 
+          product.id === 6 ? styles['card-6'] : "";
           
           return (
-            <ProductCard
-              key={product.id}
-              imageSrc={product.imageSrc}
-              price={product.price}
-              description={product.description}
-              cardClass={cardClass}
-              id={styles['prodCard_' + counter]}
-              counter={counter++}
-            />
+
+                  <ProductCard 
+                    imageSrc={product.imageSrc} 
+                    price={product.price} 
+                    description={product.description} 
+                    id={product.id}
+                    key={product.id}
+                    cardClass={cardClass}
+                    // counter={counter++}
+                  />
+
           );
         })}
     

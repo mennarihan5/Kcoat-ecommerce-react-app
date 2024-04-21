@@ -8,10 +8,18 @@ export const FilterOptions = ({handleChange, clear, handleCheckboxChange, checkb
     return (
         <div className={styles['filters-wrapper']}>
              <div className={styles.filter}>
-                <SidebarTypeOptions handleChange={handleChange} clear={clear} />
-                <SidebarColorOptions handleChange={handleChange} clear={clear}/>
-                <SidebarSizeOptions handleChange={handleChange} clear={clear} handleCheckboxChange={handleCheckboxChange} checked={checkbox}/>
-                <SidebarPriceOptions handleChange={handleChange} clear={clear}/>
+                <div className={styles.filterItem}>
+                    <SidebarTypeOptions handleChange={handleChange} clear={clear} />
+                </div>
+                <div className={styles.filterItem}>
+                    <SidebarColorOptions handleChange={handleChange} clear={clear}/>
+                </div>
+                <div className={styles.filterItem}>
+                    <SidebarSizeOptions handleChange={handleChange} clear={clear} handleCheckboxChange={handleCheckboxChange} checked={checkbox}/>
+                </div>
+                <div className={styles.filterItem}>
+                     <SidebarPriceOptions handleChange={handleChange} clear={clear}/>
+                </div>
              </div>
     </div>
     )
@@ -26,7 +34,7 @@ export const SidebarFilter = ({handleChange, clear, handleCheckboxChange, checkb
                 <input type="checkbox" id="check" />
                 <p>Apply Filter</p>
             </div> */}
-            <p className={styles.clear} onClick={clear}>Clear Filter</p>
+            <p className={styles.clear} onClick={clear} handleCheckboxChange={handleCheckboxChange}>Clear Filter</p>
         </div>
     )
 }

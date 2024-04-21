@@ -1,24 +1,25 @@
 .categories-card {
-    width: 35rem;
+    width: 46rem;
     height: 25rem;
     background-color: var(--beige);
-    margin: -5% 0;
+    margin: -1% 0;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     cursor: pointer;
+    gap: 1%;
 }
 .categories-card .img {
     width: 70%;
-    height: 100%;
 }
 .categories-card .details {
     width: 20%;
     align-self: flex-end;
-    padding: 4.5% 3%;
+    padding: 5%;
+    z-index: 1;
 }
 .margin-top { 
-    margin-bottom: 9%;
+    margin-bottom: 4%;
 }
 .small-card {
     height: 20rem;
@@ -40,12 +41,16 @@
     left: 0.7%;
     color: var(--white);
 }
-.cover-img .details .default-btn {
+.cover-img .details .default-btn  {
     color: var(--white);
 }
-.title, .default-btn {
+.title, .default-btn .btn {
     text-align: left;
     padding: 15% 3%;
+    text-decoration: none;
+}
+.default-btn .btn {
+    color: var(--olive);
 }
 .title {
     font-family: 'Libre Baskerville', Helvetica;
@@ -54,20 +59,57 @@
     font-size: clamp(1.2rem, 3vw, 1.75rem);
     width: 8.75rem;
 }
-.white-btn {
+.white-btn .btn {
     color: var(--white);
-    border-bottom: 2px solid var(--white);
+}
+@media (max-width: 900px) {
+    .categories-card {
+        margin: 3% 0;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .details {
+        margin-right: auto;
+        text-wrap: nowrap;
+        padding: 0%;
+    }
+    .title, .default-btn {
+        padding: 2% 0;
+    }
+    .categories-card img {
+        height: 90%;
+    }
+    
 }
 
-@media (max-width: 1200px) {
-    .categories {
-        height: auto;
-        justify-content: center;
-        width: 70%;
-    }
+@media (min-width: 900px) and (max-width: 1200px) {
     .categories-card {
-        /* width: rem; */
-        margin: 3%;
+        margin: 1% 0;
+        width: 49%;
+        height: 20rem; 
     }
-
+    .margin-top {
+        margin-bottom: 1%;
+    }
+    .categories-card .details {
+        text-align: center;
+        padding: 3%;
+        width: 20%;
+        z-index: 1;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1900px) {
+    .categories-card {
+        margin: 1% 0;
+        width: 48%;
+        height: 20rem; 
+    }
+    .categories-card .details {
+        text-align: center;
+        padding: 3%;
+        width: 20%;
+        z-index: 1;
+    }
 }
