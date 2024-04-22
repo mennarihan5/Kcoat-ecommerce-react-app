@@ -4,13 +4,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
-    static associate(models) {
-       Product.belongsTo(models.Category, { foreignKey: "categoryId" });
-       Product.belongsToMany(models.Cart, {
-         through: "CartItem",
-         foreignKey: "productId",
-       });
-    }
   }
   Product.init({
     name: DataTypes.STRING,

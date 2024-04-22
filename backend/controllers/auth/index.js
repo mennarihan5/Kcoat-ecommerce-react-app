@@ -1,4 +1,4 @@
-const UserModel = require("../../models/userModel");
+const { sequelize, DataTypes } = require("../../models");
 const userService = require("../../service/user");
 const passwordHelper = require("../../helpers/crypt/password");
 const JWTHelper = require("../../helpers/auth/jwt");
