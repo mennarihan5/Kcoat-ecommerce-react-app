@@ -12,6 +12,7 @@ module.exports = {
         .status(401)
         .json({ message: "Account not found. Double check or sign-up." });
     }
+    console.log(userData);
     if (
       !passwordHelper.verifyPassword(
         password,
