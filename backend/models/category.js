@@ -1,20 +1,10 @@
+// category.js
 "use strict";
 const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-  class Category extends Model {
-    static associate(models) {
-      Category.hasMany(models.Product, { foreignKey: "categoryId" });
-      Category.belongsTo(Category, {
-        foreignKey: "parentCategoryId",
-        as: "parent",
-      });
-      Category.hasMany(Category, {
-        foreignKey: "parentCategoryId",
-        as: "subCategories",
-      });
-    }
-  }
+  class Category extends Model {}
+
   Category.init(
     {
       name: DataTypes.STRING,
@@ -25,5 +15,6 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Category",
     }
   );
+
   return Category;
 };
