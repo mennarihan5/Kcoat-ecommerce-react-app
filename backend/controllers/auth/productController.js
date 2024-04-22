@@ -1,14 +1,13 @@
 const { Op } = require("sequelize");
 const { Product } = require("../../models");
 
-// Filter products controller method
-// Filter products controller method
+// Filter products
 const filterProducts = async (req, res) => {
   try {
     let whereClause = {};
     const { type, color, size, priceRange } = req.query;
 
-    // Validate and add conditions based on selected filters
+  
     if (type && ["shirt", "coat", "jeans", "polo-shirt"].includes(type)) {
       whereClause.type = type;
     }

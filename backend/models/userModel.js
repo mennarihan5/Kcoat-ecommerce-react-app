@@ -24,6 +24,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING(32),
         allowNull: false,
       },
+      password_reset_otp: {
+        type: DataTypes.STRING(6),
+        allowNull: true,
+      },
     },
     {
       sequelize,
