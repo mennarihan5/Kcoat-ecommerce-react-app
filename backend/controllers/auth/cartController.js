@@ -3,7 +3,7 @@ const { Cart, Product } = require("../../models");
 // Add item to cart controller method
 const addToCart = async (req, res) => {
   try {
-    const { usersId, productId, quantity } = req.body;
+    const { UsersId, productId, quantity } = req.body;
 
     // Check if the product exists
     const product = await Product.findByPk(productId);
@@ -12,9 +12,9 @@ const addToCart = async (req, res) => {
     }
 
     // Add the item to the cart
-    let cart = await Cart.findOne({ where: { usersId } });
+    let cart = await Cart.findOne({ where: { UsersId } });
     if (!cart) {
-      cart = await Cart.create({ usersId });
+      cart = await Cart.create({ UsersId });
     }
     await cart.addProduct(product, { through: { quantity } });
 
@@ -28,11 +28,11 @@ const addToCart = async (req, res) => {
 // Get cart contents controller method
 const getCart = async (req, res) => {
   try {
-    const { usersId } = req.query;
+    const { UsersId } = req.query;
 
     // Find the user's cart
     const cart = await Cart.findOne({
-      where: { usersId },
+      where: { UsersId },
       include: [{ model: Product }],
     });
 
