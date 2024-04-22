@@ -9,8 +9,8 @@ module.exports = {
   // USER: "root",
   // PASSWORD: "",
   // DB: "kcoat",
-  // dialect: "mysql",
-
+  // dialect: "mysql",  
+  
   pool: {
     max: 5,
     min: 0,
