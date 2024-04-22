@@ -1,21 +1,14 @@
-const db = require("../../models");
-const  Category = db.category;
+const Category = require('../../models/Category');
 
-// // Error handling middleware
-// function errorHandler(res, error) {
-//   console.error(error);
-//   res.status(500).json({ message: "Internal server error" });
-// }
 
-// Controller method to create a new category
 const createCategory = async (req, res) => {
   try{
-    let info = {
-      name: req.body.name,
-      parentCategoryId: req.body.parentCategoryId,
-    };
-    const category = await Category.create(info);
-    res.status(200).send(category);
+    const {name, parentCategoryId} = req.body;
+    if(!name){
+      return res.status(400).json({ message: 'Name is required for creating a category'});
+    }
+    const category = await Category.create({ name, parentCategoryId });
+    res.status(201).json(category);
   } catch (error){
     console.error("Error creating category:", error);
     res.status(500).send("Internal server error")
