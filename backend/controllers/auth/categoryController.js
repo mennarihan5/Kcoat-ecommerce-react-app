@@ -1,4 +1,4 @@
-const db = require("../../models/category");
+const db = require("../../models/Category");
 const { Category } = db;
 
 // Controller method to create a new category
