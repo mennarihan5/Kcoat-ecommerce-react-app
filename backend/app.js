@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-require("./models");
+const db = require("./models");
 const app = express();
 
 // Loading environmental variables

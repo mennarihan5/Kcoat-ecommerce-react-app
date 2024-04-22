@@ -31,7 +31,7 @@ db.sequelize = sequelize;
 
 // Models
 db.customers = require("./customerModel")(sequelize, DataTypes);
-db.users = require("./userModel")(sequelize, DataTypes);
+db.Users = require("./userModel")(sequelize, DataTypes);
 db.Category = require("./Category")(sequelize, DataTypes);
 db.Product = require("./Product")(sequelize, DataTypes);
 db.Cart = require("./Cart")(sequelize, DataTypes);
@@ -54,8 +54,8 @@ Object.values(db).forEach((model) => {
 });
 
 // Define associations with aliases
-db.users.hasMany(db.Favorite, { foreignKey: "userId", as: "favorites" });
-db.Favorite.belongsTo(db.users, { foreignKey: "userId", as: "user" });
+db.Users.hasMany(db.Favorite, { foreignKey: "userId", as: "favorites" });
+db.Favorite.belongsTo(db.Users, { foreignKey: "userId", as: "user" });
 
 db.Category.hasMany(db.Product, { foreignKey: "categoryId", as: "products" });
 db.Product.belongsTo(db.Category, {
