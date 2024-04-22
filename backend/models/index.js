@@ -31,6 +31,9 @@ db.sequelize = sequelize;
 
 db.customers = require("./customerModel")(sequelize, DataTypes);
 db.users = require("./userModel")(sequelize, DataTypes);
+db.category = require("./category")(sequelize, DataTypes);
+db.product = require("./product")(sequelize, DataTypes);
+db.cart = require("./cart")(sequelize, DataTypes)
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done!");

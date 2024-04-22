@@ -19,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
+  users.associate = (models) => {
+    users.hasMany(models.Favorite, { foreignKey: "usersId" });
+  };
 
   return users;
 };
