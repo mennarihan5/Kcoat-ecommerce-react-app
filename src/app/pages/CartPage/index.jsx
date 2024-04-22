@@ -8,9 +8,9 @@ import trousers from '../../assets/images/Trouser.jpg';
 export const CartPage = () => {
     // Dummy data for demonstration
     const [cartItems, setCartItems] = useState([
-        { id: 1, name: "Product 1", quantity: 2, price: 10, imageSrc: shorts },
-        { id: 2, name: "Product 2", quantity: 1, price: 20, imageSrc: vintage},
-        { id: 3, name: "Product 3", quantity: 3, price: 15, imageSrc: trousers}
+        { id: 1, name: "Short", quantity: 2, price: 10, imageSrc: shorts },
+        { id: 2, name: "Vintage SKirt", quantity: 1, price: 20, imageSrc: vintage},
+        { id: 3, name: "Trouser", quantity: 3, price: 15, imageSrc: trousers}
     ]);
 
     const handleDecrease = (itemId) => {
@@ -53,11 +53,11 @@ export const CartPage = () => {
                         <div key={item.id} className={styles.item}>
                             <div className={styles.imageContainer}>
                                 <img src={item.imageSrc} alt="Product" className={styles.image} />
-                            </div>
-                            <div className={styles.details}>
+                             </div>
+                                <div className={styles.details}>
                                 <p className={styles.itemName}>{item.name}</p>
-                            </div>
-                            <div className={styles.quantityControl}>
+                             </div>
+                             <div className={styles.quantityControl}>
                                 <div
                                     className={styles.controlButton}
                                     onClick={() => handleDecrease(item.id)}
@@ -78,10 +78,35 @@ export const CartPage = () => {
                 </div>
                 <div className={styles.rightSection}>
                     <h2 className={styles.sectionHeading}>Summary</h2>
+                   
+                <div className={styles.summaryItem}>
+                    <p className={styles.summaryText}>Subtotal</p>
+                    <p className={styles.summaryValue}>$165.00</p>
+                </div>
+                <div className={styles.summaryItem}>
+                    <p className={styles.summaryText}>Shipping</p>
+                    <p className={styles.summaryValue}>$10.00</p>
+                </div>
+                <div className={styles.summaryItem}>
+                    <p className={styles.summaryText}>Promocode</p>
+                    <button className={styles.promoButton}>Enter code</button>
+                </div>
+
+                <div className={styles.summaryItemLast}>
+                    <p className={styles.summaryText}>Total</p>
+                    <p className={styles.summaryValue}>$17,500</p>
+                    
+                </div>
+                <div className={styles.button}>
+                    <button className={styles.promoButtonLast}>Check Out</button>
+                    </div>
+            </div>
+
+                    
                     {/* Add summary and total cost details here */}
                 </div>
             </div>
-        </div>
+        
     );
 };
 
