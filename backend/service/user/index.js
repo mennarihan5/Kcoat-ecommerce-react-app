@@ -1,5 +1,5 @@
 const passwordHelper = require("../../helpers/crypt/password");
-const UserModel = require("../../models").users;
+const UserModel = require("../../models").Users;
 
 module.exports = {
   createUser: async ({ full_name, email, password }) => {
