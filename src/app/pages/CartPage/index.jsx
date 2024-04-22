@@ -53,10 +53,11 @@ export const CartPage = () => {
                         <div key={item.id} className={styles.item}>
                             <div className={styles.imageContainer}>
                                 <img src={item.imageSrc} alt="Product" className={styles.image} />
-                             </div>
                                 <div className={styles.details}>
-                                <p className={styles.itemName}>{item.name}</p>
+                                    <p className={styles.itemName}>{item.name}</p>
+                                </div>
                              </div>
+                               
                              <div className={styles.quantityControl}>
                                 <div
                                     className={styles.controlButton}

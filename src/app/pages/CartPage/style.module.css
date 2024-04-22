@@ -119,6 +119,7 @@ opacity: 0px;
   align-items: center;
   margin-left: 500px;
   margin-bottom: 50px;
+  
 }
 
 .controlButton {
@@ -127,7 +128,8 @@ opacity: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5f1b1b; /* Adjust button background color */
+  background-color: #7C7B5D;
+  /* Adjust button background color */
   cursor: pointer;
   margin: 0 5px; /* Adjust spacing between buttons */
 
@@ -194,7 +196,8 @@ margin-top: 20px;
 }
 
 .promoButton:hover {
-  background-color: #0056b3;
+  background-color: #7C7B5D;
+  ;
 }
 
 .sectionHeading{
@@ -230,5 +233,13 @@ opacity: 0px;
 color: #7C7B5D;
 
 
+}
+
+.itemName{
+  color:aqua;
+  /* margin-top: 50px; */
+  margin-right: 300px;
+  /* margin-bottom: -100px; */
+  
 }
   
