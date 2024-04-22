@@ -33,16 +33,9 @@ db.sequelize = sequelize;
 db.customers = require("./customerModel")(sequelize, DataTypes);
 db.users = require("./userModel")(sequelize, DataTypes);
 db.Category = require("./Category")(sequelize, DataTypes);
-db.product = require("./product")(sequelize, DataTypes);
-db.cart = require("./cart")(sequelize, DataTypes);
-
-
-// Associations
-db.customers.associate(db);
-// db.users.associate(db);
-// db.Category.associate(db);
-// db.product.associate(db);
-// db.cart.associate(db);
+db.Product = require("./Product")(sequelize, DataTypes);
+db.Cart = require("./Cart")(sequelize, DataTypes);
+db.Favorite = require("./favorite")(sequelize, DataTypes); // Add this line
 
 // Model initialization
 Object.keys(db).forEach((modelName) => {
@@ -52,8 +45,45 @@ Object.keys(db).forEach((modelName) => {
   console.log(`Model '${modelName}' initialized`);
 });
 
+// Associations
+// Clear previous associations
+Object.values(db).forEach((model) => {
+  if (model.associate) {
+    model.associate(db);
+  }
+});
+
+// Define associations with aliases
+db.users.hasMany(db.Favorite, { foreignKey: "userId", as: "favorites" });
+db.Favorite.belongsTo(db.users, { foreignKey: "userId", as: "user" });
+
+db.Category.hasMany(db.Product, { foreignKey: "categoryId", as: "products" });
+db.Product.belongsTo(db.Category, {
+  foreignKey: "categoryId",
+  as: "category",
+});
+db.Category.hasMany(db.Category, {
+  foreignKey: "parentCategoryId",
+  as: "subCategories",
+});
+
+db.Cart.belongsToMany(db.Product, {
+  through: "CartItem",
+  foreignKey: "cartId",
+});
+db.Product.belongsTo(db.Category, { foreignKey: "categoryId" });
+db.Product.belongsToMany(db.Cart, {
+  through: "CartItem",
+  foreignKey: "productId",
+});
+
+// Add other associations here if needed
+
 db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done!");
 });
 
-module.exports = db;
+module.exports = {db,
+  sequelize,
+  DataTypes
+};
