@@ -1,4 +1,5 @@
-const { Category } = require("../../models");
+const db = require("../../models/category");
+const { Category } = db;
 
 // Controller method to create a new category
 async function createCategory(req, res) {
