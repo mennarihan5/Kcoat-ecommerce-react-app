@@ -6,7 +6,7 @@
   grid-template-rows: repeat(2, 396px);
   grid-template-areas: "one two three six"
                        "one four five six";
-  gap: 1%;
+  gap: 2%;
   margin-bottom: 12%;
   overflow: hidden;
 }
@@ -16,6 +16,7 @@
   align-items: center; 
   cursor: pointer;
   position: relative;
+  margin-bottom: 1rem;
   /* width: 295px; */
 }
 .card-1 {
@@ -36,12 +37,12 @@
 .card-4 {
   grid-area: four;
   height: 413px;
-  /* margin-top: 16%; */
+  margin-top: -1%;
 }
 .card-5 {
   grid-area: five;
   height: 413px;
-  /* margin-top: 16%; */
+  margin-top: -1%;
 }
 .card-6 {
   grid-area: six;
@@ -52,8 +53,8 @@
 }
 
 .product-image {
-  width: 250px;
-  height: auto; 
+  /* width: 250px; */
+  /* height: auto;  */
   overflow: hidden;
 }
 .product-image img {
