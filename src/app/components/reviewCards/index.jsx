@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.module.css';
-import reviewImage from '../../assets/images/reviewImage.jpg';
+import reviewImage from '../../assets/images/Ellipse 5.png';
 
 
 
@@ -60,24 +60,24 @@ const reviews = [
     userName: 'John Eva 3',
     rating: 5,
   },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 4',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 5',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 6',
-    rating: 5,
-  },
+  // {
+  //   image: reviewImage,
+  //   text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+  //   userName: 'John Eva 4',
+  //   rating: 5,
+  // },
+  // {
+  //   image: reviewImage,
+  //   text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+  //   userName: 'John Eva 5',
+  //   rating: 5,
+  // },
+  // {
+  //   image: reviewImage,
+  //   text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+  //   userName: 'John Eva 6',
+  //   rating: 5,
+  // },
   // Add more reviews here...
 ];
 
