@@ -53,22 +53,4 @@ module.exports = {
       return res.status(400).json({error: 'Invalid OTP token'});
     }
   },
-  changePassword: async (req, res) => {
-    const {email, newPassword} = req.body;
-
-    try {
-      const salt = generate32ByteSalt();
-    return {
-      hash: crypto
-        .pbkdf2Sync(password, salt, 1000, 64, `sha512`)
-        .toString(`hex`),
-      salt: salt,
-    };
-    await User.update({password: hash, password_salt: salt}, {where: {email}});
-    return res.status(200).json({message: 'Password updated successfully'});
-    } catch (error){
-      console.error(error);
-      return res.status(500).json({error: 'Failed to update password'});
-    }
-  }
 };

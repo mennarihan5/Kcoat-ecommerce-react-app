@@ -2,7 +2,6 @@ const router = require("express").Router();
 const { login, signup, me } = require("../controllers/auth");
 const { JWTAuthenticationMiddleware } = require("../middleware/auth");
 const cartController = require("../controllers/auth/cartController");
-//const categoryController = require("../controllers/auth/categoryController");
 const authReqDataSchema = require("../helpers/validators/request/schemas/auth");
 const { requestDataValidatorMiddleware } = require("../middleware/validator");
 
