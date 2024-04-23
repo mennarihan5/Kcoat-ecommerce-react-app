@@ -80,7 +80,4 @@ db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done!");
 });
 
-module.exports = {db,
-  sequelize,
-  DataTypes
-};
+module.exports = { db, sequelize, DataTypes };

@@ -1,5 +1,5 @@
 const passwordHelper = require("../../helpers/crypt/password");
-const userModel = require("../../models").Users;
+const userModel = require("../../models").db.User;
 
 module.exports = {
   createUser: async ({ full_name, email, password }) => {
@@ -9,7 +9,7 @@ module.exports = {
       email,
       password: hash,
       password_salt: salt,
-      password_reset_otp: null
+      password_reset_otp: null,
     };
     return (await userModel.create(data))?.toJSON();
   },
