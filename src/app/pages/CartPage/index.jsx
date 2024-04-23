@@ -8,9 +8,9 @@ import trousers from '../../assets/images/Trouser.jpg';
 export const CartPage = () => {
     // Dummy data for demonstration
     const [cartItems, setCartItems] = useState([
-        { id: 1, name: "Short", quantity: 2, price: 10, imageSrc: shorts },
-        { id: 2, name: "Vintage SKirt", quantity: 1, price: 20, imageSrc: vintage},
-        { id: 3, name: "Trouser", quantity: 3, price: 15, imageSrc: trousers}
+        { id: 1, name: "Short", quantity: 2, price: 5500, imageSrc: shorts },
+        { id: 2, name: "Vintage SKirt", quantity: 1, price: 5500, imageSrc: vintage},
+        { id: 3, name: "Trouser", quantity: 3, price: 5500, imageSrc: trousers}
     ]);
 
     const handleDecrease = (itemId) => {
@@ -73,7 +73,7 @@ export const CartPage = () => {
                                     +
                                 </div>
                             </div>
-                            <p className={styles.itemPrice}>${item.price}</p>
+                            <p className={styles.itemPrice}>₦{item.price}</p>
                         </div>
                     ))}
                 </div>
@@ -82,11 +82,11 @@ export const CartPage = () => {
                    
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Subtotal</p>
-                    <p className={styles.summaryValue}>$165.00</p>
+                    <p className={styles.summaryValue}>₦165.00</p>
                 </div>
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Shipping</p>
-                    <p className={styles.summaryValue}>$10.00</p>
+                    <p className={styles.summaryValue}>₦10.00</p>
                 </div>
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Promocode</p>
@@ -95,7 +95,7 @@ export const CartPage = () => {
 
                 <div className={styles.summaryItemLast}>
                     <p className={styles.summaryText}>Total</p>
-                    <p className={styles.summaryValue}>$17,500</p>
+                    <p className={styles.summaryValue}>₦17,500</p>
                     
                 </div>
                 <div className={styles.button}>
