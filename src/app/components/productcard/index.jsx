@@ -1,4 +1,4 @@
-import { FaHeart } from 'react-icons/fa'; // Importing the heart icon from react-icons library
+import { FaRegHeart } from "react-icons/fa6";
 import dinnerGown from '../../assets/images/dinnerGown.svg';
 import pearlNecklace from '../../assets/images/pearlNecklace.svg';
 import stiletto from '../../assets/images/stiletto.svg';
@@ -17,37 +17,37 @@ import vector from '../../assets/images/vector.svg';
         id: 1,
         imageSrc: dinnerGown,
         description: "Dinner Gown",
-        price: "$5,500",
+        price: "₦5,500",
       },
       {
         id: 2,
         imageSrc: pearlNecklace,
-        price: "$24.99",
+        price: "₦5,500",
         description: "Pearl Necklace"
       }
       ,
       {
         id: 3,
         imageSrc: stiletto,
-        price: "$29.99",
+        price: "₦5,500",
         description: "Stiletto"
       },
       {
         id: 4,
         imageSrc: shoulderBag,
-        price: "$14.99",
+        price: "₦5,500",
         description: "Shoulder Bag"
       },
       {
         id: 5,
         imageSrc: vintage,
-        price: "$34.99",
+        price: "₦5,500",
         description: "Vintage Dress"
       },
       {
         id: 6,
         imageSrc: menSuit,
-        price: "$34.99",
+        price: "₦5,500",
         description: "Men Suit"
       }
       
