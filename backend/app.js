@@ -15,15 +15,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //routers
-app.use((req, res, next) => {
-  res.locals.username = "myUsername";
-  next();
-});
+// app.use((req, res, next) => {
+//   res.locals.username = "myUsername";
+//   next();
+// });
 
-app.use((req, res, next) => {
-  console.log(res.locals.username);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(res.locals.username);
+//   next();
+// });
 
 app.use("/", require("./routes"));
 
