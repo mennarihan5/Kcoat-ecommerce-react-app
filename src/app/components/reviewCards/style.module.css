@@ -30,12 +30,13 @@
     width: 300px;
      */
   }
-  .review-card:nth-child(n+2) {
-    position: relative;/* Positioning for cards after the first one */
-     /* Align all subsequent cards to the left */
-     opacity: 1; /* Make subsequent cards visible */
-     z-index: -1; /* Move subsequent cards behind */
-   }
+
+  
+  /* .review-card:nth-child(n+2) {
+    position: relative;
+     opacity: 1;
+     z-index: -1; 
+   } */
 /* 
      .review-card:nth-child(2) {
     left: 30%;
@@ -57,9 +58,6 @@
     left: 0; 
   } */
 
-
-
- 
   .review-image {
     /* width: 200px;
     height: auto;
@@ -70,7 +68,7 @@
     top: 25px;
     left: 100px;
     gap: 0px;
-    opacity: 0px;
+    /* opacity: 0px; */
    border-radius: 50%;
   }
   
