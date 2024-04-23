@@ -1,4 +1,4 @@
-const UserModel = require("../../models/userModel");
+const { sequelize, DataTypes } = require("../../models");
 const userService = require("../../service/user");
 const passwordHelper = require("../../helpers/crypt/password");
 const JWTHelper = require("../../helpers/auth/jwt");
@@ -12,6 +12,7 @@ module.exports = {
         .status(401)
         .json({ message: "Account not found. Double check or sign-up." });
     }
+    console.log(userData);
     if (
       !passwordHelper.verifyPassword(
         password,
