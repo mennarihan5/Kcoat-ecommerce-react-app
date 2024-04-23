@@ -37,7 +37,7 @@ module.exports = {
   },
 
   changePassword: async (req, res) => {
-    const { email, otp, newPassword } = req.body;
+    const { email, currentPassword, newPassword } = req.body;
     try {
       // Find user by email
       const user = await userModel.findOne({ where: { email } });
@@ -45,9 +45,10 @@ module.exports = {
         return res.status(404).json({ error: "User not found" });
       }
 
-      // Verify OTP
-      if (user.password_reset_otp !== otp) {
-        return res.status(400).json({ error: "Invalid OTP" });
+      // Verify current password
+      const isValidPassword = passwordHelper.comparePassword(currentPassword, user.password, user.password_salt);
+      if (!isValidPassword) {
+        return res.status(400).json({ error: "Invalid current password" });
       }
 
       // Update password
@@ -55,7 +56,6 @@ module.exports = {
       await user.update({
         password: hash,
         password_salt: salt,
-        password_reset_otp: null,
       });
 
       res.status(200).json({ message: "Password changed successfully" });
@@ -66,4 +66,5 @@ module.exports = {
         .json({ error: "An error occurred while changing the password" });
     }
   },
+
 };

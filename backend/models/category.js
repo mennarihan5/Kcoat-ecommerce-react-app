@@ -1,8 +1,7 @@
-// category.js
 "use strict";
-const { Model } = require("sequelize");
+const { DataTypes, Model } = require('sequelize');
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize) => {
   class Category extends Model {}
 
   Category.init(

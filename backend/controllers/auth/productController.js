@@ -1,50 +1,73 @@
-const { Op } = require("sequelize");
-const { Product } = require("../../models");
+const { Product } = require("../../models").db;
+const { Category } = require("../../models").db;
 
-// Filter products
-const filterProducts = async (req, res) => {
+//1. Create Product
+
+const addProduct = async (req, res) => {
   try {
-    let whereClause = {};
-    const { type, color, size, priceRange } = req.query;
-
-  
-    if (type && ["shirt", "coat", "jeans", "polo-shirt"].includes(type)) {
-      whereClause.type = type;
+    if (!req.body.name || !req.body.categoryId) {
+      return res.status(400).send({ message: "Name and categoryId is required" });
     }
-    if (color && ["black", "white", "grey", "blue"].includes(color)) {
-      whereClause.color = color;
-    }
-    if (size && ["XS", "S", "M", "L", "XL"].includes(size)) {
-      whereClause.size = size;
-    }
-    if (priceRange && ["1", "2", "3", "4"].includes(priceRange)) {
-      switch (priceRange) {
-        case "1":
-          whereClause.price = { [Op.between]: [1500, 5000] };
-          break;
-        case "2":
-          whereClause.price = { [Op.between]: [5000, 8500] };
-          break;
-        case "3":
-          whereClause.price = { [Op.between]: [8500, 11500] };
-          break;
-        case "4":
-          whereClause.price = { [Op.between]: [11500, 14500] };
-          break;
-        default:
-          break;
-      }
+    const category = await Category.findByPk(req.body.categoryId);
+    if (!category) {
+      return res.status(404).send({ message: "Category not found" });
     }
 
-    const filteredProducts = await Product.findAll({
-      where: whereClause,
-    });
+    let info = {
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price,
+      type: req.body.type,
+      size: req.body.size,
+      color: req.body.color,
+      quantity: req.body.quantity,
+      categoryId: req.body.categoryId
+    };
 
-    res.json(filteredProducts);
+    const product = await Product.create(info);
+    res.status(200).send(product); // Use 200 for successful creation
   } catch (error) {
-    console.error(error);
+    console.error("Error adding product:", error);
+    res.status(500).send("Internal server error");
+  }
+};
+
+//2. get all products
+
+const getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.findAll({});
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error fetching products:", error);
     res.status(500).json({ message: "Internal server error" });
   }
 };
 
-module.exports = { filterProducts };
+
+//3. get single product
+
+const getOneProduct = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const product = await Product.findOne({ where: { id: id } });
+
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+    res.status(200).json(product);
+  } catch (error) {
+    console.error("Error fetching product:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+
+
+
+
+module.exports = {
+  addProduct,
+  getAllProducts,
+  getOneProduct,
+};
