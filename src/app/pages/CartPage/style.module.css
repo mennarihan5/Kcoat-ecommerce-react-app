@@ -33,17 +33,17 @@
   font-size: 40px;
   color: #7C7B5D;
   margin-top: 20px;
+  display: flex;
 }
 
-/* .items {
-  margin-top: 30px; */
-  /* margin-right: 10px; */
-  /* font-family: Montserrat;
+.items {
+  margin-top: 30px; 
+  margin-right: 10px;
+ font-family: Montserrat;
   font-size: 24px;
   font-weight: 700;
-  color: #6b1515;
   margin-left: 480px;
-} */
+}
 
 .middleSection {
   display: block;

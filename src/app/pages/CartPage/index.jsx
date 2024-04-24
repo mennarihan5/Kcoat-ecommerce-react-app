@@ -36,12 +36,15 @@ export const CartPage = () => {
             <Header />
             <div className={styles.container}>
                 <div className={styles.leftSection}>
-                    <h2 className={styles.yourCart}>Your Cart</h2>
-                    <p className={styles.items}>3 items</p>
+                   <div><h2 className={styles.yourCart}>Your Cart</h2>
+                   <h2 className={styles.heading1}>Item</h2>
+                   </div> 
+                   <div><p className={styles.items}>3 items</p>
+                   </div> 
                 </div>
                 <div className={styles.middleSection}>
                     {/* <div className={styles.item}>
-                        <h2 className={styles.heading1}>Item</h2>
+                        
                     </div>
                     <div className={styles.quantity}>
                         <h2 className={styles.heading2}>Quantity</h2>
