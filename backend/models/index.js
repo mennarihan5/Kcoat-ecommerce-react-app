@@ -56,6 +56,11 @@ Object.values(db).forEach((model) => {
 db.User.hasMany(db.Favorite, { foreignKey: "UserId", as: "favorites" });
 db.Favorite.belongsTo(db.User, { foreignKey: "UserId", as: "User" });
 
+db.Favorite.belongsTo(db.Product, { foreignKey: "productId" });
+db.Product.hasMany(db.Favorite, { foreignKey: "productId" });
+
+
+
 db.Category.hasMany(db.Product, { foreignKey: "categoryId", as: "products" });
 db.Product.belongsTo(db.Category, {
   foreignKey: "categoryId",
