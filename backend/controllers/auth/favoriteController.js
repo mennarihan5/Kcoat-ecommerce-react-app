@@ -1,4 +1,4 @@
-const { favorite } = require("../../models").db;
+const { Favorite, Product } = require("../../models").db;
 
 // Controller function to add a product to favorites
 const addToFavorites = async (req, res) => {
@@ -6,7 +6,7 @@ const addToFavorites = async (req, res) => {
     const { UserId, productId } = req.body;
 
     // Check if the favorite already exists
-    const existingFavorite = await favorite.findOne({
+    const existingFavorite = await Favorite.findOne({
       where: { UserId, productId },
     });
     if (existingFavorite) {
@@ -14,7 +14,7 @@ const addToFavorites = async (req, res) => {
     }
 
     // Create a new favorite
-    await favorite.create({ UserId, productId });
+    await Favorite.create({ UserId, productId });
 
     res
       .status(201)
@@ -25,13 +25,36 @@ const addToFavorites = async (req, res) => {
   }
 };
 
+// Controller function to get all product on favorites
+const getAllFavorites = async (req, res) => {
+  try {
+    const userId = req.params.UserId;
+
+    // Find all favorites of the user with associated product details
+    const favorites = await Favorite.findAll({
+      where: { UserId: userId },
+      include: [{ model: Product }],
+    });
+
+    res.json(favorites);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+    
+
+
+
+
+
 // Controller function to remove a product from favorites
 const removeFromFavorites = async (req, res) => {
   try {
     const { UserId, productId } = req.body;
 
     // Check if the favorite exists
-    const favorite = await favorite.findOne({ where: { UserId, productId } });
+    const favorite = await Favorite.findOne({ where: { UserId, productId } });
     if (!favorite) {
       return res.status(404).json({ message: "Favorite not found" });
     }
@@ -48,4 +71,8 @@ const removeFromFavorites = async (req, res) => {
   }
 };
 
-module.exports = { addToFavorites, removeFromFavorites };
+module.exports = { 
+    addToFavorites, 
+    getAllFavorites,
+    removeFromFavorites
+ };

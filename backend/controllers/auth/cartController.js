@@ -43,4 +43,39 @@ const getCart = async (req, res) => {
   }
 };
 
-module.exports = { addToCart, getCart };
+const deleteCart = async (req, res) => {
+  try {
+    // Extract UserId and productId from request body
+    const { UserId, productId } = req.body;
+
+    // Check if UserId and productId are provided
+    if (!UserId || !productId) {
+      return res
+        .status(400)
+        .json({ message: "UserId and productId are required" });
+    }
+
+    // Find the cart associated with the provided UserId
+    const cart = await Cart.findOne({ where: { UserId } });
+    if (!cart) {
+      return res.status(404).json({ message: "Cart not found" });
+    }
+
+    // Find the product to remove from the cart
+    const product = await Product.findByPk(productId);
+    if (!product) {
+      return res.status(404).json({ message: "Product not found in the cart" });
+    }
+
+    // Remove the product from the cart
+    await cart.removeProduct(product);
+
+    res.status(200).json({ message: "Item removed from cart successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
+
+module.exports = { addToCart, getCart, deleteCart };
