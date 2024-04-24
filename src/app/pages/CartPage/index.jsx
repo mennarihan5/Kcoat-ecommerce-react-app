@@ -31,6 +31,15 @@ export const CartPage = () => {
         );
     };
 
+    const handleRemove = (itemId) => {
+        setCartItems(prevItems =>
+            prevItems.filter(item => item.id !== itemId)
+        );
+    };
+
+    // Calculate subtotal based on the quantity of clothes and their prices
+    const subtotal = cartItems.reduce((acc, item) => acc + (item.quantity * item.price), 0);
+
     return (
         <div className={styles.cart}>
             <Header />
@@ -39,19 +48,10 @@ export const CartPage = () => {
                    <div><h2 className={styles.yourCart}>Your Cart</h2>
                    <h2 className={styles.heading1}>Item</h2>
                    </div> 
-                   <div><p className={styles.items}>3 items</p>
+                   <div><p className={styles.items}>{cartItems.length} items</p>
                    </div> 
                 </div>
                 <div className={styles.middleSection}>
-                    {/* <div className={styles.item}>
-                        
-                    </div>
-                    <div className={styles.quantity}>
-                        <h2 className={styles.heading2}>Quantity</h2>
-                    </div>
-                    <div className={styles.price}>
-                        <h2 className={styles.heading3}>Price</h2>
-                    </div> */}
                     {cartItems.map(item => (
                         <div key={item.id} className={styles.item}>
                             <div className={styles.imageContainer}>
@@ -77,6 +77,12 @@ export const CartPage = () => {
                                 </div>
                             </div>
                             <p className={styles.itemPrice}>₦{item.price}</p>
+                            <button
+                                className={styles.removeButton}
+                                onClick={() => handleRemove(item.id)}
+                            >
+                                X
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -85,7 +91,7 @@ export const CartPage = () => {
                    
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Subtotal</p>
-                    <p className={styles.summaryValue}>₦165.00</p>
+                    <p className={styles.summaryValue}>₦{subtotal.toFixed(2)}</p>
                 </div>
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Shipping</p>
@@ -98,7 +104,7 @@ export const CartPage = () => {
 
                 <div className={styles.summaryItemLast}>
                     <p className={styles.summaryText}>Total</p>
-                    <p className={styles.summaryValue}>₦17,500</p>
+                    <p className={styles.summaryValue}>₦{(subtotal + 10).toFixed(2)}</p>
                     
                 </div>
                 <div className={styles.button}>
