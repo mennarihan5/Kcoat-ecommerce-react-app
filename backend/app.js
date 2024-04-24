@@ -2,17 +2,44 @@ const express = require("express");
 const cors = require("cors");
 const db = require("./models");
 const app = express();
+const passport = require("../backend/config/passport-config");
+const session = require("express-session");
+//const googleRoutes = require("../backend/routes/googleRoute");
+
 
 // Loading environmental variables
 require("dotenv").config({ path: ["./envs/.env"] });
 
-//middlewae
+
+
+const secretKey = process.env.SECRET_KEY;
+
+//console.log("Generated Secret Key:", secretKey);
+
+
+//middleware
 
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
+
+
+app.use(
+  session({
+    secret: secretKey, // Change this to your own secret key
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+
 
 //routers
 // app.use((req, res, next) => {
@@ -26,6 +53,7 @@ app.use(cors());
 // });
 
 app.use("/", require("./routes"));
+app.use("/", require("../backend/routes/googleRoute")); 
 
 //testing api
 
