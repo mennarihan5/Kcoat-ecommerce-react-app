@@ -9,8 +9,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
-        type: Sequelize.INTEGER
+      UserId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model: 'User',
+          key: 'id',
+        }
       },
       productId: {
         type: Sequelize.INTEGER
@@ -25,7 +30,9 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
     });
   },
   async down(queryInterface, Sequelize) {

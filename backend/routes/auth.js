@@ -2,8 +2,10 @@ const router = require("express").Router();
 const { login, signup, me } = require("../controllers/auth");
 const { JWTAuthenticationMiddleware } = require("../middleware/auth");
 const cartController = require("../controllers/auth/cartController");
+const favoriteController = require("../controllers/auth/favoriteController");
 const authReqDataSchema = require("../helpers/validators/request/schemas/auth");
 const { requestDataValidatorMiddleware } = require("../middleware/validator");
+const {forgetPassword, verifyOTP, resetPassword, changePassword} = require("../service/password");
 
 //routes for login and signup
 router.post(
@@ -16,6 +18,13 @@ router.post(
   [requestDataValidatorMiddleware([authReqDataSchema.signup])],
   signup
 );
+
+// routes for forget password and changepassword
+router.post("/forgetPassword", forgetPassword);
+router.post("/verify-otp", verifyOTP);
+router.post("/reset-password", resetPassword);
+router.post("/changePassword", changePassword);
+
 
 router.get("/me", [JWTAuthenticationMiddleware], me);
 
@@ -37,5 +46,9 @@ router.get("/me", [JWTAuthenticationMiddleware], me);
 //routes for cart
 router.get("/cart", cartController.getCart);
 router.post("/cart/add", cartController.addToCart);
+
+//routes for favorite
+router.post('/addFavorite', favoriteController.addToFavorites);
+router.delete('/removeFavorite', favoriteController.removeFromFavorites);
 
 module.exports = router;
