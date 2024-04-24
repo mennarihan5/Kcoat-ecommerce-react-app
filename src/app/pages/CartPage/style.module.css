@@ -21,7 +21,6 @@
   height: 1000px;
   margin-left: 857px;
   gap: 0px;
-  opacity: 0px;
   margin-top: -2px;
   margin-right: 2px;
   position: fixed;
@@ -101,7 +100,7 @@ margin-left: -1500px;
   width: 150px;
 height: 170px;
 gap: 0px;
-opacity: 0px;
+
   
 }
 
@@ -157,7 +156,6 @@ opacity: 0px;
   width: 104px;
 height: 29px;
 gap: 0px;
-opacity: 0px;
 font-family: Montserrat;
 font-size: 24px;
 font-weight: 500;
@@ -174,7 +172,6 @@ padding: 20px;
   width: 66px;
 height: 24px;
 gap: 0px;
-opacity: 0px;
 font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
@@ -191,34 +188,30 @@ margin-right: 50px;
   border-radius: 5px;
   cursor: pointer;
   font-family: Montserrat;
-font-size: 17.37px;
-font-weight: 500;
-line-height: 21.17px;
-text-align: left;
-margin-top: 20px;
-
-
-  
+  font-size: 17.37px;
+  font-weight: 500;
+  line-height: 21.17px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 .promoButton:hover {
   background-color: #c3bd10;
-  ;
+  
 }
 
 .sectionHeading{
   width: 212px;
-height: 50px;
-top: 179px;
-left: 918px;
-gap: 0px;
-opacity: 0px;
-font-family: Libre Baskerville;
-font-size: 40px;
-font-weight: 700;
-line-height: 49.6px;
-text-align: left;
-color: #7C7B5D;
+  height: 50px;
+  top: 179px;
+  left: 918px;
+  gap: 0px;
+  font-family: Libre Baskerville;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 49.6px;
+  text-align: left;
+  color: #7C7B5D;
 }
 
 .summaryItemLast{
@@ -236,11 +229,7 @@ height: Hug (56px)px;
 padding: 16px 84px 16px 84px;
 gap: 10px;
 border-radius: 4px 0px 0px 0px;
-opacity: 0px;
 color: #aaa516;
-
-
-
 }
 
 .itemName{
@@ -260,6 +249,5 @@ color: #aaa516;
   /* margin-left: 200px; */
   font-size: 20px;
   /* margin-top: -20px; */
-  
-  
+
 }
