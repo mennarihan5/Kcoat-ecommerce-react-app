@@ -1,29 +1,16 @@
-
-.logo svg {
-    width: 10rem;
+.logo {
+    width: 80%;
+}
+.logo img {
+    width: 100%;
 }
 
-@media (max-width: 600px) {
-    .logo svg {
+@media (max-width: 1200px) {
+    /* .logo svg {
         width: 5rem;
-    }
+    } */
     .logo {
-        margin-left: 10%;
-    }
-
-}
-@media (min-width:600px) and (max-width: 900px) {
-    .logo svg {
-        width: 8rem;
-    }
-    .logo {
-        margin-left: 10%;
-    }
-
-}
-@media (min-width:900px) and (max-width: 1200px) {
-    .logo {
-        margin-left: 10%;
+        margin-left: 20%;
     }
 
 }

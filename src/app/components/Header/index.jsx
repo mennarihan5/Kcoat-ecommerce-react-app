@@ -6,7 +6,9 @@ import { UserIcons } from './UserIcons/index.jsx';
 export const Header = () => {
     return (
         <header className={styles.header}>
-            <Logo className={styles.logo} background={true} />
+            <div className={styles.logoContainer}>
+                <Logo className={styles.logo} background={false} />
+            </div>
             <NavBar />
             <UserIcons />
         </header>

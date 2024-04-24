@@ -1,7 +1,7 @@
 import styles from './style.module.css';
 import { FilterInput } from '../FilterInput';
 
-export const SidebarSizeOptions = ({handleChange, clear, handleCheckboxChange, checkbox}) => {
+export const SidebarSizeOptions = ({handleChange, handleCheckboxChange, checkbox}) => {
     return(
         <div className={styles.options}>
             <h5 className={styles.title}>Size</h5>
@@ -9,31 +9,34 @@ export const SidebarSizeOptions = ({handleChange, clear, handleCheckboxChange, c
             handleChange={handleChange}
             handleCheckboxChange={handleCheckboxChange}
             checked={checkbox}
-            clear={clear}
             value = "XS"
             title = "XS"   
             name =  "XS"  
             />
             <FilterInput 
             handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
             value = "S"
             title = "S"  
             name =  "S" 
             />
             <FilterInput 
             handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
             value = "M"
             title = "M"  
             name = "M" 
             />
             <FilterInput 
             handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
             value = "L"
             title = "L"   
             name =  "L" 
             />
             <FilterInput 
             handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
             value = "XL"
             title = "XL"   
             name =  "XL" 

@@ -1,8 +1,16 @@
 .sidebar-filter {
     width: 30%;
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
-    margin: 0 auto;
+    font-family: "Montserrat", sans-serif; 
+}
+.filterItem::after {
+    border-bottom: 1px solid var(--lightGrey);
+    width: 15%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    left: 8%;
+    padding: 1% 0;
 }
 .filter-title {
     font-family: "Libre Baskerville", "Helvetica Neue";
@@ -13,20 +21,9 @@
 }
 .filters-wrapper {
     width: 100%;
-    margin: 7% auto;   
+    margin: -10% auto;   
 }
-.filters-wrapper::after {
-    border-bottom: 1px solid var(--lightGrey);
-    width: 15%;
-    height: 2px;
-    position: absolute;
-    content: "";
-    left: 8%;
-    padding: 1% 0;
-}
-.filter {
-   
-}
+
 .title {
     font-size: 1.5rem;
     padding: 10% 0;
@@ -59,9 +56,10 @@
     font-size: 1.75rem;
     color: var(--olive);
     border-bottom: 1px solid var(--olive);
-    width: 45%;
-    margin: 10% auto;
+    width: 35%;
+    margin: 30% auto;
     padding-bottom: 5%;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
+    text-wrap: nowrap;
 }

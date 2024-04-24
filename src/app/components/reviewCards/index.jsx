@@ -1,7 +1,47 @@
 import React from 'react';
 import styles from './style.module.css';
-import reviewImage from '../../assets/images/reviewImage.jpg';
+import reviewImage from '../../assets/images/Ellipse 5.png';
 
+// Example usage
+const reviews = [
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva 1',
+    rating: 5,
+  },
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva 2',
+    rating: 5,
+  },
+  {
+    image: reviewImage,
+    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+    userName: 'John Eva 3',
+    rating: 5,
+  },
+  // {
+  //   image: reviewImage,
+  //   text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+  //   userName: 'John Eva 4',
+  //   rating: 5,
+  // },
+  // {
+  //   image: reviewImage,
+  //   text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+  //   userName: 'John Eva 5',
+  //   rating: 5,
+  // },
+  // {
+  //   image: reviewImage,
+  //   text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
+  //   userName: 'John Eva 6',
+  //   rating: 5,
+  // },
+  // Add more reviews here...
+];
 
 
 const ReviewCard = ({ review }) => {
@@ -40,46 +80,7 @@ const ReviewCardsContainer = ({ reviews }) => {
   );
 };
 
-// Example usage
-const reviews = [
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 1',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 2',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 3',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 4',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 5',
-    rating: 5,
-  },
-  {
-    image: reviewImage,
-    text: 'Orders came on the exact date. Items received  were as seen on the website. really love them',
-    userName: 'John Eva 6',
-    rating: 5,
-  },
-  // Add more reviews here...
-];
+
 
 const AppCards = () => {
   return (

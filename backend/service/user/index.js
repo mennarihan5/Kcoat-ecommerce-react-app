@@ -1,5 +1,5 @@
 const passwordHelper = require("../../helpers/crypt/password");
-const UserModel = require("../../models").users;
+const userModel = require("../../models").db.User;
 
 module.exports = {
   createUser: async ({ full_name, email, password }) => {
@@ -9,10 +9,11 @@ module.exports = {
       email,
       password: hash,
       password_salt: salt,
+      password_reset_otp: null,
     };
-    return (await UserModel.create(data))?.toJSON();
+    return (await userModel.create(data))?.toJSON();
   },
   retrieveUser: async (kwargs) => {
-    return (await UserModel.findOne({ where: kwargs }))?.toJSON();
+    return (await userModel.findOne({ where: kwargs }))?.toJSON();
   },
 };

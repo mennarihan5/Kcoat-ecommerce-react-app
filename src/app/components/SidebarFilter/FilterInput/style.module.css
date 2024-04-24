@@ -1,13 +1,9 @@
-/* .options, .apply {
-    padding: 5% 0 5% 25%;
-    position: relative;
-    
-} */
 .option {
     display: flex;
     align-items: center;
     gap: 8%;
-    margin: auto;
+    margin: 4% 0 4% 18%;
+    margin-left: 18%;
     cursor: pointer;
 }
 .option input {
