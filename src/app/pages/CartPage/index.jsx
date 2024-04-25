@@ -42,10 +42,26 @@ export const CartPage = () => {
 
     return (
         <div className={styles.cart}>
-            <Header />
+            <div>
+                <Header />
+            
+            <div className={styles.container}>
+            <div><h2 className={styles.yourCart}>Your Cart</h2>
+            <p className={styles.items}>{cartItems.length} items</p>
+            </div>
+            <div className={styles.middleHeading}>
+                <p className={styles.headingItem}> Item</p>
+                <p className={styles.headingQuantity}>Quantity</p>
+                <p className={styles.headingPrice}>Price</p><br/>
+            </div>
+            <div><hr className={styles.line}/>   </div>
+
+            <div className={styles.middleSection}>
+            </div>
+            
+            {/* 
             <div className={styles.container}>
                 <div className={styles.leftSection}>
-                   <div><h2 className={styles.yourCart}>Your Cart</h2>
                    <h2 className={styles.heading1}>Item</h2>
                    </div> 
                    <div><p className={styles.items}>{cartItems.length} items</p>
@@ -85,7 +101,7 @@ export const CartPage = () => {
                             </button>
                         </div>
                     ))}
-                </div>
+                </div> */}
                 <div className={styles.rightSection}>
                     <h2 className={styles.sectionHeading}>Summary</h2>
                    
@@ -116,7 +132,7 @@ export const CartPage = () => {
                     {/* Add summary and total cost details here */}
                 </div>
             </div>
-        
+        </div>
     );
 };
 
