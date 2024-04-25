@@ -52,22 +52,48 @@ export const CartPage = () => {
             <div className={styles.middleHeading}>
                 <p className={styles.headingItem}> Item</p>
                 <p className={styles.headingQuantity}>Quantity</p>
-                <p className={styles.headingPrice}>Price</p><br/>
+                <p className={styles.headingPrice}>Price</p>
             </div>
             <div><hr className={styles.line}/>   </div>
 
             <div className={styles.middleSection}>
+                {cartItems.map(item => (
+                    <div key={item.id} className={styles.item}>
+                        <div className={styles.imageContainer}>
+                            <img src={item.imageSrc} alt="Product" className={styles.image} />
+                            <div className={styles.details}>
+                                <p className={styles.itemName}>{item.name}</p>
+                            </div>
+                        </div>
+                        <div className={styles.quantityControl}>
+                            <div
+                                className={styles.controlButton}
+                                onClick={() => handleDecrease(item.id)}
+                            >
+                                -
+                            </div>
+                            <span className={styles.quantity}>{item.quantity}</span>
+                            <div
+                                className={styles.controlButton}
+                                onClick={() => handleIncrease(item.id)}
+                            >
+                                +
+                            </div>
+                        </div>
+                        <p className={styles.itemPrice}>₦{item.price}</p>
+                        <button
+                            className={styles.removeButton}
+                            onClick={() => handleRemove(item.id)}
+                        >
+                            X
+                        </button>
+                    </div>
+                ))}
             </div>
             
             {/* 
-            <div className={styles.container}>
-                <div className={styles.leftSection}>
-                   <h2 className={styles.heading1}>Item</h2>
-                   </div> 
-                   <div><p className={styles.items}>{cartItems.length} items</p>
-                   </div> 
-                </div>
-                <div className={styles.middleSection}>
+       
+               
                     {cartItems.map(item => (
                         <div key={item.id} className={styles.item}>
                             <div className={styles.imageContainer}>
