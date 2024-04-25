@@ -1,7 +1,7 @@
 // googleRoute.js
 
 const express = require("express");
-const passport = require("../config/passport-config");
+const passport = require("../config/password-config");
 const tokenUtils = require("../helpers/auth/jwt"); // Import your token utilities file
 const router = express.Router();
 
