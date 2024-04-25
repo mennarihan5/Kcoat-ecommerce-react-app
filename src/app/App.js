@@ -7,6 +7,7 @@ import { LoginPage } from './pages/LoginPage/index.jsx';
 import { SignupPage } from './pages/SignupPage/index.jsx';
 import { ContactPage } from './pages/ContactPage/index.jsx';
 import { CartPage } from './pages/CartPage/index.jsx';
+import { SingleProductPage } from './pages/SingleProductPage/index.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/signup' element={<SignupPage />}/>
           <Route path='/contact' element={<ContactPage />}/> 
           <Route path='/cart' element={<CartPage />}/>
+          <Route path='/singleProduct/:id' element={<SingleProductPage />}/>
         </Routes>
       </BrowserRouter>
     </div>
