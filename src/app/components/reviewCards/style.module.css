@@ -1,0 +1,103 @@
+.review-card {
+    position: relative;
+    border: 1px solid #ccc;
+    /* padding: 20px; */
+    margin-bottom: 20px;
+    /* width: Hug (34px)px;
+    height: Hug (34px)px; */
+    padding: 25px 15px 25px 15px;
+    gap: 10px;
+    border-radius: 30px 30px 0px 0px;
+    opacity: 0px;
+    background-color: #EDE9E6;
+    box-shadow: 4px 4px 4px 0px #DEDCDC;
+    z-index: 1;
+    
+
+  }
+
+  .review-card ::content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* height: 300px;
+    width: 300px;
+     */
+  }
+
+ .review-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    /* background-color: #f5f5f5; */
+  } 
+
+  .review-card:nth-child(n+2) {
+    position: relative;/* Positioning for cards after the first one */
+     /* Align all subsequent cards to the left */
+     opacity: 1; /* Make subsequent cards visible */
+     z-index: -1; /* Move subsequent cards behind */
+   }
+/* 
+     .review-card:nth-child(2) {
+    left: 30%;
+  }   */
+
+  /* .review-card:nth-child(3) {
+    left: -250%; 
+  }   */
+
+  /* .review-card:nth-child(4) {
+    left: 0; 
+  } 
+
+  /* .review-card:nth-child(5) {
+    left: 50%;
+  } */
+
+  /* .review-card:nth-child(6) {
+    left: 0; 
+  } */
+
+
+
+ 
+  .review-image {
+    /* width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto; */
+    max-width: 100%;
+    height: 150px;
+    top: 25px;
+    left: 100px;
+    gap: 0px;
+    opacity: 0px;
+   border-radius: 50%;
+  }
+  
+  .review-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    justify-items: center;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .stars {
+    margin-top: 10px;
+    
+  }
+  
+  .star {
+    color: #7C7B5D;
+
+    font-size: 20px;
+  }
+  

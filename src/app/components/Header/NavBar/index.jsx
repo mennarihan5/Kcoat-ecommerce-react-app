@@ -1,6 +1,7 @@
 import styles from './style.module.css';
 import { useState } from 'react';
 import { FiAlignJustify } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
     const [menu, setMenu] = useState(false);
@@ -14,16 +15,16 @@ export const NavBar = () => {
         <div className={styles[`hamburger-icon`]} onClick={toggleMenu}><FiAlignJustify /></div>
             <ul className={`${styles['nav-menu']} ${menu ? styles['show-nav'] : ""}`}>
                 <li className={styles[`menu-item`]}>
-                    <a href='#'>Home</a>
+                    <Link to='/'>Home</Link>
                 </li>
                 <li className={styles[`menu-item`]}>
-                    <a href='#'>Categories</a>
+                    <Link to='/categories'>Categories</Link>
                 </li>
                 <li className={styles[`menu-item`]}>
-                    <a href='#'>About Us</a>
+                    <Link to='/about'>About Us</Link>
                 </li>
                 <li className={styles[`menu-item`]}>
-                    <a href='#'>Contact Us</a>
+                    <Link to='/contact'>Contact Us</Link>
                 </li>
             </ul>
         </nav>

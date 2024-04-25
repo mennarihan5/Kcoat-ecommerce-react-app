@@ -1,0 +1,67 @@
+.sidebar-filter {
+    width: 30%;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    margin: 0 auto;
+}
+.filter-title {
+    font-family: "Libre Baskerville", "Helvetica Neue";
+    color: var(--olive);
+    font-size: 3rem;
+    margin: 12% 0;
+    text-align: center;
+}
+.filters-wrapper {
+    width: 100%;
+    margin: 7% auto;   
+}
+.filters-wrapper::after {
+    border-bottom: 1px solid var(--lightGrey);
+    width: 15%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    left: 8%;
+    padding: 1% 0;
+}
+.filter {
+   
+}
+.title {
+    font-size: 1.5rem;
+    padding: 10% 0;
+}
+.options, .apply {
+    padding: 5% 0 5% 25%;
+    position: relative;
+    
+}
+.option, .apply {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    margin: auto;
+    cursor: pointer;
+}
+.option input, .apply input  {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+.option label, .apply label {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.apply {
+    margin: 14% 0 5% 0;
+}
+.clear {
+    font-size: 1.75rem;
+    color: var(--olive);
+    border-bottom: 1px solid var(--olive);
+    width: 45%;
+    margin: 10% auto;
+    padding-bottom: 5%;
+    cursor: pointer;
+    text-align: left;
+}

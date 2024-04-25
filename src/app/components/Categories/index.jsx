@@ -1,21 +1,15 @@
-import { Button } from 'bootstrap';
 import styles from './style.module.css';
+import { CategoriesCards } from './CategoriesCards';
+import { cardsData } from './data';
 
-export const categoriesCards = () => {
+export const Categories = (props) => {
     return(
-        <div className={styles[`categories-card`]}>
-            <img className={styles.img} />
-            <h3 className={styles.title}></h3>
-            <Button />
-        </div>
-
-    )
-}
-
-export const Categories = () => {
-    return(
-        <div className={styles.categories}>
-            Categories
-        </div>
+       <div className={styles.categories}>
+            {
+                cardsData.map((data) => {
+                    return <CategoriesCards image={data.image} title={data.title} small={data.small} cover={data.cover} marginTop={data.marginTop} isWhite={data.isWhite}/>
+                })
+            }
+      </div>
     )
 }
