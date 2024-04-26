@@ -11,9 +11,9 @@ export const FooterMenu = ({title, options, contact}) => {
                     options.map((option) => {
                         return (
                             <div className={styles['list-item']}>
-                                <span className={styles['list-icon']}>
+                                <div className={styles['list-icon']}>
                                     {option.icon}
-                                </span>
+                                </div>
                                 <li  className={styles['list-item-text']}>
                                     <Link to={option.url}>{option.title}</Link>
                                     <span className={styles['social-media-icons']}>

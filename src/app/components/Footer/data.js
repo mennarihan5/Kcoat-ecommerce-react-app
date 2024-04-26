@@ -48,17 +48,17 @@ export const servicesMenu = [
 export const contactMenu = [
     {
         icon: <IoLocationOutline />,
-        title: "74 group Tech4Dev, Lagos Nigeria",
+        title: "B2/11 FHE olomore, Abeokuta",
         url: "/address",
     },
     {
         icon: <IoMailOutline />,
-        title: "74 group @ Tech4Dev.com",
+        title: "christianabennet@gmail.com",
         url: "/email",
     },
     {
         icon: <LiaPhoneAltSolid />,
-        title: +1234567890,
+        title: "08105020473",
         url: "/phone",
     },
     {

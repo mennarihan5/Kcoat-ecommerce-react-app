@@ -2,43 +2,42 @@
 
 .app {
   display: flex;
-  justify-content: center; /* Align cards to the center horizontally */
-  color: blueviolet;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align cards to the center horizontally */
+  align-items: center;
+  width: 70%;
 }
 
 /* Card.module.css */
 
 .card {
   display: flex;
-  flex-direction: column; /* Display cards vertically */
+  justify-content: space-between;
   align-items: center; /* Align items to the center horizontally */
-  padding: 20px; /* Adjust padding for smaller screens */
-  margin: 0 auto; /* Center horizontally */
-  max-width: 200px; /* Adjust card width as needed */
-  gap: 10px;
+  width: 274px; 
 }
 
-.logo {
-  width: 20px; /* Adjust logo size as needed */
-  height: 50px; /* Adjust logo size as needed */
-  margin-right: 20px; /* Adjust margin for smaller screens */
+.logo svg {
+  width: 3rem; 
+  height: 3rem; 
+  /* margin-right: 20px; 
   margin-left: -250px;
-  margin-top: -40px;
+  margin-top: -40px; */
 
 }
 
-.content {
-  width: 100%; /* Adjust width to fill the container */
-  max-width: 150px; /* Limit maximum width */
+/* .content {
+  width: 100%; 
+  max-width: 150px; 
   gap: 5px;
   opacity: 0px;
   margin-top: -30px;
-}
+} */
 
-.heading {
+/* .heading {
   display: inline;
-  width: 100%; /* Adjust width to fill the container */
-  max-width: 100px; /* Limit maximum width */
+  width: 100%; 
+  max-width: 100px;
   gap: 0px;
   opacity: 0px;
   font-family: Montserrat;
@@ -48,11 +47,11 @@
   text-align: left;
   color: #282828;
   margin-top: -20px;
-}
+} */
 
-.description {
-  width: 100%; /* Adjust width to fill the container */
-  max-width: 176px; /* Limit maximum width */
+/* .description {
+  width: 100%; 
+  max-width: 176px; 
   gap: 0px;
   opacity: 0px;
   font-family: Montserrat;
@@ -61,7 +60,7 @@
   line-height: 19.5px;
   text-align: left;
   color: #4F4B4B;
-}
+} */
 
 @media (max-width: 768px) {
   .card {

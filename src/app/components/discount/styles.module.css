@@ -78,7 +78,10 @@
     }
     .discountImg {
       width: 100%
-
+    }
+    .discountSection {
+      width: 100%;
+      height: auto;
     }
 
 }
