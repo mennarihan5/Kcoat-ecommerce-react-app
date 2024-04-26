@@ -9,7 +9,7 @@ export const CartPage = () => {
     // Dummy data for demonstration
     const [cartItems, setCartItems] = useState([
         { id: 1, name: "Short", quantity: 2, price: 5500, imageSrc: shorts },
-        { id: 2, name: "Vintage SKirt", quantity: 1, price: 5500, imageSrc: vintage},
+        { id: 2, name: "Shirt", quantity: 1, price: 5500, imageSrc: vintage},
         { id: 3, name: "Trouser", quantity: 3, price: 5500, imageSrc: trousers}
     ]);
 
@@ -57,39 +57,39 @@ export const CartPage = () => {
             <div><hr className={styles.line}/>   </div>
 
             <div className={styles.middleSection}>
-                {cartItems.map(item => (
-                    <div key={item.id} className={styles.item}>
-                        <div className={styles.imageContainer}>
-                            <img src={item.imageSrc} alt="Product" className={styles.image} />
-                            <div className={styles.details}>
-                                <p className={styles.itemName}>{item.name}</p>
-                            </div>
-                        </div>
-                        <div className={styles.quantityControl}>
-                            <div
-                                className={styles.controlButton}
-                                onClick={() => handleDecrease(item.id)}
-                            >
-                                -
-                            </div>
-                            <span className={styles.quantity}>{item.quantity}</span>
-                            <div
-                                className={styles.controlButton}
-                                onClick={() => handleIncrease(item.id)}
-                            >
-                                +
-                            </div>
-                        </div>
-                        <p className={styles.itemPrice}>₦{item.price}</p>
-                        <button
-                            className={styles.removeButton}
-                            onClick={() => handleRemove(item.id)}
-                        >
-                            X
-                        </button>
-                    </div>
-                ))}
+            {cartItems.map(item => (
+    <div key={item.id} className={styles.item}>
+        <div className={styles.imageContainer}>
+            <img src={item.imageSrc} alt="Product" className={styles.image} />
+        </div>
+        <div className={styles.details}>
+            <p className={styles.itemName}>{item.name}</p>
+        </div>
+        <div className={styles.quantityControl}>
+            <div
+                className={styles.controlButton}
+                onClick={() => handleDecrease(item.id)}
+            >
+                -
             </div>
+            <span className={styles.quantity}>{item.quantity}</span>
+            <div
+                className={styles.controlButton}
+                onClick={() => handleIncrease(item.id)}
+            >
+                +
+            </div>
+        </div>
+        <p className={styles.itemPrice}>₦{item.price}</p>
+        <button
+            className={styles.x}
+            onClick={() => handleRemove(item.id)}
+        >
+            X
+        </button>
+    </div>
+))}
+</div>
             
             {/* 
        
