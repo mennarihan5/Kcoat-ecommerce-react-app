@@ -96,6 +96,7 @@
   opacity: 0px;
   font-family: Libre Baskerville;
   font-size: 40px;
+  font-size: clamp(32px, 3vw, 40px);
   font-weight: 700;
   color: #7C7B5D;
   position: absolute;

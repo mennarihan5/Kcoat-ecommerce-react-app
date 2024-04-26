@@ -4,6 +4,7 @@
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     gap: 2.5rem;
+    width: 20%;
 }
 .icons-wrapper {
     gap: 1rem;
@@ -12,12 +13,17 @@
     cursor: pointer;
 }
 .icon svg {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: clamp(1rem , 3vw, 1.2rem);
+    height: clamp(1rem , 3vw, 1.2rem);
     color: var(--darkGrey);
     transition: all 0.2s ease-in-out;
 }
 .icon:hover svg {
     color: var(--olive);
     transform: scale(1.2);
+}
+@media (max-width: 990px) {
+    .icons-wrapper {
+        gap: 0.6rem;
+    }
 }
