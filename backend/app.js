@@ -3,7 +3,8 @@ const cors = require("cors");
 const db = require("./models");
 const app = express();
 const passport = require("../backend/config/password-config");
-const session = require("express-session");
+//const session = require("express-session");
+const MySQLStore = require("express-mysql-session")(session);
 const googleRoutes = require("../backend/routes/googleRoute");
 
 
@@ -31,6 +32,14 @@ const corsOptions = {
 };
 
 
+const dbOptions = {
+  host: process.env.MYSQL_ADDON_HOST,
+  user: process.env.MYSQL_ADDON_USER,
+  password: process.env.MYSQL_ADDON_PASSWORD,
+  database: process.env.MYSQL_ADDON_DB,
+  port: process.env.MYSQL_ADDON_PORT,
+};
+
 
 
 
@@ -46,13 +55,24 @@ app.use(cors());
 app.use(cors(corsOptions));
 
 
-app.use(
-  session({
-    secret: secretKey, // Change this to your own secret key
+// app.use(
+//   session({
+//     secret: secretKey, // Change this to your own secret key
+//     resave: false,
+//     saveUninitialized: true,
+//   })
+// );
+
+
+// Configure session middleware
+app.use(session({
+    store: new MySQLStore(dbOptions),
+    secret: secretKey, 
     resave: false,
-    saveUninitialized: true,
-  })
-);
+    saveUninitialized: false,
+}));
+
+
 
 app.use(passport.initialize());
 app.use(passport.session());
