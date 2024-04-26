@@ -10,6 +10,7 @@ const googleRoutes = require("../backend/routes/googleRoute");
 // Loading environmental variables
 require("dotenv").config({ path: ["./envs/.env"] });
 
+//middlewae
 //console.log(process.env);
 
 const secretKey = process.env.SECRET_KEY;

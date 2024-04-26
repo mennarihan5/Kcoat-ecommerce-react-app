@@ -1,0 +1,17 @@
+.cart {
+  /* Add styles for the main cart container if needed */
+}
+
+.container {
+  /* display: flex; */
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.leftSection {
+  flex: 3;
+  padding: 20px;
+  background-color: white; /* Set background color to white */
+}
+
+

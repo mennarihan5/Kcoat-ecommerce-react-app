@@ -6,12 +6,30 @@
     width: 80%;
     padding: 6% 0;
     margin: auto;
+    height: auto;
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 900px) {
+    .categories {
+        height: auto;
+        justify-content: center;
+        width: 80%;
+        padding: 2%;
+    }
+
+} */
+/* @media (max-width: 1200px) {
     .categories {
         height: auto;
         justify-content: center;
         width: 70%;
     }
 
+} */
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    .categories {
+        height: auto;
+        width: 100%;
+        padding: 2%; 
+    }
 }
