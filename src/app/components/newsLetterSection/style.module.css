@@ -5,7 +5,8 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 20px;
+    margin: 20px 0;
+    width: 100%;
   }
   
   .subscriptionDetails {
@@ -66,11 +67,15 @@
     .cardContainer {
       width: 90%;
       flex-direction: column-reverse;
+      align-items: center;
     }
   
     .subscriptionDetails,
     .subscriptionForm {
-      width: 50%;
+      width: 100%;
+    }
+    .subscriptionForm input[type="text"] {
+      width: 90%;
     }
   }
   
