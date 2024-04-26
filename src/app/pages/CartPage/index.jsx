@@ -82,16 +82,16 @@ export const CartPage = () => {
             </div>
         </div>
         <p className={styles.itemPrice}>₦{item.price}</p>
-        <button
-            className={styles.x}
-            onClick={() => handleRemove(item.id)}
-        >
+        <span className={styles.x} onClick={() => handleRemove(item.id)}>
+
             X
-        </button>
+        </span>
+            
+        
     </div>
 ))}
 </div>
-        <div> <Link to="/login" className={styles.continueShopping}>Continue Shopping</Link> </div>
+        <div> <Link to="/categories" className={styles.continueShopping}>Continue Shopping</Link> </div>
         
                 <div className={styles.rightSection}>
                     <h2 className={styles.sectionHeading}>Summary</h2>

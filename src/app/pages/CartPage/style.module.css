@@ -118,14 +118,14 @@
 }
 
 .imageContainer {
-  width: 2px; /* Adjust width as needed */
+  width: 100px; /* Adjust width as needed */
   flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  
+  margin-right: 100px;
   margin-left: 20px;
   flex: 1; /* Let it occupy remaining space */
   margin-right: -120px;
@@ -160,11 +160,10 @@
 
 .itemPrice {
   margin-right: 30px; /* Adjust margin for spacing */
-  margin-left: 20px; /* Align to the right */
+  margin-left: -60px; /* Align to the right */
   margin-top: -110px;
   width: 79px;
   height: 24px;
-  
   width: 55px;
   padding-left: 5px;
   font-family: Montserrat;
@@ -184,12 +183,15 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 29.26px;
+  text-align: left; 
+  /* margin-top: 500px;  */
+  margin-left: -1200px;
   text-align: left;
-  margin-top: 200px;
-  margin-left: -50px;
-  text-align: left;
-  margin-right: 300px;
+  /* /* margin-right: 300px; */
+  margin-bottom: 500px;
+  /* flex: 1; */  
 }
+
 
 /* .line2{
   margin-bottom: 100px;
