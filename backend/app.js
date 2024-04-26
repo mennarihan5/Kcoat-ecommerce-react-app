@@ -37,7 +37,6 @@ const dbOptions = {
   password: process.env.MYSQL_ADDON_PASSWORD,
   database: process.env.MYSQL_ADDON_DB,
   port: process.env.MYSQL_ADDON_PORT,
-  // Add other options as needed
 };
 
 
