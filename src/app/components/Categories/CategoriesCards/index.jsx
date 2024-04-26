@@ -1,5 +1,6 @@
 import styles from './style.module.css';
 import { Button } from '../../Button/index.jsx';
+import { Link } from 'react-router-dom';
 
 export const CategoriesCards = (props) => {
     const size = props.small ? styles['small-card'] : '';
@@ -15,6 +16,7 @@ export const CategoriesCards = (props) => {
                     <h3 className={styles.title}>{props.title}</h3>
                     <div className={styles['card-btn']}>
                         <Button className={`${styles['default-btn']} ${whiteBtn}`} >
+                            <Link className={styles.btn} to='/categories'>Shop Now</Link>
                             Shop Now
                         </Button>
                     </div>

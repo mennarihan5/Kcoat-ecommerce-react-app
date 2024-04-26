@@ -38,7 +38,7 @@
         align-items: center;
         position: absolute;
         background-color: var(--darkGrey);
-        right: 0;
+        width: 100%;
         left: 0;
         height: auto;
         padding: 1.5rem 0;

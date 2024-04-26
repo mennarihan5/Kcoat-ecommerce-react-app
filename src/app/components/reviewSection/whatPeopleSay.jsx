@@ -4,7 +4,7 @@ import styles from './style.module.css';
 export const WhatPeopleSay = () => {
   return (
          <div className={styles.header}>
-                <h2>What People Say</h2>
+                <h2>What People Say About Us</h2>
             </div>
     );
 }
