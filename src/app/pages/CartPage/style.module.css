@@ -125,7 +125,7 @@
 .details {
   display: flex;
   flex-direction: column;
-  color: #c3bd10;
+  
   margin-left: 20px;
   flex: 1; /* Let it occupy remaining space */
   margin-right: -120px;
@@ -141,7 +141,7 @@
   display: flex;
   align-items: center;
   margin-right: auto; /* Align to the left */
-  color: aqua;
+  
   margin-right: 100px; /* Adjust margin for spacing */
 }
 
@@ -159,30 +159,48 @@
 }
 
 .itemPrice {
-  margin-right: 10px; /* Adjust margin for spacing */
+  margin-right: 30px; /* Adjust margin for spacing */
   margin-left: 20px; /* Align to the right */
   margin-top: -110px;
   width: 79px;
   height: 24px;
-  color: purple;
+  
   width: 55px;
-
+  padding-left: 5px;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   line-height: 24.38px;
   text-align: left;
-
-
-
 }
 
+.continueShopping{
+  width: 238px;
+  height: 29px;
+  width: 238px;
+  height: 29px;
+  color: #7C7B5D;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+  text-align: left;
+  margin-top: 200px;
+  margin-left: -50px;
+  text-align: left;
+  margin-right: 300px;
+}
 
+/* .line2{
+  margin-bottom: 100px;
+  width: 70%;
+  margin-left: 70px;
+} */
 .removeButton {
   cursor: pointer;
   border: none;
+  border-color: #c3bd10;
 }
-
 
 
 
@@ -286,9 +304,6 @@ color: #aaa516;
   
 }
 
-.itemWithLongName .imageContainer {
-  width: 100px; /* Adjust width as needed */
-}
 
   
 .itemPrice{

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from './style.module.css';
 import { Header } from '../../components/Header/index.jsx';
 import shorts from '../../assets/images/short.jpg';
@@ -90,44 +91,8 @@ export const CartPage = () => {
     </div>
 ))}
 </div>
-            
-            {/* 
-       
-               
-                    {cartItems.map(item => (
-                        <div key={item.id} className={styles.item}>
-                            <div className={styles.imageContainer}>
-                                <img src={item.imageSrc} alt="Product" className={styles.image} />
-                                <div className={styles.details}>
-                                    <p className={styles.itemName}>{item.name}</p>
-                                </div>
-                             </div>
-                               
-                             <div className={styles.quantityControl}>
-                                <div
-                                    className={styles.controlButton}
-                                    onClick={() => handleDecrease(item.id)}
-                                >
-                                    -
-                                </div>
-                                <span className={styles.quantity}>{item.quantity}</span>
-                                <div
-                                    className={styles.controlButton}
-                                    onClick={() => handleIncrease(item.id)}
-                                >
-                                    +
-                                </div>
-                            </div>
-                            <p className={styles.itemPrice}>₦{item.price}</p>
-                            <button
-                                className={styles.removeButton}
-                                onClick={() => handleRemove(item.id)}
-                            >
-                                X
-                            </button>
-                        </div>
-                    ))}
-                </div> */}
+        <div> <Link to="/login" className={styles.continueShopping}>Continue Shopping</Link> </div>
+        
                 <div className={styles.rightSection}>
                     <h2 className={styles.sectionHeading}>Summary</h2>
                    
