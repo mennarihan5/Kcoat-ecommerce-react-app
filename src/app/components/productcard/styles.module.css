@@ -136,11 +136,10 @@
     /* gap: 20px; */
 
   }
-  .product-card {
+  /* .product-card {
     /* width: 100%; */
     /* margin-bottom: 5%; */
-    
-  }
+  */
   .card-1 {
     grid-column: 1/2;
     grid-row: 1/3;   

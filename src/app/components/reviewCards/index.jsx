@@ -81,7 +81,6 @@ const ReviewCardsContainer = ({ reviews }) => {
 };
 
 
-
 const AppCards = () => {
   return (
     <div className={styles.app}> {/* Use CSS module class name for styling */}

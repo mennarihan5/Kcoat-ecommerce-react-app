@@ -20,6 +20,7 @@ function App() {
           <Route path='/signup' element={<SignupPage />}/>
           <Route path='/contact' element={<ContactPage />}/> 
           <Route path='/cart' element={<CartPage />}/>
+          {/* <Route path='/contact' element={<SignupPage />}/> */}
         </Routes>
       </BrowserRouter>
     </div>

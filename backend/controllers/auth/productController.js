@@ -62,6 +62,35 @@ const getOneProduct = async (req, res) => {
   }
 };
 
+// 4. update product
+const updateProduct = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Product.update(req.body, { where: { id: id } });
+    const updatedProduct = await Product.findOne({ where: { id: id } });
+    res.status(200).send(updatedProduct);
+  } catch (error) {
+    console.error("Error updating product:", error);
+    res.status(500).send("Internal server error");
+  }
+};
+
+
+//5. delete product by id
+
+const deleteProduct = async (req, res) => {
+  try{
+    let id = req.params.id
+
+    await Product.destroy({where: { id: id}})
+
+    res.status(200).send('Product is deleted!');
+  } catch (error) {
+    console.error("Error deleting product:", error);
+    res.status(500).send("Internal server error");
+  }
+
+};
 
 
 
@@ -70,4 +99,6 @@ module.exports = {
   addProduct,
   getAllProducts,
   getOneProduct,
+  updateProduct,
+  deleteProduct
 };
