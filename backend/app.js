@@ -3,7 +3,7 @@ const cors = require("cors");
 const db = require("./models");
 const app = express();
 const passport = require("../backend/config/password-config");
-//const session = require("express-session");
+const session = require("express-session");
 const MySQLStore = require("express-mysql-session")(session);
 const googleRoutes = require("../backend/routes/googleRoute");
 
