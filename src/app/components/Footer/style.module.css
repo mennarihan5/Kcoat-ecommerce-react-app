@@ -5,11 +5,12 @@
     flex-wrap: wrap;
     color: var(--white);
     width: 100%;
-    height: 37rem;
+    height: auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     padding: 4% 6%;
     text-align: start;
+    gap: 5%;
 }
 .logo {
     width: 25%;
@@ -24,12 +25,13 @@
     width: 80%;
 }
 @media (max-width: 1200px) {
-    .footer {
-        height: auto;
-    }
+    /* .footer {
+        
+    } */
     .logo {
         margin: 4% 0;
     }
+    
 }
 @media (min-width: 900px) and (max-width: 1200px) {
     .logo {

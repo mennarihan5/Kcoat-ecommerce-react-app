@@ -1,7 +1,9 @@
 .arrivalcontainer {
     margin: 0 auto; /* Center the container horizontally */
-    padding: 0;
-    max-width: 100%; /* Ensure the container's width doesn't exceed the viewport */
+
+    padding: 5% 0;
+    max-width: 80%; /* Ensure the container's width doesn't exceed the viewport */
+
     height: auto; /* Adjust height automatically based on content */
     display: flex;
     flex-direction: column;
