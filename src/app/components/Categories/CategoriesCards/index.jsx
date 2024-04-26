@@ -9,6 +9,7 @@ export const CategoriesCards = (props) => {
     const whiteBtn = props.isWhite ? styles['white-btn'] : '';
 
     return(
+        <div>
             <div className={`${styles['categories-card']} ${size} ${coverImg} ${margin}`}>
                 <img className={styles.img} src={props.image} alt='card images' />
                 <div className={styles.details}>
@@ -16,9 +17,11 @@ export const CategoriesCards = (props) => {
                     <div className={styles['card-btn']}>
                         <Button className={`${styles['default-btn']} ${whiteBtn}`} >
                             <Link className={styles.btn} to='/categories'>Shop Now</Link>
+                            Shop Now
                         </Button>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }

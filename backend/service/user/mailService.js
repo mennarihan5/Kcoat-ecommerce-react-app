@@ -22,4 +22,8 @@ module.exports = { mailsender: async (email, title, body) => {
         console.log(error.message);
     }
 }
+
 };
+
+};
+
