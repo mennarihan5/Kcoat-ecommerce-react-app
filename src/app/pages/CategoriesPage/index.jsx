@@ -5,6 +5,8 @@ import { Footer } from '../../components/Footer/index.jsx';
 import { ProductsGrid, ProductsGridCard } from '../../components/ProductsGrid/index.jsx';
 import { SidebarFilter } from '../../components/SidebarFilter/index.jsx';
 import { useState, useEffect } from 'react';
+import { productsAPI } from '../../API/ProductsApi.js';
+
 
 export const CategoriesPage = () => {
     const [products ,setProducts] = useState([]);
@@ -12,7 +14,6 @@ export const CategoriesPage = () => {
     const [query, setQuery] = useState("");
     const [checkbox, setCheckbox] = useState();
 
-  
 
     const handleInputChange = (event) => {
         setQuery(event.target.value);
@@ -47,13 +48,14 @@ export const CategoriesPage = () => {
         }
         return filteredProducts.map(({id, title, price, category, description, image}) => (
             <ProductsGridCard 
-            key={id}
+            id={id}
             title={title}
             price={price}
             category={category}
             description={description}
             image={image}
             />
+           
         )
         )
     }
@@ -74,23 +76,32 @@ export const CategoriesPage = () => {
     }
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
-        .then(res => res.json())
-        .then((apiData) => {
-            setProducts(apiData);
-        })
-        .catch(error => console.error("Error fetching products: ", error))
+        async function fetchData() {
+            try {
+                // Call the productsAPI function to fetch products data
+                const productsData = await productsAPI();
+                
+                // Set the fetched products data to state
+                setProducts(productsData);
+            
+            } catch(error) {
+                console.error("Error fetching products: ", error);
+            }
+        }
+        
+        // Call the fetchData function when the component mounts
+        fetchData();
     }, [])
 
     return (
-        <div className={styles['products-home-page']}>
+            <div className={styles['products-home-page']}>
             <Header />
             <CategoriesPageCards />
             <div className={styles['products-grid-wrapper']}>
                 <SidebarFilter handleChange={handleChange} handleCheckboxChange={handleCheckboxChange} clear={clear} checked={checkbox}/>
-                <ProductsGrid results={results}/>
+                <ProductsGrid results={results} />
             </div>
             <Footer />
-        </div>
+            </div>
     )
 }
