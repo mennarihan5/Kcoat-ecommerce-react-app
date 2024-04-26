@@ -32,9 +32,9 @@ db.sequelize = sequelize;
 // Models
 //db.customers = require("./customerModel")(sequelize, DataTypes);
 db.User = require("./userModel")(sequelize, DataTypes);
-db.Category = require("./Category")(sequelize, DataTypes);
-db.Product = require("./Product")(sequelize, DataTypes);
-db.Cart = require("./Cart")(sequelize, DataTypes);
+db.Category = require("./category")(sequelize, DataTypes);
+db.Product = require("./product")(sequelize, DataTypes);
+db.Cart = require("./cart")(sequelize, DataTypes);
 db.Favorite = require("./favorite")(sequelize, DataTypes);
 
 // Model initialization

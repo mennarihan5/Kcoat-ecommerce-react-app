@@ -11,11 +11,10 @@ function Banner() {
         <img src={discount1} alt="discount1" className={styles.discount1} />
       </div>
       <section className={styles.discountSection}>
-        <div className={styles.discountText}>
-            <h1 className={styles.discountTitle}>30% Sales Off</h1><br />
-            <p className={styles.para}>For every new subscriber</p>
-            <Link href="/categories" className={styles.link}>Shop Now</Link>
-        </div>
+        <h1 className={styles.discountText}>30% Sales Off
+          <br />  <p className={styles.para}>For every new subscriber</p>
+          <a href="#" className={styles.link}>Shop Now</a>
+        </h1>
         {/* <p className={styles.paragraph}>For every new subscriber</p> */}
         {/* <a href="#" className={styles.link}>Shop Now</a> */}
       </section>

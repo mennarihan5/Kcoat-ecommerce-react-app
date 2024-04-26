@@ -1,4 +1,5 @@
 import { FaRegHeart } from "react-icons/fa6";
+import { FaHeart } from 'react-icons/fa'; // Importing the heart icon from react-icons library
 import dinnerGown from '../../assets/images/dinnerGown.svg';
 import pearlNecklace from '../../assets/images/pearlNecklace.svg';
 import stiletto from '../../assets/images/stiletto.svg';
