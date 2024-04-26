@@ -1,7 +1,7 @@
 const { User } = require("../models").db;
 const passwordHelper = require("../helpers/crypt/password");
 const otpHelper = require("../helpers/otp");
-const  mailSender  = require("../service/user/mailService");
+const  mailSender = require("../service/user/mailService");
 
 module.exports = {
   forgetPassword: async (req, res) => {
