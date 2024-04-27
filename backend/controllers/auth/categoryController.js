@@ -24,6 +24,8 @@ const createCategory = async (req, res) => {
         .json({ message: "Title and image is required for creating a category" });
     }
 
+      console.log("File Path:", req.file.path);
+
     const imagePath = image.path;
     // Save the image to the images directory
     // You may want to handle unique filenames to avoid conflicts
