@@ -87,6 +87,7 @@ const deleteCategory = async (req, res) => {
 
 
 module.exports = {
+  upload,
   createCategory,
   getAllCategories,
   getCategoryById,
