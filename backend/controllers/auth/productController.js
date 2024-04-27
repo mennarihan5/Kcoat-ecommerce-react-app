@@ -5,8 +5,8 @@ const { Category } = require("../../models").db;
 
 const addProduct = async (req, res) => {
   try {
-    if (!req.body.name || !req.body.categoryId) {
-      return res.status(400).send({ message: "Name and categoryId is required" });
+    if (!req.body.title || !req.body.categoryId) {
+      return res.status(400).send({ message: "Title and categoryId is required" });
     }
     const category = await Category.findByPk(req.body.categoryId);
     if (!category) {
@@ -14,8 +14,9 @@ const addProduct = async (req, res) => {
     }
 
     let info = {
-      name: req.body.name,
+      title: req.body.title,
       description: req.body.description,
+      image: req.body.image,
       price: req.body.price,
       type: req.body.type,
       size: req.body.size,
