@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from './style.module.css';
 import { Header } from '../../components/Header/index.jsx';
 import shorts from '../../assets/images/short.jpg';
@@ -9,7 +10,7 @@ export const CartPage = () => {
     // Dummy data for demonstration
     const [cartItems, setCartItems] = useState([
         { id: 1, name: "Short", quantity: 2, price: 5500, imageSrc: shorts },
-        { id: 2, name: "Vintage SKirt", quantity: 1, price: 5500, imageSrc: vintage},
+        { id: 2, name: "Shirt", quantity: 1, price: 5500, imageSrc: vintage},
         { id: 3, name: "Trouser", quantity: 3, price: 5500, imageSrc: trousers}
     ]);
 
@@ -40,28 +41,45 @@ export const CartPage = () => {
     // Calculate subtotal based on the quantity of clothes and their prices
     const subtotal = cartItems.reduce((acc, item) => acc + (item.quantity * item.price), 0);
 
+    const handleToggleArrow = (itemId) => {
+        setCartItems(prevItems =>
+            prevItems.map(item =>
+                item.id === itemId ? { ...item, showFull: !item.showFull } : item
+            )
+        );
+    };
+
     return (
         <div className={styles.cart}>
             <Header />
             <div className={styles.container}>
-                <div className={styles.leftSection}>
-                   <div><h2 className={styles.yourCart}>Your Cart</h2>
-                   <h2 className={styles.heading1}>Item</h2>
-                   </div> 
-                   <div><p className={styles.items}>{cartItems.length} items</p>
-                   </div> 
+                <div>
+                    <h2 className={styles.yourCart}>Your Cart</h2>
+                    <p className={styles.items}>{cartItems.length} items</p>
                 </div>
+                <div className={styles.middleHeading}>
+                    <p className={styles.headingItem}> Item</p>
+                    <p className={styles.headingQuantity}>Quantity</p>
+                    <p className={styles.headingPrice}>Price</p>
+                </div>
+                <div><hr className={styles.line}/>   </div>
                 <div className={styles.middleSection}>
                     {cartItems.map(item => (
                         <div key={item.id} className={styles.item}>
                             <div className={styles.imageContainer}>
                                 <img src={item.imageSrc} alt="Product" className={styles.image} />
-                                <div className={styles.details}>
-                                    <p className={styles.itemName}>{item.name}</p>
-                                </div>
-                             </div>
-                               
-                             <div className={styles.quantityControl}>
+                            </div>
+                            <div className={styles.details}>
+                                <p className={styles.itemName}>
+                                    {item.showFull ? item.name : (item.name.length > 4 ? `${item.name.slice(0, 4)}...` : item.name)}
+                                    {item.name.length > 4 && (
+                                        <span className={styles.arrow} onClick={() => handleToggleArrow(item.id)}>
+                                            {item.showFull ? "▲" : "▼"}
+                                        </span>
+                                    )}
+                                </p>
+                            </div>
+                            <div className={styles.quantityControl}>
                                 <div
                                     className={styles.controlButton}
                                     onClick={() => handleDecrease(item.id)}
@@ -77,18 +95,18 @@ export const CartPage = () => {
                                 </div>
                             </div>
                             <p className={styles.itemPrice}>₦{item.price}</p>
-                            <button
-                                className={styles.removeButton}
-                                onClick={() => handleRemove(item.id)}
-                            >
+                            <span className={styles.x} onClick={() => handleRemove(item.id)}>
                                 X
-                            </button>
+                            </span>
                         </div>
                     ))}
                 </div>
-                <div className={styles.rightSection}>
-                    <h2 className={styles.sectionHeading}>Summary</h2>
-                   
+                <div>
+                    <Link to="/categories" className={styles.continueShopping}>Continue Shopping</Link>
+                </div>
+            </div>
+            <div className={styles.rightSection}>
+                <h2 className={styles.sectionHeading}>Summary</h2>
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Subtotal</p>
                     <p className={styles.summaryValue}>₦{subtotal.toFixed(2)}</p>
@@ -101,22 +119,15 @@ export const CartPage = () => {
                     <p className={styles.summaryText}>Promocode</p>
                     <button className={styles.promoButton}>Enter code</button>
                 </div>
-
                 <div className={styles.summaryItemLast}>
                     <p className={styles.summaryText}>Total</p>
                     <p className={styles.summaryValue}>₦{(subtotal + 10).toFixed(2)}</p>
-                    
                 </div>
                 <div className={styles.button}>
-                    <button className={styles.promoButtonLast}>Check Out</button>
-                    </div>
-            </div>
-
-                    
-                    {/* Add summary and total cost details here */}
+                    <button className={styles.promoButtonLast}>CheckOut</button>
                 </div>
             </div>
-        
+        </div>
     );
 };
 
