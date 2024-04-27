@@ -25,12 +25,13 @@ const addProduct = async (req, res) => {
       title: req.body.title,
       description: req.body.description,
       image: imageData,
-      price: req.body.price,
+      // price: req.body.price,
+      price: parseFloat(req.body.price.replace(/[^\d.]/g, '')), // Extract numerical value
       type: req.body.type,
       size: req.body.size,
       color: req.body.color,
       quantity: req.body.quantity,
-      categoryId: req.body.categoryId
+      categoryId: req.body.categoryId,
     };
 
     const product = await Product.create(info);
