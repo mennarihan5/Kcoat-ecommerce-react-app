@@ -6,8 +6,12 @@ module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
   }
   Product.init({
-    name: DataTypes.STRING,
+    title: DataTypes.STRING,
     description: DataTypes.TEXT,
+    image:{
+      type: DataTypes.BLOB('long'),
+      allowNull: true
+    },
     price: DataTypes.DECIMAL,
     type: DataTypes.DECIMAL,
     size: DataTypes.STRING,
