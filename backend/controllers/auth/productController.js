@@ -1,22 +1,30 @@
 const { Product } = require("../../models").db;
 const { Category } = require("../../models").db;
+const multer = require('multer');
+
+// Multer Middleware
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage});
 
 //1. Create Product
 
 const addProduct = async (req, res) => {
   try {
-    if (!req.body.title || !req.body.categoryId) {
-      return res.status(400).send({ message: "Title and categoryId is required" });
+    if (!req.body.title || !req.body.categoryId || !req.file) {
+      return res.status(400).send({ message: "Title, categoryId, and image is required" });
     }
     const category = await Category.findByPk(req.body.categoryId);
     if (!category) {
       return res.status(404).send({ message: "Category not found" });
     }
 
+    // read image data from the uploaded file
+    const imageData = req.file.buffer;
+
     let info = {
       title: req.body.title,
       description: req.body.description,
-      image: req.body.image,
+      image: imageData,
       price: req.body.price,
       type: req.body.type,
       size: req.body.size,

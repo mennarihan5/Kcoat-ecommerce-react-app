@@ -1,14 +1,21 @@
 const { Category } = require("../../models").db;
+const multer = require('multer');
+
+
+// Multer Middleware
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage});
 
 const createCategory = async (req, res) => {
   try {
     const { title, parentCategoryId } = req.body;
-    if (!title) {
+    const image = req.file.buffer;
+    if (!title || !image) {
       return res
         .status(400)
-        .json({ message: "Title is required for creating a category" });
+        .json({ message: "Title and image is required for creating a category" });
     }
-    const category = await Category.create({ title, parentCategoryId });
+    const category = await Category.create({ title, image, parentCategoryId });
     res.status(201).json(category);
   } catch (error) {
     console.error("Error creating category:", error);
