@@ -1,21 +1,44 @@
 const { Category } = require("../../models").db;
 const multer = require('multer');
+//const fs = require('fs');
 
 
 // Multer Middleware
-const storage = multer.memoryStorage();
+const storage = multer.diskStorage({
+  destination: function (req, file, cb){
+    cb(null, 'images/category_image');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
 const upload = multer({ storage: storage});
 
 const createCategory = async (req, res) => {
   try {
     const { title, parentCategoryId } = req.body;
-    const image = req.file.buffer;
+    const image = req.file;
     if (!title || !image) {
       return res
         .status(400)
         .json({ message: "Title and image is required for creating a category" });
     }
-    const category = await Category.create({ title, image, parentCategoryId });
+
+    const imagePath = image.path;
+    // Save the image to the images directory
+    // You may want to handle unique filenames to avoid conflicts
+    // fs.writeFile(imagePath, image.buffer, (err) => {
+    //   if (err) {
+    //     console.error("Error saving image:", err);
+    //     return res.status(500).send("Internal server error");
+    //   }
+    // });
+
+
+
+
+
+    const category = await Category.create({ title, image: imagePath, parentCategoryId });
     res.status(201).json(category);
   } catch (error) {
     console.error("Error creating category:", error);

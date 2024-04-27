@@ -8,10 +8,7 @@ module.exports = (sequelize) => {
     {
       title: DataTypes.STRING,
       parentCategoryId: DataTypes.INTEGER,
-      image: {
-        type: DataTypes.BLOB('long'),
-        allowNull: true
-      }
+      image: DataTypes.STRING
     },
     {
       sequelize,

@@ -8,10 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   Product.init({
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
-    image:{
-      type: DataTypes.BLOB('long'),
-      allowNull: true
-    },
+    image: DataTypes.STRING,
     price: DataTypes.DECIMAL,
     type: DataTypes.DECIMAL,
     size: DataTypes.STRING,
