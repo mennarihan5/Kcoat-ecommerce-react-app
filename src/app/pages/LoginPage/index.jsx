@@ -52,8 +52,8 @@ export const LoginPage = () => {
               onChange={e => setEmail(e.target.value)} 
             />
           </div>
-          <div className={styles.formGroup}>
-            <label>Password</label>
+          <div className={styles.passwordformGroup}>
+            <label className={styles.password}>Password</label>
             <input 
               type={showPassword ? 'text' : 'password'} 
               placeholder="Enter your password" 
