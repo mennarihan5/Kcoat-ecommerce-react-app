@@ -2,13 +2,13 @@ const { Category } = require("../../models").db;
 
 const createCategory = async (req, res) => {
   try {
-    const { name, parentCategoryId } = req.body;
-    if (!name) {
+    const { title, parentCategoryId } = req.body;
+    if (!title) {
       return res
         .status(400)
-        .json({ message: "Name is required for creating a category" });
+        .json({ message: "Title is required for creating a category" });
     }
-    const category = await Category.create({ name, parentCategoryId });
+    const category = await Category.create({ title, parentCategoryId });
     res.status(201).json(category);
   } catch (error) {
     console.error("Error creating category:", error);
