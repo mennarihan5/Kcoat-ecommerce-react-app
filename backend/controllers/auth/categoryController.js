@@ -1,5 +1,6 @@
 const { Category } = require("../../models").db;
 const multer = require('multer');
+const path = require('path');
 //const fs = require('fs');
 
 
@@ -27,7 +28,7 @@ const createCategory = async (req, res) => {
       console.log("File Path:", image.path);
 
     //const imagePath = image.path;
-    const imagePath = image.path.replace(/\\/g, "/");
+    const imagePath = path.normalize(image.path);
     // Save the image to the images directory
     // You may want to handle unique filenames to avoid conflicts
     // fs.writeFile(imagePath, image.buffer, (err) => {
