@@ -7,7 +7,7 @@ const path = require('path');
 // Multer Middleware
 const storage = multer.diskStorage({
   destination: function (req, file, cb){
-    cb(null, path.join(__dirname, '..' , 'images', 'category_image'));
+    cb(null, path.join(__dirname, '..' , '..', 'images', 'category_image'));
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' + file.originalname);
@@ -28,7 +28,7 @@ const createCategory = async (req, res) => {
       console.log("File Path:", image.path);
 
     //const imagePath = image.path;
-    const imagePath = path.join(__dirname, '..' , 'images', 'category_image', image.filename);
+    const imagePath = path.join(__dirname, '..' , '..' , 'images', 'category_image', image.filename);
     // Save the image to the images directory
     // You may want to handle unique filenames to avoid conflicts
     // fs.writeFile(imagePath, image.buffer, (err) => {
