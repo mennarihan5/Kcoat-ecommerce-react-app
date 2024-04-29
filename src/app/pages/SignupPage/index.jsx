@@ -25,17 +25,17 @@ export const SignupPage = () => {
         <h2 className={styles.create}>Create your free account</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
-          <div className={styles.formGroup}>
-            <label>Name</label>
+          <div className={styles.nameformGroup}>
+            <label className={styles.name}>Name</label>
             <input type="email" placeholder="Full Name" />
             </div>
           </div>
           <div className={styles.formGroup}>
-            <label>Email</label>
+            <label className={styles.email}>Email</label>
             <input type="email" placeholder="Tech4Dev@kcoat.com" />
             </div>
-            <div className={styles.formGroup}>
-            <label>Password</label>
+            <div className={styles.passwordformGroup}>
+            <label className={styles.password}>Password</label>
             {/* <input type="password"  /> */}
             <input 
               type={showPassword ? 'text' : 'password'} // Toggle password visibility
@@ -50,8 +50,8 @@ export const SignupPage = () => {
             {/* <span className={styles.passwordToggle}>&#x1F441;</span>  */}
           </div>
 
-          <div className={styles.formGroup}>
-            <label>Confirm Password</label>
+          <div className={styles.confirmformGroup}>
+            <label className={styles.confirm}>Confirm Password</label>
             <input 
               type={showPassword ? 'text' : 'password'} // Toggle password visibility
               placeholder="Enter your password" 
