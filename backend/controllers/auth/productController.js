@@ -25,13 +25,20 @@ const addProduct = async (req, res) => {
         .status(400)
         .send({ message: "Title, categoryId, and at least one image is required" });
     }
+    // check if req.files is an array and contains at least one file
+    if (!Array.isArray(req.files) || req.files.length === 0){
+      return res.send(400).send({ message: "No files uploaded"});
+    }
+
+
+
     const category = await Category.findByPk(req.body.categoryId);
     if (!category) {
       return res.status(404).send({ message: "Category not found" });
     }
 
     // Log the file path to verify
-    console.log("File Path:", req.file.path);
+   // console.log("File Path:", req.file.path);
 
 
 
