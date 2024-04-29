@@ -20,7 +20,7 @@ export const CategoriesPage = () => {
         console.log(event.target.value);
     } 
     const filteredItems = products.filter((product) => {
-        product.title.toLowerCase().indexOf(query.toLocaleLowerCase() !== -1)
+        product.title.toLowerCase().indexOf(query.toLocaleLowerCase() !== -1);
     })
     const handleChange = ((event) => {
         setSelectedCategory(event.target.value);
@@ -33,7 +33,7 @@ export const CategoriesPage = () => {
         let filteredProducts = products;
         
         if(query) {
-            filteredProducts = filteredItems
+            filteredProducts = filteredItems;
         }
 
         if(selected) {
@@ -54,8 +54,7 @@ export const CategoriesPage = () => {
             category={category}
             description={description}
             image={image}
-            />
-           
+            /> 
         )
         )
     }
@@ -65,9 +64,9 @@ export const CategoriesPage = () => {
         setCheckbox(event.target.checked);
         console.log(event.target.checked);
 
-        if(checkbox.checked === true) {
-            setCheckbox(false);
-        } 
+        // if(checkbox.checked === true) {
+        //     setCheckbox(false);
+        // } 
     } 
 
     function clear () {

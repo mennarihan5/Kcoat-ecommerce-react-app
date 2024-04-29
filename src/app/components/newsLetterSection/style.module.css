@@ -7,7 +7,9 @@
     padding: 20px;
     margin: 20px 0;
     width: 100%;
+
   }
+
   
   .subscriptionDetails {
     padding-bottom: 2px;
@@ -76,6 +78,9 @@
     }
     .subscriptionForm input[type="text"] {
       width: 90%;
+    }
+    .subscriptionForm button  {
+      width: 45%;
     }
   }
   

@@ -7,15 +7,12 @@ export const SidebarSizeOptions = ({handleChange, handleCheckboxChange, checkbox
             <h5 className={styles.title}>Size</h5>
             <FilterInput 
             handleChange={handleChange}
-            handleCheckboxChange={handleCheckboxChange}
-            checked={checkbox}
             value = "XS"
             title = "XS"   
             name =  "XS"  
             />
             <FilterInput 
             handleChange={handleChange}
-            handleCheckboxChange={handleCheckboxChange}
             value = "S"
             title = "S"  
             name =  "S" 

@@ -33,7 +33,7 @@ export const SingleProductPage = () => {
         <div>
             <Header />
                     <div className={styles['single-propduct-container']} id={id}>
-                        <div className={styles['category-title']}>Categories {'>'} {product.category} {'>'} <span>{product.title}</span> </div>
+                        <div className={styles['category-title']}>Categories {'>'} {product.categoryId} {'>'} <span>{product.title}</span> </div>
                         <div className={styles['img-txt-wrapper']}>
                             <div className={styles['img-wrapper']}>
                                 <img src={product.image} alt={product.title} />

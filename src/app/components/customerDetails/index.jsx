@@ -2,9 +2,9 @@
 import React from 'react';
 import styles from './style.module.css';
 import firstButton from '../../assets/images/firstbutton.svg';
-import flexiblePayment from '../../assets/images/flexiblePayment.svg';
+import flexiblePayment from '../../assets/images/Frame 107.svg';
 import customerSupport from '../../assets/images/customerSupport.svg';
-import buyersProtection from '../../assets/images/buyersProtection.svg';
+import buyersProtection from '../../assets/images/Frame 108.svg';
 
 
 function Card({ logo, heading, description }) {
