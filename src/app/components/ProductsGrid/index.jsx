@@ -12,7 +12,7 @@ export const ProductsGridCard = ({id, title, price, category, description, image
             <Link to ={`/singleProduct/${id}`} className={styles.title}>
                 {title}
             </Link>
-            <p className={styles.price}>{price} $</p>
+            <p className={styles.price}>{price} ₦</p>
             <div className={styles.stars}>
                 <span><IoStarSharp /></span>
                 <IoStarSharp />
