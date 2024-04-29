@@ -21,6 +21,7 @@
   flex: 1;
   padding: 20px;
   height: 300px;
+  margin-top: 20px;
 }
 .rightContent {
   flex: 1;
@@ -113,24 +114,33 @@ label {
   text-align: center;
 }
 
-.contactus{
-  width: 157px;
-  height: 34px;
-  gap: 0px;
+.email, .message{
+  width: 58px;
+height: 24px;
+top: 136px;
+left: 52px;
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 400;
+line-height: 24.38px;
+text-align: justified;
 
+  
+}
+
+/* .contactus{
+  height: 34px;
   font-family: Montserrat;
-  font-size: 1px; 
+  font-size: 1-px; 
   font-weight: 500; 
   line-height: 20px;
   text-align: left;
   background: #7C7B5D;
   border-radius: 30px;
-  width: 157px;
+  width: 50%;
   height: 34px;
-  gap: 0px;
-  opacity: 0px;
   border-radius: 30px;
-}
+} */
 
 .rightContent1{
   width: 81px;
@@ -188,12 +198,15 @@ text-align: left;
 .contacttext {
   height: 24px;
   top: 38px;
-  gap: 0px;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   line-height: 24.38px;
   text-align: center;
+}
+
+.kcoat{
+  margin-left: 80px;
 }
 
 .contactus {
@@ -221,7 +234,7 @@ text-align: left;
   left: 500px;
 }
 
-.rightContent {
+.rightContent { 
   width: 355px;
   height: 305px;
   top: 46px;
@@ -229,6 +242,8 @@ text-align: left;
   gap: 0px;
   margin-top: 50px;
 }
+
+
 
 .image {
   width: 100%;
