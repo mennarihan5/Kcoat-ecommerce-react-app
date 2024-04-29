@@ -46,8 +46,11 @@
     height: 1.8rem;
 }
 .title {
+    margin-top: 2%;
     font-size: 1.2rem;
     font-weight: 600;
+    text-decoration: none;
+    color: var(--black);
 }
 .stars {
     color: var(--olive);
