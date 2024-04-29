@@ -45,7 +45,7 @@ const addProduct = async (req, res) => {
 
     // Upload images to Cloudinary
     const imageUploadPromises = req.files.map(async (file) => {
-      const result = await cloudinary.uploader.upload(file.buffer.toString('base64'), {folder: "product_images"});
+      const result = await cloudinary.uploader.upload(file.path, {folder: "product_images"});
       return result.secure_url;
     });
 
