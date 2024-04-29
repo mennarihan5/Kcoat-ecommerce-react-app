@@ -5,6 +5,7 @@
   justify-content: space-between; 
   align-items: center;
   width: 90%;
+  gap: 2%;
 }
 
 /* Card.module.css */
@@ -19,6 +20,7 @@
   gap: 3%;
   text-wrap: nowrap;
   cursor: pointer;
+  margin-bottom: 2%;
 }
 .card:last-child {
   border: none;
