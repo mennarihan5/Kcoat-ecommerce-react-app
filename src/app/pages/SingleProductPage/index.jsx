@@ -78,14 +78,13 @@ export const SingleProductPage = () => {
                                 </div>
                             </div>
                         </div>
-
                         </div>
                         <div className={styles['description-wrapper']}>
-                            <h4>Description</h4>
+                            <h4 className={styles.title}>Description</h4>
                             <p className={styles.desc}>{product.description}</p>
                         </div>
-                        <Link to='/categories'>
-                            Back to categories
+                        <Link to='/categories' className={styles.back}>
+                        ⬅ Back to categories
                         </Link>
                 </div>
             <Footer />

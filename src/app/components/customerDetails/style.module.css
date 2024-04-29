@@ -63,17 +63,23 @@
   color: #4F4B4B;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .app {
     justify-content: center;
     flex-wrap: wrap;
-
-    
-
+    width: 80%;
   }
   .card {
     padding: 10px; /* Adjust padding for smaller screens */
     border: none;
     width: 80%;
+    text-wrap: wrap;
 }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .app {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+  }
 }
