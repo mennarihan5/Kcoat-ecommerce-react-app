@@ -6,14 +6,14 @@ const path = require('path');
 //const fs = require('fs');
 
 // Multer Middleware
-const storage = multer.memoryStorage(
+const storage = multer.diskStorage({
   // destination: function (req, file, cb){
   // cb(null, file.originalname);
   // },
-  // filename: function (req, file, cb){
-  //   cb(null, Date.now() + '-' + file.originalname);
-  // }
-)
+  filename: function (req, file, cb){
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
 const upload = multer({ storage: storage}).any();
 
 //1. Create Product
@@ -49,7 +49,7 @@ const addProduct = async (req, res) => {
     // Upload images to Cloudinary
     const imageUploadPromises = req.files.map(async (file) => {
       console.log('File:', file);
-      const result = await cloudinary.uploader.upload(file.buffer, {folder: "product_images"});
+      const result = await cloudinary.uploader.upload(file.path, {folder: "product_images"});
       return result.secure_url;
     });
 
