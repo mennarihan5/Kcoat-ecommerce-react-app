@@ -26,7 +26,6 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 .card {
     width: 30rem;
@@ -68,6 +67,10 @@
 
 }
 @media (max-width: 600px) {
+    .cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .card {
         flex-direction: column;
     }
@@ -75,7 +78,13 @@
         width: 100%;
     }
 }
-@media (max-width: 1200px) {
+@media (min-width: 600px) and (max-width: 990px) {
+    .cards-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (min-width: 990px) and (max-width: 1200px) {
     .cards-container {
         justify-content: center;
     }
