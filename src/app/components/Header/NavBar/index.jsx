@@ -24,7 +24,7 @@ export const NavBar = () => {
                     <Link to='/about'>About Us</Link>
                 </li>
                 <li className={styles[`menu-item`]}>
-                    <Link to='/contact'>Contact Us</Link>
+                    <Link to='/contact'>Help</Link>
                 </li>
             </ul>
         </nav>
