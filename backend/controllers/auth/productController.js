@@ -75,7 +75,7 @@ const addProduct = async (req, res) => {
     let info = {
       title: req.body.title,
       description: req.body.description,
-      image: uploadedImages,
+      image: JSON.stringify(uploadedImages),
       // price: req.body.price,
       price: parseFloat(req.body.price.replace(/[^\d.]/g, "")), // Extract numerical value
       type: req.body.type,
