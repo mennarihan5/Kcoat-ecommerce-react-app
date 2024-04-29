@@ -1,34 +1,44 @@
 const { Category } = require("../../models").db;
 const multer = require('multer');
+const cloudinary = require("../../utils/cloudinaryConfig");
 const path = require('path');
 //const fs = require('fs');
 
 
 // Multer Middleware
-const storage = multer.diskStorage({
-  destination: function (req, file, cb){
-    cb(null, path.join(__dirname, '..' , '..', 'images', 'category_image'));
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname);
-  }
-});
-const upload = multer({ storage: storage});
+const storage = multer.memoryStorage();
+  // ({
+  //   destination: function (req, file, cb) {
+  //     cb(null, file.originalname);
+  //   },
+  //   filename: function (req, file, cb) {
+  //     cb(null, Date.now() + "-" + file.originalname);
+  //   },
+  // })
+const upload = multer({ storage: storage }).single('image');
+
 
 const createCategory = async (req, res) => {
   try {
     const { title, parentCategoryId } = req.body;
     const image = req.file;
     if (!title || !image) {
-      return res
-        .status(400)
-        .json({ message: "Title and image is required for creating a category" });
+      return res.status(400).json({
+        message: "Title and an image are required for creating a category",
+      });
     }
 
-      console.log("File Path:", image.path);
+    // Upload image to Cloudinary
+    const result = await cloudinary.uploader.upload(image.buffer);
+    const imageUrl = result.secure_url;
+
+    //wait for all images to get uploaded
+    ///const uploadedImages = await Promise.all(imageUploadPromises);
+
+    //console.log("File Path:", images.path);
 
     //const imagePath = image.path;
-    const imagePath = path.join(__dirname, '..' , '..' , 'images', 'category_image', image.filename);
+    // const imagePath = path.join(__dirname, '..' , '..' , 'images', 'category_image', image.filename);
     // Save the image to the images directory
     // You may want to handle unique filenames to avoid conflicts
     // fs.writeFile(imagePath, image.buffer, (err) => {
@@ -38,11 +48,11 @@ const createCategory = async (req, res) => {
     //   }
     // });
 
-
-
-
-
-    const category = await Category.create({ title, image: imagePath, parentCategoryId });
+    const category = await Category.create({
+      title,
+      image: imageUrl,
+      parentCategoryId,
+    });
     res.status(201).json(category);
   } catch (error) {
     console.error("Error creating category:", error);
