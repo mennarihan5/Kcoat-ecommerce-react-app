@@ -9,17 +9,18 @@ import { Footer } from '../../components/Footer/index.jsx';
 export const SingleProductPage = () => {
    const [product, setProduct] = useState([]);
    const { id } = useParams();
+   const imageArray = JSON.parse(product.image);
   
    useEffect(() => {
     async function fetchData() {
         try {
-            const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+            const response = await fetch(`https://kcoat-ecommerce-react-app.onrender.com/product/${id}`);
             // Call the productsAPI function to fetch products data
             const productsData = await response.json();
             
             // Set the fetched products data to state
             setProduct(productsData);
-        
+        console.log(response)
         } catch(error) {
             console.error("Error fetching products: ", error);
         }
@@ -36,7 +37,9 @@ export const SingleProductPage = () => {
                         <div className={styles['category-title']}>Categories {'>'} {product.categoryId} {'>'} <span>{product.title}</span> </div>
                         <div className={styles['img-txt-wrapper']}>
                             <div className={styles['img-wrapper']}>
-                                <img src={product.image} alt={product.title} />
+                                {imageArray.map((imageUrl, index) => (
+                                    <img key={index} src={imageUrl} alt={product.title} />
+                                ))}
                             </div>
                             <div className={styles['text-wrapper']}>
                                 <h3 className={styles.title}>{product.title}</h3>
