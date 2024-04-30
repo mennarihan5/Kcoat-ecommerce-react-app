@@ -118,6 +118,7 @@
     text-align: left;
   }
   
+  input[type="text"],
   input[type="email"],
   input[type="password"] {
     width: calc(100% - 40px); /* Adjust width for password toggle */
