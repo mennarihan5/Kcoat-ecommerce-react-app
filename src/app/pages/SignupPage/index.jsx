@@ -1,66 +1,90 @@
-// SigniUnPage.js
 import React, { useState } from 'react';
-
-import styles from './style.module.css'; // Import the styles for the login page
-import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; // Import the LoginFormFooter component from the googleSignupButton folder 
-// import logo from '../../assets/images/logo.svg'; // Import the logo image
-import eye from '../../assets/images/Right Content.jpg'; // Import the eye image
-import {Logo} from '../../components/Logo/index.jsx';
-
+import styles from './style.module.css';
+import LoginFormFooter from '../../components/googleSignupButton/index.jsx';
+import eye from '../../assets/images/Right Content.jpg';
+import { Logo } from '../../components/Logo/index.jsx';
 
 export const SignupPage = () => {
-  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [showPassword, setShowPassword] = useState(false);
+  const [data, setSuccessMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    const formData = new FormData(event.target);
+    const payload = {};
+    formData.forEach((value, key) => {
+      payload[key] = value;
+    });
+    try {
+      const response = await fetch('https://kcoat-ecommerce-react-app.onrender.com/auth/signup/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      // const responseData = await response.json();
+      // setData(responseData);
+      if (response.ok) {
+        setSuccessMessage("Signup successful!"); // Display success message
+      } else {
+        const responseData = await response.json();
+        setError(responseData.message || 'Unknown error occurred');
+      }
+      setLoading(false);
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
+    }
+  };
 
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftSection}>
-      <div className={styles.logo}>
-                <Logo className={styles.img} background={false}/>
-            </div> 
+        <div className={styles.logo}>
+          <Logo className={styles.img} background={false}/>
+        </div> 
 
-      {/* <div className={styles.companyLogo}>
-          <img src={logo} alt="Company Logo" />
-        </div> */}
         <h2 className={styles.create}>Create your free account</h2>
-        <form className={styles.loginForm}>
+        <form className={styles.loginForm} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
-          <div className={styles.nameformGroup}>
             <label className={styles.name}>Name</label>
-            <input type="email" placeholder="Full Name" />
-            </div>
+            <input type="text" name="full_name" placeholder="Full Name" />
           </div>
           <div className={styles.formGroup}>
             <label className={styles.email}>Email</label>
-            <input type="email" placeholder="Tech4Dev@kcoat.com" />
-            </div>
-            <div className={styles.passwordformGroup}>
+            <input type="email" name="email" placeholder="Tech4Dev@kcoat.com" />
+          </div>
+          <div className={styles.passwordformGroup}>
             <label className={styles.password}>Password</label>
-            {/* <input type="password"  /> */}
             <input 
-              type={showPassword ? 'text' : 'password'} // Toggle password visibility
+              type={showPassword ? 'text' : 'password'} 
+              name="password" 
               placeholder="Enter your password" 
             />
             <img 
               src={eye} 
               alt="Eye Icon" 
               className={styles.passwordToggle} 
-              onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+              onClick={() => setShowPassword(!showPassword)} 
             />
-            {/* <span className={styles.passwordToggle}>&#x1F441;</span>  */}
           </div>
 
           <div className={styles.confirmformGroup}>
             <label className={styles.confirm}>Confirm Password</label>
             <input 
-              type={showPassword ? 'text' : 'password'} // Toggle password visibility
-              placeholder="Enter your password" 
+              type={showPassword ? 'text' : 'password'} 
+              name="confirmPassword" 
+              placeholder="Confirm your password" 
             />
             <img 
               src={eye} 
               alt="Eye Icon" 
               className={styles.passwordToggle} 
-              onClick={() => setShowPassword(!showPassword)} // Toggle password visibility
+              onClick={() => setShowPassword(!showPassword)} 
             />          
           </div>
           
@@ -70,12 +94,13 @@ export const SignupPage = () => {
             </label>
             <a href="#" className={styles.forgot}>Forgot Password?</a>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit">{loading ? 'Signing Up...' : 'Sign Up'}</button>
         </form>
+        {error && <p>{error}</p>}
+        {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
         <LoginFormFooter />
       </div>
-      {/* <LoginFormFooter /> Include the component for the form footer */}
-      <div className={styles.rightSection}></div> {/* Right section for background image */}
+      <div className={styles.rightSection}></div>
     </div>
   );
 }
