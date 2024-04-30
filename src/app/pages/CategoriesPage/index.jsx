@@ -14,13 +14,12 @@ export const CategoriesPage = () => {
     const [query, setQuery] = useState("");
     const [checkbox, setCheckbox] = useState();
 
-
     const handleInputChange = (event) => {
         setQuery(event.target.value);
         console.log(event.target.value);
     } 
     const filteredItems = products.filter((product) => {
-        product.title.toLowerCase().indexOf(query.toLocaleLowerCase() !== -1);
+        return product.title.toLowerCase().indexOf(query.toLocaleLowerCase() !== -1);
     })
     const handleChange = ((event) => {
         setSelectedCategory(event.target.value);
@@ -44,7 +43,8 @@ export const CategoriesPage = () => {
                 price === selected ||
                 category === selected ||
                 description === selected ||
-                image === selected)
+                (image && JSON.parse(image).includes(selected)) 
+            )
         }
         return filteredProducts.map(({id, title, price, category, description, image}) => (
             <ProductsGridCard 
@@ -53,7 +53,7 @@ export const CategoriesPage = () => {
             price={price}
             category={category}
             description={description}
-            image={image}
+            image={image && JSON.parse(image)}
             /> 
         )
         )
