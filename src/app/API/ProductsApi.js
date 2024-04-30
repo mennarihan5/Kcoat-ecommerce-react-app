@@ -1,4 +1,4 @@
-const url = "https://fakestoreapi.com/products";
+const url = "https://kcoat-ecommerce-react-app.onrender.com/product";
 
 export async function productsAPI() {
     try {
