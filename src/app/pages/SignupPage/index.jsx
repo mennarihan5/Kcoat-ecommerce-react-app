@@ -50,14 +50,17 @@ export const SignupPage = () => {
 
         <h2 className={styles.create}>Create your free account</h2>
         <form className={styles.loginForm} onSubmit={handleSubmit}>
-          <div className={styles.formGroup}>
+
+        <div className={styles.formGroup}>
             <label className={styles.name}>Name</label>
-            <input type="text" name="full_name" placeholder="Full Name" />
+            <input type="email" name="name" placeholder="Full Name" />
           </div>
+
           <div className={styles.formGroup}>
             <label className={styles.email}>Email</label>
-            <input type="email" name="email" placeholder="Tech4Dev@kcoat.com" />
+            <input type="email" name="name" placeholder="Tech4Dev@kcoat.com" />
           </div>
+
           <div className={styles.passwordformGroup}>
             <label className={styles.password}>Password</label>
             <input 
