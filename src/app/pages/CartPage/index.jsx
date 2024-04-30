@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from './style.module.css';
 import { Header } from '../../components/Header/index.jsx';
@@ -13,6 +13,17 @@ export const CartPage = () => {
         { id: 2, name: "Shirt", quantity: 1, price: 5500, imageSrc: vintage},
         { id: 3, name: "Trouser", quantity: 3, price: 5500, imageSrc: trousers}
     ]);
+
+    const [cartItemCount, setCartItemCount] = useState(0); // State to track total items in cart
+
+    // Calculate subtotal based on the quantity of clothes and their prices
+    const subtotal = cartItems.reduce((acc, item) => acc + (item.quantity * item.price), 0);
+
+    useEffect(() => {
+        // Update total cart item count whenever cartItems change
+        const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+        setCartItemCount(totalCount);
+    }, [cartItems]);
 
     const handleDecrease = (itemId) => {
         setCartItems(prevItems =>
@@ -38,9 +49,7 @@ export const CartPage = () => {
         );
     };
 
-    // Calculate subtotal based on the quantity of clothes and their prices
-    const subtotal = cartItems.reduce((acc, item) => acc + (item.quantity * item.price), 0);
-
+    // Function to toggle the full item name
     const handleToggleArrow = (itemId) => {
         setCartItems(prevItems =>
             prevItems.map(item =>
@@ -55,7 +64,7 @@ export const CartPage = () => {
             <div className={styles.container}>
                 <div>
                     <h2 className={styles.yourCart}>Your Cart</h2>
-                    <p className={styles.items}>{cartItems.length} items</p>
+                    <p className={styles.items}>{cartItemCount} items</p>
                 </div>
                 <div className={styles.middleHeading}>
                     <p className={styles.headingItem}> Item</p>
