@@ -17,7 +17,7 @@ const LoginFormFooter = () => {
        <span className={styles.continue}>Continue with Google</span>
       </button>
       <p className={styles.terms}>
-        By continuing, you agree to the <span className={styles.link}>Terms of Service</span> and <span className={styles.link}>Private Policy</span>.
+        By continuing, you agree to the <span className={styles.link}>Terms of Service</span> and <span className={styles.link}><Link to='/PrivacyPolicy'>Private Policy</Link></span>.
       </p>
       {/* <p className={styles.already}>Already have an account? <Link  className={styles.login}>Log In</a></p> */}
       <p className={styles.account}>Already have an account? <Link to="/login" className={styles.login}>Log In</Link></p>
