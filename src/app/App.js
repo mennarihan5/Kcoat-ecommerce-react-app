@@ -22,7 +22,6 @@ function App() {
           <Route path='/signup' element={<SignupPage />}/>
           <Route path='/contact' element={<ContactPage />}/> 
           <Route path='/cart' element={<CartPage />}/>
-
           <Route path='/singleProduct/:id' element={<SingleProductPage />}/>
           <Route path='/privacy' element={<PrivacyPolicy />}/>
           <Route path='*' element={<h1>404 Page Not Found</h1>}/>
