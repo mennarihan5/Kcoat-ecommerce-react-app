@@ -1,3 +1,5 @@
+const product = require("../../models/product");
+
 const { Cart, Product } = require("../../models").db;
 
 // Add item to cart controller method
@@ -78,4 +80,42 @@ const deleteCart = async (req, res) => {
 };
 
 
-module.exports = { addToCart, getCart, deleteCart };
+// Cart Summary
+const getCartSummary = async (req, res) => {
+  try{
+    const { UserId, promoCode } = req.query;
+
+    // Find the user's cart
+    const cart = await Cart.findOne({
+      where: { UserId },
+      include: [{model: Product}],
+    });
+    
+    // Subtotal
+    let subtotal = 0;
+    cart.Products.forEach(item => {
+      subtotal += item.price * item.Cart.quantity;
+    });
+    
+    //Shipping fee
+    const shipping = 1000; //#1000
+
+    // calculate promo discount based on promo code
+    let promoDiscount = 0;
+    if (promoCode === "YOUR_PROMO_CODE"){
+      promoDiscount = 0.1 * subtotal; //10% discount
+    }
+    
+    // Total
+
+    const total = subtotal + shipping - promoDiscount;
+
+    res.json({subtotal, shipping, promoDiscount, total});
+  } catch (error){
+    console.error(error);
+    res.status(500).json({ message: "Internal server error"});
+  }
+};
+
+
+module.exports = { addToCart, getCart, deleteCart, getCartSummary };
