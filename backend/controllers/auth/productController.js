@@ -79,8 +79,8 @@ const addProduct = async (req, res) => {
       // price: req.body.price,
       price: parseFloat(req.body.price.replace(/[^\d.]/g, "")), // Extract numerical value
       type: req.body.type,
-      size: req.body.size,
-      color: req.body.color,
+      size: JSON.parse(req.body.size),
+      color: JSON.parse(req.body.color),
       quantity: req.body.quantity,
       categoryId: req.body.categoryId,
     };
