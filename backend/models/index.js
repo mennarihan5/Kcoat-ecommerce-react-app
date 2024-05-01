@@ -35,6 +35,7 @@ db.User = require("./userModel")(sequelize, DataTypes);
 db.Category = require("./category")(sequelize, DataTypes);
 db.Product = require("./product")(sequelize, DataTypes);
 db.Cart = require("./cart")(sequelize, DataTypes);
+db.CartItem = require("./cartItem")(sequelize, DataTypes);
 db.Favorite = require("./favorite")(sequelize, DataTypes);
 
 // Model initialization
@@ -75,11 +76,16 @@ db.Cart.belongsToMany(db.Product, {
   through: "CartItem",
   foreignKey: "cartId",
 });
-db.Product.belongsTo(db.Category, { foreignKey: "categoryId" });
 db.Product.belongsToMany(db.Cart, {
-  through: "CartItem",
+ through: "CartItem",
   foreignKey: "productId",
 });
+
+db.CartItem.belongsTo(db.Cart, { foreignKey: "cartId" });
+db.CartItem.belongsTo(db.Product, { foreignKey: "productId" });
+db.Cart.hasMany(db.CartItem, { foreignKey: "cartId" }); 
+
+
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done!");
