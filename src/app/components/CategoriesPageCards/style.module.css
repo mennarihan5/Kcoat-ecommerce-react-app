@@ -3,11 +3,13 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    gap: 1%;
 
 }
 .card {
     width: 21.8rem;
     position: relative;
+    margin-bottom: 2%;
 
 }
 .card img {

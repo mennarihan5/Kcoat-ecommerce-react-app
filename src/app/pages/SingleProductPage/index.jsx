@@ -5,11 +5,13 @@ import { useState, useEffect} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Header } from '../../components/Header/index.jsx';
 import { Footer } from '../../components/Footer/index.jsx';
+import { useCart } from '../CartPage/index.jsx';
+
 
 export const SingleProductPage = () => {
    const [product, setProduct] = useState([]);
    const { id } = useParams();
-   const imageArray = JSON.parse(product.image);
+   const imageArray = product.image && JSON.parse(product.image);
   
    useEffect(() => {
     async function fetchData() {
@@ -37,8 +39,8 @@ export const SingleProductPage = () => {
                         <div className={styles['category-title']}>Categories {'>'} {product.categoryId} {'>'} <span>{product.title}</span> </div>
                         <div className={styles['img-txt-wrapper']}>
                             <div className={styles['img-wrapper']}>
-                                {imageArray.map((imageUrl, index) => (
-                                    <img key={index} src={imageUrl} alt={product.title} />
+                            {imageArray && imageArray.map((imageUrl, index) => (
+                                        <img key={index} src={imageUrl} alt={product.title} />
                                 ))}
                             </div>
                             <div className={styles['text-wrapper']}>
@@ -73,9 +75,9 @@ export const SingleProductPage = () => {
                                     </div>
                             </div>
                             <div className={styles['cart-wrapper']}>
-                                <div className={styles.cart}>
+                                <button className={styles.cart}>
                                     Add to Cart
-                                </div>
+                                </button>
                                 <div className={styles.favorites}>
                                     <FaRegHeart />
                                 </div>

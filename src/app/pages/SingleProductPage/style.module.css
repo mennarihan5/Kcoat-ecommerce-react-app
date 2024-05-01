@@ -19,7 +19,7 @@
     color: var(--darkGrey);
 }
 .img-wrapper {
-    width: 48%;
+    width: 35%;
 }
 .img-wrapper img {
     width: 100%;
@@ -104,7 +104,7 @@
 .cart-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 35%;
+    width: 70%;
     align-items: center;
 }
 .cart {
@@ -113,6 +113,7 @@
     padding: 7% 12%;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 .favorites {
     font-size: 1.8rem;
