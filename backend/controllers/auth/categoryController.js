@@ -6,15 +6,14 @@ const path = require('path');
 
 
 // Multer Middleware
-const storage = multer.memoryStorage();
-  // ({
+const storage = multer.diskStorage({
   //   destination: function (req, file, cb) {
   //     cb(null, file.originalname);
   //   },
-  //   filename: function (req, file, cb) {
-  //     cb(null, Date.now() + "-" + file.originalname);
-  //   },
-  // })
+    filename: function (req, file, cb) {
+      cb(null, Date.now() + "-" + file.originalname);
+    },
+  })
 const upload = multer({ storage: storage }).single('image');
 
 
@@ -29,7 +28,9 @@ const createCategory = async (req, res) => {
     }
 
     // Upload image to Cloudinary
-    const result = await cloudinary.uploader.upload(image.buffer);
+    const result = await cloudinary.uploader.upload(image.path, {
+      folder: "product_images",
+    });
     const imageUrl = result.secure_url;
 
     //wait for all images to get uploaded
