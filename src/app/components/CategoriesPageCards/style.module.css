@@ -1,6 +1,5 @@
 .categories-page-cards {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     gap: 1%;
@@ -30,19 +29,25 @@
     text-wrap: nowrap;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    text-wrap: nowrap;
 }
 .title:hover {
     color: var(--black);
 }
 
 @media (max-width: 600px) {
+    .categories-page-cards {
+        flex-wrap: wrap;
+    }
     .card {
         width: 100%;   
         margin: 5% 0; 
     }
 }
 @media (min-width: 600px) and (max-width: 1200px) {
-
+    .categories-page-cards {
+        flex-wrap: wrap;
+    }
     .card {
         width: 48%;   
         margin: 1% 0; 

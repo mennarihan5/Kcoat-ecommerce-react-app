@@ -5,7 +5,7 @@ import { useState, useEffect} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Header } from '../../components/Header/index.jsx';
 import { Footer } from '../../components/Footer/index.jsx';
-import { useCart } from '../CartPage/index.jsx';
+
 
 
 export const SingleProductPage = () => {
