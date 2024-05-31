@@ -1,4 +1,5 @@
 cart {
+  color: #aaa516;
   /* Add styles for the main cart container if needed */
 }
 
@@ -38,13 +39,6 @@ cart {
   width: 50%;
 }
 
-/* .items {
- 
-  margin-right: 10px;
- font-family: Montserrat;
-  font-size: 24px;
-  /* font-weight: 700; */
-  /* margin-bottom: 200px; */
 
 
 .line{
@@ -92,7 +86,7 @@ cart {
 } 
 
 .items {
-  width: 92px;
+  width: 200px;
   height: 29px;
   margin-left: 720px;
   font-family: Montserrat;
@@ -100,8 +94,8 @@ cart {
   font-weight: 700;
   line-height: 29.26px;
   text-align: left;
-  color: #282828;
-  margin-bottom: 50px;
+  color: #4F4B4B;
+  margin-bottom: 100px;
 }
 
 
