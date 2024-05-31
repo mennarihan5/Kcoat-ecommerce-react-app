@@ -38,14 +38,14 @@ cart {
   width: 50%;
 }
 
-.items {
+/* .items {
  
   margin-right: 10px;
  font-family: Montserrat;
   font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 200px;
-}
+  /* font-weight: 700; */
+  /* margin-bottom: 200px; */
+
 
 .line{
   width: 50%;
@@ -61,12 +61,15 @@ cart {
   display: flex;
   align-items: center;
   width: 107px;
-  height: 29px;
+  /* height: 2px; */
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
   line-height: 29.26px;
   text-align: left;
+  margin-top: -100px
+
+  ;
 }
 
 .headingQuantity{
@@ -119,8 +122,7 @@ cart {
 }
 
 .imageContainer {
-  width: 100px; /* Adjust width as needed */
-  flex-shrink: 0; /* Prevent the image from shrinking */
+  
 }
 
 .details {
@@ -175,9 +177,9 @@ cart {
 }
 
 .continueShopping{
-  width: 238px;
+  width: 10px;
   height: 29px;
-  width: 238px;
+  /* width: 238px; */
   height: 29px;
   color: #7C7B5D;
   font-family: Montserrat;
@@ -191,6 +193,8 @@ cart {
   /* /* margin-right: 300px; */
   margin-bottom: 500px;
   /* flex: 1; */  
+  position: relative;
+  left: -250px;
 }
 
 
@@ -211,15 +215,15 @@ cart {
 /* right section */
 
 .rightSection {
-  background: #E5E5E54D;
-  width: 600px; /* Adjust width as needed */
-  height: 100%; /* Adjust height to cover the entire height */
-  margin-left: calc(100% - 600px); /* Adjust margin to position it on the right */
-  top: 0; /* Position it at the top */
+  background:#E5E5E54D;
+
+  width: 500px; /* Adjust width as needed */
+  height: 90%; /* Adjust height to cover the entire height */
+  top: 170px; /* Position it at the top */
+  left: 700px;
   padding-top: 20px; /* Add padding at the top to avoid overlapping with the header */
-  overflow-y: auto; /* Add vertical scrolling if content exceeds height */
   position: fixed;
-  margin-top: 120px;
+  /* margin-top: 120px; */
 }
 
 .summaryItem {
@@ -234,7 +238,6 @@ cart {
 .summaryText {
   width: 104px;
   height: 29px;
-  gap: 0px;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
@@ -242,13 +245,13 @@ cart {
   text-align: left;
   color: #4F4B4B;
   padding: 20px;
+  
 }
 
 .summaryValue {
   padding: 20px;
   width: 66px;
   height: 24px;
-  gap: 0px;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 700;
@@ -278,13 +281,13 @@ cart {
 .sectionHeading {
   width: 212px;
   height: 50px;
-  gap: 0px;
   font-family: Libre Baskerville;
   font-size: 40px;
   font-weight: 700;
   line-height: 49.6px;
   text-align: left;
   color: #7C7B5D;
+  margin-left: 25px;
 }
 
 .summaryItemLast {
@@ -320,11 +323,6 @@ cart {
   margin-left: 50px;
   margin-top: 50px;
 
-
-
-  
-
-  
 }
 
 .itemName {
