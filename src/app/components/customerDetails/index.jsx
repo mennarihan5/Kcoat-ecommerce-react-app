@@ -27,7 +27,6 @@ function Card({ logo, heading, description }) {
 }
 
 function App() {
-  // Sample data for cards
   const cardsData = [
     {
       logo: firstButton,
@@ -41,7 +40,7 @@ function App() {
     },
     {
       logo: customerSupport,
-  heading: 'Customer SupportCard',
+  heading: 'Customer Support',
   description: '24/7 Online Support',
     },
     {

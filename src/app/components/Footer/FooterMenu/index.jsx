@@ -16,11 +16,11 @@ export const FooterMenu = ({title, options, contact}) => {
                                 </div>
                                 <li  className={styles['list-item-text']}>
                                     <Link to={option.url}>{option.title}</Link>
-                                    <span className={styles['social-media-icons']}>
+                                    <div className={styles['social-media-icons']}>
                                         <span>{option.whatsappIcon}</span>
                                         <span>{option.instagramIcon}</span>
                                         <span>{option.facebookIcon}</span>
-                                    </span>
+                                    </div>
                                 </li>
                             </div>
                         )

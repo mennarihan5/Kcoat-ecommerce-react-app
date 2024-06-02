@@ -1,6 +1,5 @@
 .footer-nav {
-    width: 30%;
-    padding-top: 7%;
+    width: 28%;
 }
 .footer-menu-title {
     font-size: 1.6rem;
@@ -41,20 +40,15 @@
     width: 1.5rem;
     height: 1.5rem;
 }
-.social-media-icons div {
+.social-media-icons span {
     width: 100%;
-    margin-right: 7%;
-
-}
-.contact {
-    margin: 0 5%; 
+    margin-right: 5%;
 }
 .contact .footer-menu-list {
     margin-top: -4%;
 }
 .contact .footer-menu-list .list-item {
-    width: 25rem;
-    
+    width: 23rem;
 }
 .contact .footer-menu-list .list-item .list-icon {
     margin: 0 2%;
@@ -63,9 +57,12 @@
     width: 1.5rem;
     height: 1.5rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 991px) {
     .footer-nav {
         width: 100%;
+    }
+    .list-item-text {
+        font-size: 0.9rem;
     }
     .contact .footer-menu-list .list-item .list-icon {
         margin-left: -4%;
@@ -78,9 +75,12 @@
     }
   
 }
-@media (max-width: 900px) {
+@media (min-width: 768px)and (max-width: 991px) {
     .footer-nav {
-        width: 100%;
+        width: 33%;
+    }
+    .list-item-text {
+        font-size: 1rem;
     }
     .contact .footer-menu-list .list-item .list-icon {
         margin-left: -4%;
@@ -89,8 +89,8 @@
         margin-left: -3%;
     }
 }
-@media (min-width: 900px) and (max-width: 1200px) {
+@media (min-width: 991px) and (max-width: 1200px) {
     .footer-nav {
-        width: 30%;
+        width: 27%;
     }
 }

@@ -9,7 +9,7 @@ export const Logo = (props) => {
         <div className={`${styles.logo} ${className}`}>
             <h1>
                 <a href="#">
-                    <img src={LogoImage} alt = "logo"/>
+                    <img src={LogoImage} className={styles['logoImage']} alt = "logo"/>
                 </a>
             </h1>
         </div>
