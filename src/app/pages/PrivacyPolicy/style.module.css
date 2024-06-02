@@ -3,12 +3,12 @@
     margin: auto;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 14px;
     text-align: left;
 }
 h2, h3, p {
     padding-bottom: 5%;
 }
-span {
+/* span {
     font-weight: 600;
-}
+} */

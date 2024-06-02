@@ -6,17 +6,21 @@
     color: #fff;
     font-family: Libre Baskerville;
     /* height: 1024px; */
-
-    @media (max-width: 768px) {
-      .loginContainer {
-          flex-direction: column;
-          height: auto; /* Adjust height for responsiveness */
-      }
-    }
-
-
   }
-
+  
+  @media (max-width: 768px) {
+    .loginContainer {
+        flex-direction: column;
+        height: auto; /* Adjust height for responsiveness */
+    }
+  }
+.logo {
+  margin: auto;
+  width: 20%;
+}
+.logo .img {
+  width: 100%;
+}
   /* .companyLogo{
     color: #7C7B5D;
     font-family: Libre Baskerville;
@@ -36,15 +40,6 @@
     font-weight: 700;
     line-height: 39.68px;
     text-align: center;
-  width: 252px;
-  height: 40px;
-left: 292px;
-  gap: 0px;
-  opacity: 0px;
-  margin-left: 30%;
-          
-
-
 }
   
   .leftSection {
@@ -64,10 +59,10 @@ left: 292px;
 
   }
   
-  .rightSection {
+.rightSection {
     flex: 1;
     position: relative;
-  }
+  } 
   
   .backgroundImage {
     position: absolute;
@@ -77,11 +72,11 @@ left: 292px;
     height: 100%;
     object-fit: cover;
   }
-  
+/*   
   .loginForm {
     width: 100%;
   }
-  
+   */
   .formGroup {
     margin-bottom: 20px;
   }
@@ -90,22 +85,27 @@ left: 292px;
     display: block;
     font-weight: bold;
     text-align: left;
+    margin-left: 3%;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1%;
+    font-size: 14px;
   }
   
   input[type="email"],
   input[type="password"] {
-    width: calc(100% - 40px); /* Adjust width for password toggle */
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 56px;
+    font-size: 14px;
   }
-  
-
+ 
 .passwordToggle {
-  position: relative;
-  margin-bottom: -20px; /* Position vertically at the center of the input field */
-  right: 20px; /* Adjust the right distance from the input field */
-  transform: translateY(-50%);
+  position: absolute;
+  right: 47rem;
+  top: 19.4rem;
   cursor: pointer;
 }
 
@@ -116,7 +116,10 @@ left: 292px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    
+    font-family: 'Montserrat', sans-serif;
+    width: 94%;
+    margin-left: 3%;
+    font-size: 14px;
   }
 
   .forgot {
@@ -128,13 +131,15 @@ left: 292px;
   button {
     padding: 10px 20px;
     background-color:#A3A17F80;
-
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    
-    
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 334px;
+    margin-top: 7%;
+    height: 56px;
   }
   .forgot:hover {
     text-decoration: underline;
@@ -185,9 +190,9 @@ hr {
   transition: border-color 0.3s;
 }
 
-.googleButton:hover {
+/* .googleButton:hover {
   border-color: blue;
-}
+} */
 
 .gmailIcon {
   width: 20px;
@@ -199,10 +204,10 @@ hr {
   color: #777;
 }
 
-.link {
-  color: blue;
-  text-decoration: underline;
-}
+/* .link {
+  color: var(--black);
+  text-decoration: none;
+} */
 
 .link:hover {
   color: darkblue;
@@ -227,6 +232,13 @@ hr {
 /* Other styles remain the same */
 
 .account {
-  
+  font-family: 'Montserrat', sans-serif;
   margin-top: 50px;
+  font-weight: 2rem;
+  font-size: 14px;
+}
+.signup {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
 }
