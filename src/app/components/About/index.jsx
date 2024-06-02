@@ -1,5 +1,5 @@
 import styles from './style.module.css';
-import AboutImg1 from '../../assets/images/about1.jpeg';
+import AboutImg1 from '../../assets/images/about1.png';
 import AboutImg2 from '../../assets/images/about2.png';
 
 
@@ -21,7 +21,7 @@ export const About = () => {
                     <img className={styles.aboutImg1} src={AboutImg1}/>      
                 </div>
             </div>
-            <div className={styles.olive}></div>
+            {/* <div className={styles.olive}></div> */}
         </div>
     )
 }
