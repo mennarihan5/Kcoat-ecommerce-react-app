@@ -48,7 +48,7 @@ export const servicesMenu = [
 export const contactMenu = [
     {
         icon: <IoLocationOutline />,
-        title: "B2/11 FHE olomore, Abeokuta",
+        title: "721road Bclose block 1 flat 5 Festac town",
         url: "/address",
     },
     {

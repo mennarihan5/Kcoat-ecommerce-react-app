@@ -38,6 +38,20 @@ export const SidebarSizeOptions = ({handleChange, handleCheckboxChange, checkbox
             title = "XL"   
             name =  "XL" 
             />
+            <FilterInput 
+            handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
+            value = "XXL"
+            title = "XXL"   
+            name =  "XXL" 
+            />
+            <FilterInput 
+            handleChange={handleChange}
+            handleCheckboxChange={handleCheckboxChange}
+            value = "XXXL"
+            title = "XXXL"   
+            name =  "XXXL" 
+            />
         </div>
         
     )

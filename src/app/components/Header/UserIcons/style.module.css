@@ -15,11 +15,11 @@
 .icon svg {
     width: clamp(1rem , 3vw, 1.2rem);
     height: clamp(1rem , 3vw, 1.2rem);
-    color: var(--darkGrey);
+    color: var(--olive);
     transition: all 0.2s ease-in-out;
 }
 .icon:hover svg {
-    color: var(--olive);
+    color: var(--darkGrey);
     transform: scale(1.2);
 }
 @media (max-width: 990px) {

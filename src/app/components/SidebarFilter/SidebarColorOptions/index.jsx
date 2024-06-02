@@ -29,6 +29,30 @@ export const SidebarColorOptions = ({handleChange}) => {
             title = "Brown"   
             name =  "Brown" 
             />
+            <FilterInput 
+            handleChange={handleChange}
+            value = "Red"
+            title = "Red"   
+            name =  "Red" 
+            />
+            <FilterInput 
+            handleChange={handleChange}
+            value = "Blue"
+            title = "Blue"   
+            name =  "Blue" 
+            />
+            <FilterInput 
+            handleChange={handleChange}
+            value = "Green"
+            title = "Green"   
+            name =  "Green" 
+            />
+            <FilterInput 
+            handleChange={handleChange}
+            value = "Mixed"
+            title = "Mixed"   
+            name =  "Mixed" 
+            />
         </div>
         
     )

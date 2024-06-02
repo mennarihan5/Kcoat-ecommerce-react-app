@@ -1,27 +1,18 @@
 .logo {
-    width: 20%;
-    margin-left: -2%;
+    width: 18%;
 }
-.logo img {
+.logoImage {
     width: 100%;
 }
 
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .logo {
-        margin-left: 8%;
         width: 18%;
     }
 }
 @media (min-width: 600px) and (max-width: 900px) {
     .logo {
-        margin-left: 3%;
         width: 16%;
     }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-    .logo {
-        margin-left: 5%;
-    }
+} */
 
-}

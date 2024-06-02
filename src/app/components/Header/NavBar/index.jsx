@@ -14,7 +14,7 @@ export const NavBar = () => {
         <nav className=''>
         <div className={styles[`hamburger-icon`]} onClick={toggleMenu}><FiAlignJustify /></div>
             <ul className={`${styles['nav-menu']} ${menu ? styles['show-nav'] : ""}`}>
-                <li className={styles[`menu-item`]}>
+                <li className={`${styles['menu-item']} ${styles['home']}`}>
                     <Link to='/'>Home</Link>
                 </li>
                 <li className={styles[`menu-item`]}>
@@ -24,7 +24,7 @@ export const NavBar = () => {
                     <Link to='/about'>About Us</Link>
                 </li>
                 <li className={styles[`menu-item`]}>
-                    <Link to='/contact'>Help</Link>
+                    <Link to='/help'>Help</Link>
                 </li>
             </ul>
         </nav>

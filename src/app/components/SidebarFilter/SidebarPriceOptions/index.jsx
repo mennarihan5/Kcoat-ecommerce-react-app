@@ -29,6 +29,18 @@ export const SidebarPriceOptions = ({handleChange}) => {
             title = "₦11,500 to ₦14,500"   
             name =  "₦11,500 to ₦14,500" 
             />
+            <FilterInput 
+            handleChange={handleChange}
+            value = "₦14,500 to ₦17,500"
+            title = "₦14,500 to ₦17,500"   
+            name =  "₦14,500 to ₦17,500" 
+            />
+            <FilterInput 
+            handleChange={handleChange}
+            value = "₦17,500 to ₦20,500"
+            title = "₦17,500 to ₦20,500"   
+            name =  "₦17,500 to ₦20,500" 
+            />
         </div>
         
     )

@@ -6,9 +6,7 @@ import { FooterMenu } from './FooterMenu/index.jsx';
 export const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.logo}>
-                <Logo className={styles.img} background={false}/>
-            </div>    
+            <Logo className={styles.logo} background={false}/>   
             <div className={styles['footer-menu-wrapper']}>
                 <FooterMenu title="Profile" options={profileMenu} />
                 <FooterMenu title="Services" options={servicesMenu}/>
