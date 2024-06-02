@@ -6,8 +6,9 @@ module.exports = (sequelize) => {
 
   Category.init(
     {
-      name: DataTypes.STRING,
+      title: DataTypes.STRING,
       parentCategoryId: DataTypes.INTEGER,
+      image: DataTypes.STRING
     },
     {
       sequelize,

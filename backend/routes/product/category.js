@@ -2,7 +2,7 @@ const router = require("express").Router();
 const categoryController = require("../../controllers/auth/categoryController");
 
 //routes 
-router.post("/", categoryController.createCategory);
+router.post("/", categoryController.upload,categoryController.createCategory);
 router.get("/", categoryController.getAllCategories);
 router.get("/:id", categoryController.getCategoryById);
 router.put("/:id", categoryController.updateCategory);

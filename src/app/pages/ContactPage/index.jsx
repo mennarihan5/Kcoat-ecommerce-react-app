@@ -41,7 +41,7 @@ export const ContactPage = () => {
               </div>
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="email" className={styles.name}>Email</label>
+              <label htmlFor="email" className={styles.email}>Email</label>
               <div className={styles.inputContainer}>
               <input
                   type="text"
@@ -53,7 +53,7 @@ export const ContactPage = () => {
               </div>
             </div>
             <div className={styles.formGroup}>
-              <label htmlFor="message" className={styles.name}>Message</label>
+              <label htmlFor="message" className={styles.message}>Message</label>
               <div className={styles.inputContainer}>
                 <textarea
                   value={message}
@@ -70,7 +70,7 @@ export const ContactPage = () => {
         </div>
         <div className={styles.rightContent}>
           <h3 className={styles.contacttext}>Contact</h3>
-          <p>
+          <p className={styles.kcoat}> 
             KCOAT@fashion.com
           </p><br />
           <p className={styles.righttext1}>
