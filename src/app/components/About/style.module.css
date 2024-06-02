@@ -7,12 +7,12 @@
     text-align: start;
     position: relative;
     height: 42rem;
+    background-color: var(--beige);
 }
 .text {
-    background-color: var(--beige);
     width: 75%;
     padding: 5% 0;
-    padding-left: 8%;
+    padding-left: 3%;
 }
 .title {
     font-family: 'Libre Baskerville', 'Helvetica Neue';
@@ -48,8 +48,8 @@
 .imgs-container {
     background-color: var(--beige);
 }
-.olive {
+/* .olive {
     width: 25%;
     background-color: var(--olive);
     z-index: -1;
-}
+} */

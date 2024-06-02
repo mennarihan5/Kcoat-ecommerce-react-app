@@ -11,7 +11,7 @@ export const Hero = () => {
                 <p>Shop our diverse selection of trendy clothing and accessories for 
                     both men and women</p> 
                 <Link to='/categories'>
-                    <button className={styles[`hero-btn`]}>Explore</button>
+                    <button className={styles[`hero-btn`]}>Get Styled Up</button>
                 </Link>
             </div>
             <div className={styles.image}>

@@ -59,17 +59,22 @@ export const LoginPage = () => {
         <h2 className={styles.welcome}>Welcome Back</h2>
         <form className={styles.loginForm}>
           <div className={styles.formGroup}>
-            <label className={styles.email}>Email</label>
+            <label htmlFor='email'>Email</label>
             <input 
+            id='email'
               type="email" 
               placeholder="Enter your email" 
               value={email} 
               onChange={e => setEmail(e.target.value)} 
             />
           </div>
+
+          <div className={styles.formGroup}>
+
           <div className={styles.passwordformGroup}>
-            <label className={styles.password}>Password</label>
+
             <input 
+            id='password'
               type={showPassword ? 'text' : 'password'} 
               placeholder="Enter your password" 
               value={password} 
@@ -88,7 +93,7 @@ export const LoginPage = () => {
             </label>
             <a href="#" className={styles.forgot}>Forgot Password?</a>
           </div>
-          <button id={styles.loginButton} type="submit" onClick={handleLogin}>Login</button>
+          <button id={styles.loginButton} type="submit" onClick={handleLogin}>Log in</button>
         </form>
         {error && <p>{error}</p>}
         {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
