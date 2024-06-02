@@ -68,9 +68,6 @@ export const LoginPage = () => {
               onChange={e => setEmail(e.target.value)} 
             />
           </div>
-
-          <div className={styles.formGroup}>
-
           <div className={styles.passwordformGroup}>
 
             <input 
