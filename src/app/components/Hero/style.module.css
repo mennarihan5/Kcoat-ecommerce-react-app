@@ -43,6 +43,8 @@
     border: none;
     padding: 1.2% 2.8%;
     cursor: pointer;
+    width: 12rem;
+    height: 3.5rem;
 }
 .image {
     padding-top: 3%; 

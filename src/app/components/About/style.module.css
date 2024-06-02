@@ -26,12 +26,14 @@
 }
 .contact-btn {
     background-color: var(--olive);
-    padding: 1.8% 4%;
+    padding: 1.8% 3%;
     border-radius: 4px;
     font-size: 1.25rem;
     font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: 400;
     cursor: pointer;
     margin-top: 23%;
+    width: 11rem;
 }
 .aboutImg1 {
     position: absolute;
