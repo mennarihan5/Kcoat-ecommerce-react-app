@@ -185,7 +185,7 @@ cart {
   margin-bottom: 500px;
   /* flex: 1; */  
   position: relative;
-  left: -250px;
+  left: 1%;
 }
 
 
@@ -208,10 +208,10 @@ cart {
 .rightSection {
   background:#cac2df4d;
 
-  width: 500px; /* Adjust width as needed */
+  width: 600px; /* Adjust width as needed */
   height: 90%; /* Adjust height to cover the entire height */
-  top: 170px; /* Position it at the top */
-  left: 700px;
+  top: 20%; /* Position it at the top */
+  left: 10%;
   padding-top: 20px; /* Add padding at the top to avoid overlapping with the header */
   position: fixed;
   /* margin-top: 120px; */
@@ -330,16 +330,16 @@ cart {
 
 /* Media queries for responsiveness */
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .rightSection {
     width: 500px;
     margin-left: calc(100% - 500px);
   }
-}
+} */
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 500px) {
   .rightSection {
-    width: 400px;
+    width: 200px;
     margin-left: calc(100% - 400px);
   }
 }
