@@ -141,10 +141,10 @@
     margin-top: 7%;
     height: 56px;
   }
-  .forgot:hover {
+  /* .forgot:hover {
     text-decoration: underline;
     color: blue; 
-  }
+  } */
 
 
   button:hover {
@@ -188,6 +188,7 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   transition: border-color 0.3s;
+
 }
 
 /* .googleButton:hover {
