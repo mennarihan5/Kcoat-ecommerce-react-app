@@ -59,8 +59,8 @@
   text-align: center;
   }
   .account {
-    font-family: Montserrat;
-    color: white;
+        font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
     font-size: 14px;
   }
 
