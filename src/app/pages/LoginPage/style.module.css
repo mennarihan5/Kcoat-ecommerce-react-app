@@ -40,6 +40,15 @@
     font-weight: 700;
     line-height: 39.68px;
     text-align: center;
+
+
+    width: 252px;
+    height: 40px;
+    left: 292px;
+    margin-left: 30%;
+            
+
+
 }
   
   .leftSection {
@@ -53,10 +62,43 @@
     height: 47px;
     top: 64px;
     left: 358px;
-    gap: 0px;
-    opacity: 0px;
     margin-bottom: 100px;
+  }
 
+  .logo{
+    width: 100%;
+    height: 47px;
+    margin-top: 64px;
+    margin-left: 290px;
+    margin-bottom: 40px;
+  }
+
+  .email{
+    width: 601px;
+  height: 20px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20.3px;
+  text-align: left;
+  color: #FFFFFFCC;
+  margin-left: 20px;
+  }
+
+  .password{
+    width: 601px;
+    height: 20px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20.3px;
+    text-align: left;
+    color: #FFFFFFCC;
+    margin-left: 10px;
+  }
+
+  .passwordformGroup{
+    margin-left: 10px;
   }
   
 .rightSection {
@@ -116,10 +158,16 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+
     font-family: 'Montserrat', sans-serif;
     width: 94%;
     margin-left: 3%;
     font-size: 14px;
+
+    margin-top: 20px;
+    margin-left: 20px;
+    
+
   }
 
   .forgot {
@@ -141,10 +189,10 @@
     margin-top: 7%;
     height: 56px;
   }
-  .forgot:hover {
+  /* .forgot:hover {
     text-decoration: underline;
     color: blue; 
-  }
+  } */
 
 
   button:hover {
@@ -188,6 +236,7 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   transition: border-color 0.3s;
+
 }
 
 /* .googleButton:hover {

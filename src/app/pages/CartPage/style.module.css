@@ -1,4 +1,5 @@
-.cart {
+cart {
+  color: #aaa516;
   /* Add styles for the main cart container if needed */
 }
 
@@ -34,220 +35,316 @@
   color: #7C7B5D;
   margin-top: 20px;
   display: flex;
+  margin-left: 20px;
+  width: 50%;
 }
 
-.items {
-  margin-top: 30px; 
-  margin-right: 10px;
- font-family: Montserrat;
-  font-size: 24px;
-  font-weight: 700;
-  margin-left: 480px;
+
+
+.line{
+  width: 50%;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px
 }
 
-.middleSection {
-  display: block;
-  justify-content: left; 
-  margin-top: 100px; /* Adjust margin as needed */
-  gap: 5px;
-  
-  
-  /* margin-left: -200px; */
-}
 
-.heading1,
-.heading2,
-.heading3 {
+
+.middleHeading {
+  display: flex;
+  align-items: center;
+  width: 107px;
+  /* height: 2px; */
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
-  color: #282828;
-  justify-content: center;
+  line-height: 29.26px;
+  text-align: left;
+  margin-top: -100px
 
+  ;
 }
 
-.heading1{
-  margin-top: 20px;
+.headingQuantity{
+  /* margin-right: 5px; Push these elements to the right */
+  /* padding-right: 10px;  */
+  /* margin-left: 450px; */
+  /* margin-right: 50px; */
+  }
+
+  .headingPrice{
+    margin-left: 50px;
+  }
+
+  .headingItem {
+    margin-left: 50px;
+  }
+
+ .headingQuantity {
+  margin-left: 500px;
+} 
+
+.items {
+  width: 200px;
+  height: 29px;
+  margin-left: 720px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.26px;
+  text-align: left;
+  color: #4F4B4B;
+  margin-bottom: 100px;
 }
 
-.heading2{
-  margin-left: -500px;
+
+.middleSection {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  align-items: center;
+  margin-left: 50px; 
 }
-
-.heading3{
-margin-left: -1500px;
-}
-
-
-/* cartItem {
+.item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px; /* Adjust as needed */
-
-
-.imageContainer {
-  width: 100px; /* Adjust image width */
-  /* margin-right: 10px; Adjust spacing */
-  /* display: block; */
-  margin-right: 0px;
-  
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  color: #282828;
 }
 
-.image {
-  /* width: 10%; */
-  /* height: auto; */
-  margin-right: 100%;
-  width: 150px;
-height: 170px;
-gap: 0px;
-
-  
-}
 
 .details {
-  flex-grow: 1;
-  margin-bottom: -100px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-left: 20px;
+  flex: 1; /* Let it occupy remaining space */
+  margin-right: -120px;
 }
 
-.controls {
-  display: flex;
-  align-items: center;
-
-  
-} 
+.itemName {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px; /* Adjust margin for spacing */
+}
 
 .quantityControl {
   display: flex;
   align-items: center;
-  margin-left: 500px;
-  margin-bottom: 50px;
+  margin-right: auto; /* Align to the left */
   
+  margin-right: 100px; /* Adjust margin for spacing */
 }
 
 .controlButton {
-  width: 30px; /* Adjust button size */
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #7C7B5D;
-  /* Adjust button background color */
   cursor: pointer;
-  margin: 0 5px; /* Adjust spacing between buttons */
-  
-
-  
+  border: 2px solid #7C7B5D;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #7C7B5D;
+  color: #fff;
 }
 
 .quantity {
-  margin: 0 5px; /* Adjust spacing */
+  padding: 5px;
 }
 
+.itemPrice {
+  margin-right: 30px; /* Adjust margin for spacing */
+  margin-left: -60px; /* Align to the right */
+  margin-top: -110px;
+  width: 79px;
+  height: 24px;
+  width: 55px;
+  padding-left: 5px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.38px;
+  text-align: left;
+}
+
+.continueShopping{
+  width: 10px;
+  height: 29px;
+  /* width: 238px; */
+  height: 29px;
+  color: #7C7B5D;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+  text-align: left; 
+  /* margin-top: 500px;  */
+  margin-left: -1200px;
+  text-align: left;
+  /* /* margin-right: 300px; */
+  margin-bottom: 500px;
+  /* flex: 1; */  
+  position: relative;
+  left: 1%;
+}
+
+
+/* .line2{
+  margin-bottom: 100px;
+  width: 70%;
+  margin-left: 70px;
+} */
+.removeButton {
+  cursor: pointer;
+  border: none;
+  border-color: #c3bd10;
+}
+
+
+
+
 /* right section */
+
+.rightSection {
+  background:#cac2df4d;
+
+  width: 600px; /* Adjust width as needed */
+  height: 90%; /* Adjust height to cover the entire height */
+  top: 20%; /* Position it at the top */
+  left: 10%;
+  padding-top: 20px; /* Add padding at the top to avoid overlapping with the header */
+  position: fixed;
+  /* margin-top: 120px; */
+}
+
 .summaryItem {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 10px;
   margin-right: 100px;
+  
 }
 
 .summaryText {
   width: 104px;
-height: 29px;
-gap: 0px;
-font-family: Montserrat;
-font-size: 24px;
-font-weight: 500;
-line-height: 29.26px;
-text-align: left;
-color: #4F4B4B;
-padding: 20px;
-
+  height: 29px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+  text-align: left;
+  color: #4F4B4B;
+  padding: 20px;
+  
 }
 
 .summaryValue {
-  /* font-size: 16px; */
   padding: 20px;
   width: 66px;
-height: 24px;
-gap: 0px;
-font-family: Montserrat;
-font-size: 20px;
-font-weight: 700;
-line-height: 24.38px;
-margin-right: 50px;
-
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.38px;
+  margin-right: 80px;
+  text-align: center;
 }
 
 .promoButton {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  border: 2px solid #7C7B5D;
   border-radius: 5px;
   cursor: pointer;
   font-family: Montserrat;
   font-size: 17.37px;
   font-weight: 500;
-  line-height: 21.17px;
-  text-align: left;
+  /* line-height: 21.17px; */
+  text-align: center;
   margin-top: 20px;
+  width: 30%;
+  margin-left: 10%;
 }
 
 .promoButton:hover {
   background-color: #c3bd10;
-  
 }
 
-.sectionHeading{
+.sectionHeading {
   width: 212px;
   height: 50px;
-  top: 179px;
-  left: 918px;
-  gap: 0px;
   font-family: Libre Baskerville;
   font-size: 40px;
   font-weight: 700;
   line-height: 49.6px;
   text-align: left;
   color: #7C7B5D;
+  margin-left: 25px;
 }
 
-.summaryItemLast{
+.summaryItemLast {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
   margin-right: 100px;
+}
+
+.button {
+  margin-top: 30px;
+  width: 265px; /* Fixed typo in width property */
+  height: 56px; /* Fixed typo in height property */
+  padding: 16px 84px; /* Adjusted padding */
+  gap: 10px;
+  border-radius: 4px 0px 0px 0px;
+  color: #aaa516;
   
 }
 
-.button{
-margin-top: 30px;
-width: Hug (265px)px;
-height: Hug (56px)px;
-padding: 16px 84px 16px 84px;
-gap: 10px;
-border-radius: 4px 0px 0px 0px;
-color: #aaa516;
+.promoButtonLast{
+  width: Hug (265px)px;
+  height: Hug (56px)px;
+  padding: 16px 84px 16px 84px;
+  border-radius: 4px 0px 0px 0px;
+  background-color: #7C7B5D;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.38px;
+  text-align: center; 
+  margin-left: 50px;
+  margin-top: 5px;
+
 }
 
-.itemName{
-  /* color:rgb(0, 255, 4); */
-  /* margin-top: 50px; */
+.itemName {
   margin-right: 300px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   margin-left: 200px;
   font-size: 20px;
-  
 }
-  
-.itemPrice{
-  /* color:rgb(0, 255, 4); */
-  /* margin-right: 300px; */
-  margin-bottom: -110px; 
-  /* margin-left: 200px; */
-  font-size: 20px;
-  /* margin-top: -20px; */
 
+.itemPrice {
+  margin-bottom: -110px;
+  font-size: 20px;
 }
+
+
+/* Media queries for responsiveness */
+
+/* @media only screen and (max-width: 1200px) {
+  .rightSection {
+    width: 500px;
+    margin-left: calc(100% - 500px);
+  }
+} */
+
+@media only screen and (max-width: 500px) {
+  .rightSection {
+    width: 200px;
+    margin-left: calc(100% - 400px);
+  }
+}
+
+/* Add more media queries as needed */

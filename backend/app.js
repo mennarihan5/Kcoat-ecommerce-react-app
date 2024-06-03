@@ -22,14 +22,14 @@ const secretKey = process.env.SECRET_KEY;
 
 
 // Configure CORS options
-const corsOptions = {
-  origin: 'https://kcoat-ecommerce-react-app.vercel.app/', // Replace with the frontend domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
-  // allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
-  // exposedHeaders: ['Content-Length'], // Specify headers exposed to the client
-  // credentials: true, // Allow cookies and authorization headers with credentials
-  // maxAge: 86400 // Specify the maximum age (in seconds) for preflight requests (OPTION method)
-};
+// const corsOptions = {
+//   origin: 'https://kcoat-ecommerce-react-app.vercel.app/', // Replace with the frontend domain
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
+//   // allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+//   // exposedHeaders: ['Content-Length'], // Specify headers exposed to the client
+//   // credentials: true, // Allow cookies and authorization headers with credentials
+//   // maxAge: 86400 // Specify the maximum age (in seconds) for preflight requests (OPTION method)
+// };
 
 
 const dbOptions = {
@@ -50,9 +50,12 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+ app.use(cors());
 
-app.use(cors(corsOptions));
+app.use('/images', express.static('images'));
+
+
+// app.use(cors(corsOptions));
 
 
 // app.use(

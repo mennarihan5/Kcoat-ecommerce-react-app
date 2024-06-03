@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from './style.module.css';
 import { Header } from '../../components/Header/index.jsx';
 import shorts from '../../assets/images/short.jpg';
@@ -9,9 +10,20 @@ export const CartPage = () => {
     // Dummy data for demonstration
     const [cartItems, setCartItems] = useState([
         { id: 1, name: "Short", quantity: 2, price: 5500, imageSrc: shorts },
-        { id: 2, name: "Vintage SKirt", quantity: 1, price: 5500, imageSrc: vintage},
+        { id: 2, name: "Shirt", quantity: 1, price: 5500, imageSrc: vintage},
         { id: 3, name: "Trouser", quantity: 3, price: 5500, imageSrc: trousers}
     ]);
+
+    const [cartItemCount, setCartItemCount] = useState(0); // State to track total items in cart
+
+    // Calculate subtotal based on the quantity of clothes and their prices
+    const subtotal = cartItems.reduce((acc, item) => acc + (item.quantity * item.price), 0);
+
+    useEffect(() => {
+        // Update total cart item count whenever cartItems change
+        const totalCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+        setCartItemCount(totalCount);
+    }, [cartItems]);
 
     const handleDecrease = (itemId) => {
         setCartItems(prevItems =>
@@ -37,58 +49,73 @@ export const CartPage = () => {
         );
     };
 
-    // Calculate subtotal based on the quantity of clothes and their prices
-    const subtotal = cartItems.reduce((acc, item) => acc + (item.quantity * item.price), 0);
+    // Function to toggle the full item name
+    const handleToggleArrow = (itemId) => {
+        setCartItems(prevItems =>
+            prevItems.map(item =>
+                item.id === itemId ? { ...item, showFull: !item.showFull } : item
+            )
+        );
+    };
 
     return (
         <div className={styles.cart}>
-            <Header />
+            <Header cartItemCount={cartItemCount} />
             <div className={styles.container}>
-                <div className={styles.leftSection}>
-                   <div><h2 className={styles.yourCart}>Your Cart</h2>
-                   <h2 className={styles.heading1}>Item</h2>
-                   </div> 
-                   <div><p className={styles.items}>{cartItems.length} items</p>
-                   </div> 
+                <div>
+                    <h2 className={styles.yourCart}>Your Cart</h2>
+                    <p className={styles.items}>{cartItemCount} items</p>
                 </div>
+                <div className={styles.middleHeading}>
+                    <p className={styles.headingItem}> Item</p>
+                    <p className={styles.headingQuantity}>Quantity</p>
+                    <p className={styles.headingPrice}>Price</p>
+                </div>
+                <div><hr className={styles.line}/>   </div>
                 <div className={styles.middleSection}>
-                    {cartItems.map(item => (
-                        <div key={item.id} className={styles.item}>
-                            <div className={styles.imageContainer}>
+                    <div className={styles.imageContainer}>
+                        {cartItems.map(item => (
+                            <div key={item.id} className={styles.item}>
                                 <img src={item.imageSrc} alt="Product" className={styles.image} />
                                 <div className={styles.details}>
-                                    <p className={styles.itemName}>{item.name}</p>
+                                    <p className={styles.itemName}>
+                                        {item.showFull ? item.name : (item.name.length > 4 ? `${item.name.slice(0, 4)}...` : item.name)}
+                                        {item.name.length > 4 && (
+                                            <span className={styles.arrow} onClick={() => handleToggleArrow(item.id)}>
+                                                {item.showFull ? "▲" : "▼"}
+                                            </span>
+                                        )}
+                                    </p>
                                 </div>
-                             </div>
-                               
-                             <div className={styles.quantityControl}>
-                                <div
-                                    className={styles.controlButton}
-                                    onClick={() => handleDecrease(item.id)}
-                                >
-                                    -
+                                <div className={styles.quantityControl}>
+                                    <div
+                                        className={styles.controlButton}
+                                        onClick={() => handleDecrease(item.id)}
+                                    >
+                                        -
+                                    </div>
+                                    <span className={styles.quantity}>{item.quantity}</span>
+                                    <div
+                                        className={styles.controlButton}
+                                        onClick={() => handleIncrease(item.id)}
+                                    >
+                                        +
+                                    </div>
                                 </div>
-                                <span className={styles.quantity}>{item.quantity}</span>
-                                <div
-                                    className={styles.controlButton}
-                                    onClick={() => handleIncrease(item.id)}
-                                >
-                                    +
-                                </div>
+                                <p className={styles.itemPrice}>₦{item.price}</p>
+                                <span className={styles.x} onClick={() => handleRemove(item.id)}>
+                                    X
+                                </span>
                             </div>
-                            <p className={styles.itemPrice}>₦{item.price}</p>
-                            <button
-                                className={styles.removeButton}
-                                onClick={() => handleRemove(item.id)}
-                            >
-                                X
-                            </button>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-                <div className={styles.rightSection}>
-                    <h2 className={styles.sectionHeading}>Summary</h2>
-                   
+                <div>
+                    <Link to="/categories" className={styles.continueShopping}>Continue Shopping</Link>
+                </div>
+            </div>
+            <div className={styles.rightSection}>
+                <h2 className={styles.sectionHeading}>Summary</h2>
                 <div className={styles.summaryItem}>
                     <p className={styles.summaryText}>Subtotal</p>
                     <p className={styles.summaryValue}>₦{subtotal.toFixed(2)}</p>
@@ -101,22 +128,15 @@ export const CartPage = () => {
                     <p className={styles.summaryText}>Promocode</p>
                     <button className={styles.promoButton}>Enter code</button>
                 </div>
-
                 <div className={styles.summaryItemLast}>
                     <p className={styles.summaryText}>Total</p>
                     <p className={styles.summaryValue}>₦{(subtotal + 10).toFixed(2)}</p>
-                    
                 </div>
                 <div className={styles.button}>
-                    <button className={styles.promoButtonLast}>Check Out</button>
-                    </div>
-            </div>
-
-                    
-                    {/* Add summary and total cost details here */}
+                    <button className={styles.promoButtonLast}>CheckOut</button>
                 </div>
             </div>
-        
+        </div>
     );
 };
 

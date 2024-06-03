@@ -1,32 +1,47 @@
 import React, { useState } from 'react';
 import styles from './style.module.css'; 
 import LoginFormFooter from '../../components/googleSignupButton/index.jsx'; 
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { Logo } from '../../components/Logo/index.jsx';
 import eye from '../../assets/images/Right Content.jpg';
-import userData from '../../.env/acoount.json';
 
 export const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const [redirectTo, setRedirectTo] = useState('');
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault(); // Prevent the default form submission
 
-    const user = userData.find(user => user.email === email && user.password === password);
+    try {
+      const response = await fetch('https://kcoat-ecommerce-react-app.onrender.com/auth/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
 
-    if (user) {
-      if (user['account-type'] > 0) {
-        setRedirectTo('/admin-dashboard'); // Redirect admin user to admin dashboard
+      if (response.ok) {
+        const responseData = await response.json();
+        if (responseData.isAdmin) {
+          setRedirectTo('/admin-dashboard'); // Redirect admin user to admin dashboard
+        } else {
+          setRedirectTo('/'); // Redirect regular user to landing page
+        }
+        setSuccessMessage('Login successful');
+        setError('');
       } else {
-        setRedirectTo('/'); // Redirect regular user to landing page
+        setSuccessMessage('');
+        setError('Incorrect email or password');
       }
-    } else {
-      setError(<span style={{ color: 'blue'}}>Incorrect email or password</span>); 
+    } catch (error) {
+      setSuccessMessage('');
+      setError('An error occurred while processing your request');
     }
   };
 
@@ -53,8 +68,8 @@ export const LoginPage = () => {
               onChange={e => setEmail(e.target.value)} 
             />
           </div>
-          <div className={styles.formGroup}>
-            <label htmlFor='password'>Password</label>
+          <div className={styles.passwordformGroup}>
+
             <input 
             id='password'
               type={showPassword ? 'text' : 'password'} 
@@ -78,6 +93,7 @@ export const LoginPage = () => {
           <button id={styles.loginButton} type="submit" onClick={handleLogin}>Log in</button>
         </form>
         {error && <p>{error}</p>}
+        {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
         <div>
           <p className={styles.account}>Don't have an account? <Link to="/signup" className={styles.signup}>Sign Up</Link></p>
         </div>

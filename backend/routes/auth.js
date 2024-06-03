@@ -47,6 +47,8 @@ router.get("/me", [JWTAuthenticationMiddleware], me);
 router.get("/cart", cartController.getCart);
 router.post("/cart/add", cartController.addToCart);
 router.delete("/cart/delete", cartController.deleteCart);
+router.get("/cart/summary", cartController.getCartSummary);
+
 
 //routes for favorite
 router.post('/addFavorite', favoriteController.addToFavorites);

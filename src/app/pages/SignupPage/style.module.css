@@ -13,8 +13,14 @@
     color: #7C7B5D;
     font-family: Libre Baskerville;
     font-size: 32px; */
-    
+    .img{
+      width: 119px;
+      height: 47px;
+      margin-top: 64px;
+      margin-left: 300px;
+    }
   
+
 .logo {
     margin: auto;
     width: 20%;
@@ -22,6 +28,46 @@
 .logo .img {
     width: 100%;
 }
+
+    .name, .email{
+      width: 601px;
+      height: 20px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20.3px;
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .confirm{
+      width: 601px;
+      height: 20px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20.3px;
+      text-align: left;
+      margin-left: 30px;
+    }
+
+    .password{
+      width: 601px;
+      height: 20px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20.3px;
+      text-align: left;
+      margin-left: 30px;
+    }
+
+    .passwordformGroup{
+      margin-bottom: 20px;
+      margin-right: 40px;
+    }
+
+
   #welcome{
     font-family: Libre Baskerville;
     font-size: 32px;
@@ -67,6 +113,13 @@
   
   .formGroup {
     margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .passwordformGroup{
+    margin-bottom: 20px;
+    margin-left: 0px;
+    width: 100%;
+    
   }
   
   .formGroup label {
@@ -80,6 +133,7 @@
     font-size: 14px;
   }
   
+  input[type="text"],
   input[type="email"],
   input[type="password"] {
     width: calc(100% - 40px);
@@ -104,6 +158,9 @@
     width: 94%;
     margin-left: 3%;
     font-size: 14px;
+
+    margin-top: 20px;
+    margin-left: 30px; 
     
   }
 
