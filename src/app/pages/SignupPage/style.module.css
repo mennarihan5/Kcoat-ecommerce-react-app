@@ -64,32 +64,40 @@
   }
   
   .formGroup label {
-    display: block;
+        display: block;
     font-weight: bold;
     text-align: left;
+    margin-left: 3%;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1%;
+    font-size: 14px;
   }
   
   input[type="email"],
   input[type="password"] {
-    width: calc(100% - 40px); /* Adjust width for password toggle */
+    width: calc(100% - 40px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
   
   .passwordToggle {
+        position: absolute;
+    right: 47rem;
+    top: 19.4rem;
     cursor: pointer;
-    position: relative;
-    top: 2%;
-    right: 10px;
-    transform: translateY(-50%);
   }
   
   .rememberForgot {
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    width: 94%;
+    margin-left: 3%;
+    font-size: 14px;
     
   }
 
