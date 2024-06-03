@@ -15,7 +15,13 @@
     font-size: 32px; */
     
   
-
+.logo {
+    margin: auto;
+    width: 20%;
+}
+.logo .img {
+    width: 100%;
+}
   #welcome{
     font-family: Libre Baskerville;
     font-size: 32px;
