@@ -247,11 +247,12 @@ cart {
   font-size: 20px;
   font-weight: 700;
   line-height: 24.38px;
-  margin-right: 50px;
+  margin-right: 80px;
+  text-align: center;
 }
 
 .promoButton {
-  padding: 5px 10px;
+  padding: 5px;
   background-color: white;
   color: black;
   border: 2px solid #7C7B5D;
@@ -260,9 +261,11 @@ cart {
   font-family: Montserrat;
   font-size: 17.37px;
   font-weight: 500;
-  line-height: 21.17px;
-  text-align: left;
+  /* line-height: 21.17px; */
+  text-align: center;
   margin-top: 20px;
+  width: 30%;
+  margin-left: 10%;
 }
 
 .promoButton:hover {
@@ -311,7 +314,7 @@ cart {
   line-height: 24.38px;
   text-align: center; 
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: 5px;
 
 }
 
