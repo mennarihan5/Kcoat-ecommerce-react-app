@@ -60,7 +60,7 @@ export const CartPage = () => {
 
     return (
         <div className={styles.cart}>
-            <Header />
+            <Header cartItemCount={cartItemCount} />
             <div className={styles.container}>
                 <div>
                     <h2 className={styles.yourCart}>Your Cart</h2>
@@ -73,42 +73,42 @@ export const CartPage = () => {
                 </div>
                 <div><hr className={styles.line}/>   </div>
                 <div className={styles.middleSection}>
-                    {cartItems.map(item => (
-                        <div key={item.id} className={styles.item}>
-                            <div className={styles.imageContainer}>
+                    <div className={styles.imageContainer}>
+                        {cartItems.map(item => (
+                            <div key={item.id} className={styles.item}>
                                 <img src={item.imageSrc} alt="Product" className={styles.image} />
-                            </div>
-                            <div className={styles.details}>
-                                <p className={styles.itemName}>
-                                    {item.showFull ? item.name : (item.name.length > 4 ? `${item.name.slice(0, 4)}...` : item.name)}
-                                    {item.name.length > 4 && (
-                                        <span className={styles.arrow} onClick={() => handleToggleArrow(item.id)}>
-                                            {item.showFull ? "▲" : "▼"}
-                                        </span>
-                                    )}
-                                </p>
-                            </div>
-                            <div className={styles.quantityControl}>
-                                <div
-                                    className={styles.controlButton}
-                                    onClick={() => handleDecrease(item.id)}
-                                >
-                                    -
+                                <div className={styles.details}>
+                                    <p className={styles.itemName}>
+                                        {item.showFull ? item.name : (item.name.length > 4 ? `${item.name.slice(0, 4)}...` : item.name)}
+                                        {item.name.length > 4 && (
+                                            <span className={styles.arrow} onClick={() => handleToggleArrow(item.id)}>
+                                                {item.showFull ? "▲" : "▼"}
+                                            </span>
+                                        )}
+                                    </p>
                                 </div>
-                                <span className={styles.quantity}>{item.quantity}</span>
-                                <div
-                                    className={styles.controlButton}
-                                    onClick={() => handleIncrease(item.id)}
-                                >
-                                    +
+                                <div className={styles.quantityControl}>
+                                    <div
+                                        className={styles.controlButton}
+                                        onClick={() => handleDecrease(item.id)}
+                                    >
+                                        -
+                                    </div>
+                                    <span className={styles.quantity}>{item.quantity}</span>
+                                    <div
+                                        className={styles.controlButton}
+                                        onClick={() => handleIncrease(item.id)}
+                                    >
+                                        +
+                                    </div>
                                 </div>
+                                <p className={styles.itemPrice}>₦{item.price}</p>
+                                <span className={styles.x} onClick={() => handleRemove(item.id)}>
+                                    X
+                                </span>
                             </div>
-                            <p className={styles.itemPrice}>₦{item.price}</p>
-                            <span className={styles.x} onClick={() => handleRemove(item.id)}>
-                                X
-                            </span>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
                 <div>
                     <Link to="/categories" className={styles.continueShopping}>Continue Shopping</Link>

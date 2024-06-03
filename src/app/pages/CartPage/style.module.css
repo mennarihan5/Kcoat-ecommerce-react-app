@@ -1,4 +1,5 @@
 cart {
+  color: #aaa516;
   /* Add styles for the main cart container if needed */
 }
 
@@ -38,14 +39,7 @@ cart {
   width: 50%;
 }
 
-.items {
- 
-  margin-right: 10px;
- font-family: Montserrat;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 200px;
-}
+
 
 .line{
   width: 50%;
@@ -61,12 +55,15 @@ cart {
   display: flex;
   align-items: center;
   width: 107px;
-  height: 29px;
+  /* height: 2px; */
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
   line-height: 29.26px;
   text-align: left;
+  margin-top: -100px
+
+  ;
 }
 
 .headingQuantity{
@@ -89,7 +86,7 @@ cart {
 } 
 
 .items {
-  width: 92px;
+  width: 200px;
   height: 29px;
   margin-left: 720px;
   font-family: Montserrat;
@@ -97,8 +94,8 @@ cart {
   font-weight: 700;
   line-height: 29.26px;
   text-align: left;
-  color: #282828;
-  margin-bottom: 50px;
+  color: #4F4B4B;
+  margin-bottom: 100px;
 }
 
 
@@ -118,10 +115,6 @@ cart {
   color: #282828;
 }
 
-.imageContainer {
-  width: 100px; /* Adjust width as needed */
-  flex-shrink: 0; /* Prevent the image from shrinking */
-}
 
 .details {
   display: flex;
@@ -175,9 +168,9 @@ cart {
 }
 
 .continueShopping{
-  width: 238px;
+  width: 10px;
   height: 29px;
-  width: 238px;
+  /* width: 238px; */
   height: 29px;
   color: #7C7B5D;
   font-family: Montserrat;
@@ -191,6 +184,8 @@ cart {
   /* /* margin-right: 300px; */
   margin-bottom: 500px;
   /* flex: 1; */  
+  position: relative;
+  left: 1%;
 }
 
 
@@ -211,15 +206,15 @@ cart {
 /* right section */
 
 .rightSection {
-  background: #E5E5E54D;
+  background:#cac2df4d;
+
   width: 600px; /* Adjust width as needed */
-  height: 100%; /* Adjust height to cover the entire height */
-  margin-left: calc(100% - 600px); /* Adjust margin to position it on the right */
-  top: 0; /* Position it at the top */
+  height: 90%; /* Adjust height to cover the entire height */
+  top: 20%; /* Position it at the top */
+  left: 10%;
   padding-top: 20px; /* Add padding at the top to avoid overlapping with the header */
-  overflow-y: auto; /* Add vertical scrolling if content exceeds height */
   position: fixed;
-  margin-top: 120px;
+  /* margin-top: 120px; */
 }
 
 .summaryItem {
@@ -234,7 +229,6 @@ cart {
 .summaryText {
   width: 104px;
   height: 29px;
-  gap: 0px;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;
@@ -242,13 +236,13 @@ cart {
   text-align: left;
   color: #4F4B4B;
   padding: 20px;
+  
 }
 
 .summaryValue {
   padding: 20px;
   width: 66px;
   height: 24px;
-  gap: 0px;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 700;
@@ -278,13 +272,13 @@ cart {
 .sectionHeading {
   width: 212px;
   height: 50px;
-  gap: 0px;
   font-family: Libre Baskerville;
   font-size: 40px;
   font-weight: 700;
   line-height: 49.6px;
   text-align: left;
   color: #7C7B5D;
+  margin-left: 25px;
 }
 
 .summaryItemLast {
@@ -311,20 +305,14 @@ cart {
   padding: 16px 84px 16px 84px;
   border-radius: 4px 0px 0px 0px;
   background-color: #7C7B5D;
-  
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 400;
   line-height: 24.38px;
   text-align: center; 
   margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 305px;
 
-
-
-  
-
-  
 }
 
 .itemName {
@@ -342,16 +330,16 @@ cart {
 
 /* Media queries for responsiveness */
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .rightSection {
     width: 500px;
     margin-left: calc(100% - 500px);
   }
-}
+} */
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 500px) {
   .rightSection {
-    width: 400px;
+    width: 200px;
     margin-left: calc(100% - 400px);
   }
 }
